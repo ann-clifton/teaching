@@ -1,0 +1,191 @@
+\documentclass[12pt]{amsart}
+\usepackage{amsmath,amsthm,amssymb,amsfonts,enumerate,mymath,tikz-cd,fancyhdr}
+\openup 5pt
+\author{Blake Farman\\University of South Carolina}
+\title{Math 142: Final Exam}
+\date{August 1, 2014}
+\pdfpagewidth 8.5in
+\pdfpageheight 11in
+\usepackage[margin=1in]{geometry}
+
+\renewcommand{\qedsymbol}{}
+
+\begin{document}
+\maketitle
+
+\begin{center}
+  \fbox{\fbox{\parbox{5.5in}{\centering
+        Answer the questions in the spaces provided on the
+        question sheets and turn them in at the end of the class period. 
+        Unless otherwise stated, all supporting work is required.
+        It is advised, although not required, that you check your answers.
+        You may {\bf not} use any calculators.}}}
+\end{center}
+
+\vspace{0.2in}
+\makebox[\textwidth]{Name:\enspace\hrulefill}
+\vspace{0.2in}
+
+\theoremstyle{plain}
+\newtheorem{thm}{}
+\newtheorem{lem}{Lemma}
+\theoremstyle{definition}
+\newtheorem{defn}{Definition}
+
+$$
+\begin{array}{|c|c|c|}
+  \hline
+  \text{Problem} & \text{Points Earned} & \text{Points Possible}\\
+  \hline
+  1 & & 10\\
+  \hline
+  2 & & 10\\
+  \hline
+  3 & & 10\\
+  \hline
+  4 & & 10\\
+  \hline
+  5 & & 10 \\
+  \hline
+  6 & & 10 \\
+  \hline
+  7 & & 10 \\
+  \hline
+  8 & & 10 \\
+  \hline
+  9 & & 10 \\
+  \hline
+  10 & & 10 \\
+  \hline
+  \text{Bonus} & & 10\\
+  \hline
+  \text{Total} & & 100\\
+  \hline
+\end{array}
+$$
+
+\newpage
+
+\section{Problems}
+
+\subsection{Applications of Integration}
+
+%\begin{thm}[10 Points]
+%Find the area between the curves $\displaystyle{y = \sin\left(\frac{\pi x}{2}\right)}$ and $\displaystyle{y = x}$.
+%\end{thm}
+
+%\newpage
+
+\begin{thm}[10 Points]
+  Find the volume of the solid obtained by rotating the region bounded by the curves $f(x) = 4(x - 2)^2$ and $g(x) = x^2 - 4x + 7$ about the $y$-axis.
+\end{thm}
+
+\newpage
+
+\subsection{Integration}
+
+For each of the following problems, decide which method of integration is appropriate and compute the given integrals.
+You will find some useful trigonmetric identities on the last page.
+If you need more space for a problem, use the back of the page.
+
+%\begin{thm}[10 Points]
+%  Compute the following integrals.
+%  \begin{enumerate}[(a)]
+%  \item\label{1.a}
+%    $\displaystyle{\int \theta\cos(\theta^2)d\theta}$.
+%    \vspace{3in}
+%  \item
+%    $\displaystyle{\int \theta^3\cos(\theta^2)d\theta}$.
+%  \end{enumerate}
+%\end{thm}
+
+%\newpage
+
+\begin{thm}[10 Points]
+  Compute $\displaystyle{\int\sin^3(\theta)\cos^2(\theta)d\theta}$.
+\end{thm}
+
+\newpage
+
+\begin{thm}[10 Points]
+  Compute $\displaystyle{\int \frac{\ln(x)}{x^2}dx}$.
+\end{thm}
+
+\newpage
+
+\begin{thm}[10 Points]
+  Compute $\displaystyle{\int\frac{dx}{x^2\sqrt{x^2-9}}}$.
+\end{thm}
+
+\newpage
+
+\begin{thm}[10 Points]
+  Compute $\displaystyle{\int\frac{x}{x^2 - 5x + 6}}dx$.
+\end{thm}
+
+\newpage
+\begin{thm}[10 Points]
+  Explain why $\displaystyle{\int_0^3 \frac{dx}{\sqrt{x}}}$ is an improper integral, then evaluate it.
+\end{thm}
+
+\newpage
+
+\subsection{Series and Sequences}
+\begin{thm}[10 Points]
+  Express $5.\overline{5} = 5.55555\ldots$ as a rational number. [Hint: Geometric Series.]
+\end{thm}
+
+\newpage
+Test the following series for convergence.
+You may use any of the tests we covered in class, however you {\bf must indicate which test you use}.
+\begin{thm}[10 Points]
+  $\displaystyle{\sum_{k=1}^\infty \frac{2^k k!}{(k+2)!}}.$
+\end{thm}
+
+\newpage
+
+\begin{thm}[10 Points]
+  $\displaystyle{\sum_{n=1}^\infty \frac{2^{2n}}{n^n}}$
+\end{thm}
+
+\newpage
+
+\subsection{Power Series}
+
+\begin{thm}[10 Points]
+  Find the Taylor expansion of $\ln(x)$ about $a = 2$ and find the radius of convergence and the interval of convergence for the series you find.
+\end{thm}
+
+\newpage
+
+\subsection{Bonus}
+
+\begin{thm}[10 Points]
+  Sketch the curve with polar equation $\displaystyle{r = \sin^2(2\theta)}$.
+\end{thm}
+\newpage
+
+\section{Useful Formulae}
+
+\begin{itemize}
+\item
+  $\sin^2(\theta) + \cos^2(\theta) = 1$.
+\item
+  $\tan^2(\theta) + 1 = \sec^2(\theta)$.
+\item
+  $\cot^2(\theta) + 1 = \csc^2(\theta)$.
+\item
+  $2\sin^2(\theta) = 1 - \cos(2\theta)$.
+\item
+  $2\cos^2(\theta) = 1 + \cos(2\theta)$.
+\item
+  $\sin(2\theta) = 2\sin(\theta)\cos(\theta)$.
+\item
+  $2\sin(\theta)\cos(\varphi) = \sin(\theta - \varphi) + \sin(\theta + \varphi)$.
+\item
+  $2\sin(\theta)\sin(\varphi) = \cos(\theta - \varphi) - \cos(\theta + \varphi)$.
+\item
+  $2\cos(\theta)\cos(\varphi) = \cos(\theta - \varphi) + \cos(\theta + \varphi)$.
+\end{itemize}
+
+\end{document}

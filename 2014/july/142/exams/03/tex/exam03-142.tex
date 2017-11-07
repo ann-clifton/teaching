@@ -1,0 +1,109 @@
+\documentclass[12pt]{amsart}
+\usepackage{amsmath,amsthm,amssymb,amsfonts,enumerate,mymath,tikz-cd,fancyhdr}
+\openup 5pt
+\author{Blake Farman\\University of South Carolina}
+\title{Math 142: Exam 03}
+\date{July 25, 2014}
+\pdfpagewidth 8.5in
+\pdfpageheight 11in
+\usepackage[margin=1in]{geometry}
+
+\renewcommand{\qedsymbol}{}
+
+\begin{document}
+\maketitle
+
+\begin{center}
+  \fbox{\fbox{\parbox{5.5in}{\centering
+        Answer the questions in the spaces provided on the
+        question sheets and turn them in at the end of the class period. 
+        Unless otherwise stated, all supporting work is required.
+        You may {\bf not} use any calculators.}}}
+\end{center}
+
+\vspace{0.2in}
+\makebox[\textwidth]{Name:\enspace\hrulefill}
+\vspace{0.2in}
+
+$$
+\begin{array}{|c|c|c|}
+  \hline
+  \text{Problem} & \text{Points Earned} & \text{Points Possible}\\
+  \hline
+  1 & & 20\\
+  \hline
+  2 & & 20\\
+  \hline
+  3 & & 20\\
+  \hline
+  4 & & 20\\
+  \hline
+  5 & & 20 \\
+  \hline
+  \text{Bonus} & & 10\\
+  \hline
+  \text{Total} & & 100\\
+  \hline
+\end{array}
+$$
+
+\newpage
+
+\theoremstyle{plain}
+\newtheorem{thm}{}
+\newtheorem{lem}{Lemma}
+\theoremstyle{definition}
+\newtheorem{defn}{Definition}
+
+\section{Problems}
+
+\begin{thm}
+Find the area between the curves $\displaystyle{y = \sin\left(\frac{\pi x}{2}\right)}$ and $\displaystyle{y = x}$.
+\end{thm}
+
+\newpage
+
+\begin{thm}
+  Find the volume of the solid obtained by rotating the region bounded by the curves $\displaystyle{y = \frac{1}{x}}$, $\displaystyle{x = 1}$, $\displaystyle{x = 2}$, and $\displaystyle{y = 0}$ about the $x$-axis.
+\end{thm}
+
+\newpage
+\begin{thm}
+  Find a power series representation for $\displaystyle{\frac{1}{x - 5}}$.
+  Once you have found this power series, find its radius of convergence and the interval of convergence.
+\end{thm}
+
+\newpage
+
+\begin{thm}
+  \begin{enumerate}[(a)]
+  \item\label{1.a}
+    Find the Maclaurin expansion (i.e. find the Taylor expansion about $a = 0$) for the function $f(x) = \cos(x)$.
+    Find the radius of convergence and the interval of convergence for this series.
+    \vspace{4in}
+  \item
+    Use Taylor's Inequality to show that $\cos(x)$ is equal to its Maclaurin expansion on the interval of convergence you found in Part~\ref{1.a}.
+    You will find the statement of Taylor's Inequality on the last page.
+  \end{enumerate}
+\end{thm}
+
+\newpage
+
+\begin{thm}\label{5}
+  Find the Maclaurin expansion of the function $f(x) = xe^x$.
+\end{thm}
+
+\newpage
+
+\begin{thm}
+  Show that $f(x) = xe^x$ is equal to the power series expansion you found in Problem~\ref{5}.
+\end{thm}
+
+\newpage
+
+\begin{thm}[Taylor's Inequality]
+  If there exists a real number, $M$, such that $\abs{f^{(n+1)}(x)} \leq M$ holds whenever $\abs{x - a} \leq d$, then the remainder, $R_n(x)$, of the Taylor series satisfies the inequality
+  $$\abs{R_n(x)} \leq \frac{M}{(n+1)!} \abs{x - a}^{n+1}$$
+  whenever $\abs{x - a} \leq d$.
+\end{thm}
+\end{document}

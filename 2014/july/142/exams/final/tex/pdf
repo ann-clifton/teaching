@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+CLASS=142
+NAME="final-${CLASS}"
+PDFDIR=../pdf/
+FILE="$NAME.tex"
+texi2pdf $FILE 
+
+
+if [ ! -d ${PDFDIR} ]; then
+    mkdir ${PDFDIR}
+fi
+
+mv $NAME.pdf ${PDFDIR}
+
+rm -fr *.log
+rm -fr *.aux
+rm -fr *.bbl
+rm -fr *.blg
+rm -fr *~
+rm -fr *.out

@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+CLASS=116
+SECTION=E2B
+NAME="syllabus-${CLASS}-${SECTION}"
+PDFDIR=../pdf/
+FILE="$NAME.tex"
+SEMESTER=F15
+
+htlatex $NAME
+
+cp $NAME.html /Users/Blake/teaching/www/courses/$CLASS/$SEMESTER/$SECTION/
+cp $NAME.css /Users/Blake/teaching/www/courses/$CLASS/$SEMESTER/$SECTION/
+
+rm -fr *.log
+rm -fr *.aux
+rm -fr *.bbl
+rm -fr *.blg
+rm -fr *~
+rm -fr *.out
+rm -fr *.4ct
+rm -fr *.4tc
+rm -fr *.dvi
+rm -fr *.idv
+rm -fr *.lg
+rm -fr *.tmp
+rm -fr *.xref
+

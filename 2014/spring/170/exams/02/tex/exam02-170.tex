@@ -1,0 +1,112 @@
+\documentclass[12pt]{amsart}
+\usepackage{amsmath,amsthm,amssymb,amsfonts,enumerate,mymath,tikz-cd,fancyhdr}
+\openup 5pt
+\author{Blake Farman\\University of South Carolina}
+\title{Math 170: Exam 02}
+\date{April 21, 2014}
+\pdfpagewidth 8.5in
+\pdfpageheight 11in
+\usepackage[margin=1in]{geometry}
+
+\renewcommand{\qedsymbol}{}
+
+\begin{document}
+\maketitle
+
+\begin{center}
+  \fbox{\fbox{\parbox{5.5in}{\centering
+        Answer the questions in the spaces provided on the
+        question sheets and turn them in at the end of the class period. 
+        Unless otherwise stated, all supporting work is required.}}}
+\end{center}
+
+\vspace{0.2in}
+\makebox[\textwidth]{Name:\enspace\hrulefill}
+\vspace{0.2in}
+
+\theoremstyle{plain}
+\newtheorem{thm}{}
+\newtheorem{lem}{Lemma}
+\theoremstyle{definition}
+\newtheorem{defn}{Definition}
+
+\section{Problems}
+
+\begin{thm}[20 Points]\label{ex1}
+  A bag contains five red marbles, two green marbles, one lavender marble, one yellow marble, and three orange marbles.
+  \begin{enumerate}[(a)]
+  \item
+    How many sets of four marbles include none of the red ones?
+    \vspace{2in}
+  \item
+    How many sets of four marbles include exactly one red marble?
+    \vspace{2in}
+  \end{enumerate}
+\end{thm}
+
+\newpage
+\begin{thm}[20 Points]\label{ex2}
+  Use Gauss-Jordan row reduction to solve the system of equations
+  \begin{eqnarray*}
+    x - y + 7z &=& 4\\
+    x - y + 8z &=& 3.
+  \end{eqnarray*}
+  If there is no solution, simply write 'no solution.'  If the system is dependent, express your answer in terms of $x$, where $y = y(x)$ and $z = z(x)$.
+  \vspace{2in}
+\end{thm}
+
+\begin{thm}[20 Points]\label{ex3}
+  Use Gauss-Jordan row reduction to solve the system of equations
+  \begin{eqnarray*}
+    2x - y &=& 0\\
+    x + y + z &=& 18\\
+    x - z &=& 2
+  \end{eqnarray*}
+  If there is no solution, simply write 'no solution.'  If the system is dependent, express your answer in terms of $x$, where $y = y(x)$ and $z = z(x)$.
+\end{thm}
+
+\newpage
+
+\begin{thm}[20 Points]\label{ex4}
+  Compute the matrix product,
+  $$\left(\begin{array}{cc}
+    1 & -1\\
+    1 & -1
+  \end{array}\right) 
+  \left(\begin{array}{cc}
+    3 & 7\\
+    3 & 7
+  \end{array}\right).$$
+  \vspace{2in}
+\end{thm}
+
+\begin{thm}[20 Points]
+  Use {\bf matrix inversion} to solve the given system of equations
+  \begin{eqnarray*}
+    -4x + y &=& 4\\
+    -4x - 3y &=& 4.
+  \end{eqnarray*}
+  
+\end{thm}
+\newpage
+
+\begin{thm}[Bonus - 10 Points]\label{bonus}
+  State Euler's Formula for plane graphs and use it to fill in the missing pieces of the following chart:
+  
+  \renewcommand{\arraystretch}{1.5}
+  \begin{center}
+    \begin{tabular}{|c|c|c|}
+      \hline
+      V & F & E\\
+      \hline
+      4 & 3 & \\
+      \hline
+      & 3 & 6 \\
+      \hline
+      5 & & 7 \\
+      \hline
+    \end{tabular}
+  \end{center}
+\end{thm}
+\newpage
+\end{document}

@@ -1,0 +1,134 @@
+\documentclass[12pt]{amsart}
+\usepackage{amsmath,amsthm,amssymb,amsfonts,enumerate,mymath,tikz-cd,fancyhdr}
+\openup 5pt
+\author{Blake Farman\\University of South Carolina}
+\title{Math 170: Exam 01}
+\date{February 26, 2014}
+\pdfpagewidth 8.5in
+\pdfpageheight 11in
+\usepackage[margin=1in]{geometry}
+
+\renewcommand{\qedsymbol}{}
+
+\begin{document}
+\maketitle
+
+\begin{center}
+\fbox{\fbox{\parbox{5.5in}{\centering
+Answer the questions in the spaces provided on the
+question sheets and turn them in at the end of the class period. 
+Unless otherwise stated, all supporting work is required.}}}
+\end{center}
+
+\vspace{0.2in}
+\makebox[\textwidth]{Name:\enspace\hrulefill}
+\vspace{0.2in}
+
+\theoremstyle{plain}
+\newtheorem{thm}{}
+\newtheorem{lem}{Lemma}
+\theoremstyle{definition}
+\newtheorem{defn}{Definition}
+
+\section{Problems}
+
+\noindent In problems 1-3, use the given information to set up the appropriate equation.
+You need not carry out the computation.
+On the last page you will find a selection of potentially useful formulae.
+\begin{thm}[10 Points]\label{ex1}
+  You deposit $\$1,000$ in an account that pays $6\%$ annual interest, compounded quarterly.
+  \begin{enumerate}[(a)]
+  \item
+    What will be the balance of the account after 4 years?
+    \vspace{1.5in}
+  \item
+    How much interest will have accrued?
+  \end{enumerate}
+\end{thm}
+
+\newpage
+\begin{thm}[18 Points]\label{ex2}
+  Your local bank offers an account that pays $6\%$ per year with quarterly compounding interest.
+  You wish to save $\$75,000$ over the course of 20 years.
+  How much must you deposit into the account each quarter to reach your goal?
+  \vspace{4in}
+\end{thm}
+
+\begin{thm}[18 Points]\label{ex3}
+  You wish to set up an account that will pay $\$500$ per month over the course of 20 years.
+  If the account earns $3\%$ per year, how much money must be deposited into the account?
+\end{thm}
+
+\newpage
+
+\noindent Let $U = \{\text{Burton},\, \text{Ride},\,\text{Forum}, \text{V\"{o}lkl},\, \text{LibTech},\, \text{Gnu},\, \text{Rome}\}$.
+  Let 
+  $X = \{\text{Burton},\, \text{Ride},\,\text{Forum}\},$
+  $Y = \{\text{Forum}, \text{V\"{o}lkl},\, \text{LibTech},\, \text{Gnu},\, \text{Rome}\}, \text{and}$
+  $Z = \{\text{Ride},\,\text{Forum}, \text{V\"{o}lkl}\}.$
+\begin{thm}[18 Points]\label{ex4}
+  Compute
+  \begin{enumerate}[(a)]
+  \item
+    $X \cap Y$,
+    \vspace{1in}
+  \item
+    $X \cup Z$,
+    \vspace{1in}
+  \item
+    The complement of $Z$ in $U$, $Z^c$.
+    \vspace{1in}
+  \end{enumerate}
+\end{thm}
+
+\begin{thm}[18 Points]
+  \begin{enumerate}[(a)]
+  \item
+    What is the cardinality of $X \times Z$?
+    \vspace{1in}
+  \item
+    What is the cardinality of $Y \cup Z$?
+    \vspace{1in}
+  \end{enumerate}
+\end{thm}
+\newpage
+
+\begin{thm}[18 Points]\label{ex9}
+  Use a truth table to prove the following logical equivalences.
+  \begin{enumerate}[(a)]
+  \item
+    $$\neg\left(p \vee q\right) \equiv \neg p \wedge \neg q.$$
+    \vspace{2in}
+  \item
+    $$\neg\left(p \wedge q \right) \equiv \neg p \vee \neg q.$$
+    \vspace{2in}
+  \end{enumerate}
+\end{thm}
+
+\begin{thm}[Bonus - 10 Points]\label{bonus}
+  Write out Modus Tollens symbolically.
+  State the conditions for an argument to be valid and then prove that Modus Tollens is a valid argument.
+  Can you give an example of how Modus Tollens is used?
+\end{thm}
+\newpage
+\section{Useful Formulae}
+
+\begin{itemize}
+  \newcommand{\INT}{\operatorname{INT}}
+  \newcommand{\PV}{\operatorname{PV}}
+  \newcommand{\FV}{\operatorname{FV}}
+  \newcommand{\PMT}{\operatorname{PMT}}
+\item
+  $\INT = \PV r t$
+\item
+  $\FV = \PV(1 + rt)$
+\item
+  $\FV = \PV \left(1 + \frac{r}{m}\right)^{mt}$
+\item
+  $r_\text{eff} = \displaystyle{\left( 1 + \frac{r_\text{nom}}{m}\right)^m - 1}$
+\item
+  $\FV = \PMT \displaystyle{\frac{(1 + i)^n - 1}{i}},\, \text{where}\ i = \frac{r}{m}\ \text{and}\ n = mt$
+\item
+  $\PV = \PMT \displaystyle{\frac{1 - (1 + i)^{-n}}{i}},\, \text{where}\ i = \frac{r}{m}\ \text{and}\ n = mt$
+\end{itemize}
+\end{document}

@@ -1,0 +1,30 @@
+#!/bin/bash
+CLASS=142
+SECTION=004
+NAME="syllabus-${CLASS}-${SECTION}"
+HTMLDIR=../html/
+FILE="$NAME.tex"
+
+if [ ! -d ../html ]; then
+    mkdir ../html
+fi
+
+cp $NAME.tex ../html
+cd ../html && htlatex $NAME.tex
+
+rm -fr *.log
+rm -fr *.aux
+rm -fr *.bbl
+rm -fr *.blg
+rm -fr *~
+rm -fr *.out
+rm -fr *.tex
+rm -fr *.tmp
+rm -fr *.4ct
+rm -fr *.4tc
+rm -fr *.lg
+rm -fr *.dvi 
+rm -fr *.idv
+rm -fr *.xref
+
+cd ../tex

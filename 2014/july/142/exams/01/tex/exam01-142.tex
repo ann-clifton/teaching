@@ -1,0 +1,131 @@
+\documentclass[12pt]{amsart}
+\usepackage{amsmath,amsthm,amssymb,amsfonts,enumerate,mymath,tikz-cd,fancyhdr}
+\openup 5pt
+\author{Blake Farman\\University of South Carolina}
+\title{Math 142: Exam 01}
+\date{July 11, 2014}
+\pdfpagewidth 8.5in
+\pdfpageheight 11in
+\usepackage[margin=1in]{geometry}
+
+\renewcommand{\qedsymbol}{}
+
+\begin{document}
+\maketitle
+
+\begin{center}
+  \fbox{\fbox{\parbox{5.5in}{\centering
+        Answer the questions in the spaces provided on the
+        question sheets and turn them in at the end of the class period. 
+        Unless otherwise stated, all supporting work is required.
+        It is advised, although not required, that you check your answers.
+        You may {\bf not} use any calculators.}}}
+\end{center}
+
+\vspace{0.2in}
+\makebox[\textwidth]{Name:\enspace\hrulefill}
+\vspace{0.2in}
+
+\theoremstyle{plain}
+\newtheorem{thm}{}
+\newtheorem{lem}{Lemma}
+\theoremstyle{definition}
+\newtheorem{defn}{Definition}
+
+$$
+\begin{array}{|c|c|c|}
+  \hline
+  \text{Problem} & \text{Points Earned} & \text{Points Possible}\\
+  \hline
+  1 & & 20\\
+  \hline
+  2 & & 20\\
+  \hline
+  3 & & 20\\
+  \hline
+  4 & & 20\\
+  \hline
+  5 & & 20 \\
+  \hline
+  \text{Bonus} & & 10\\
+  \hline
+  \text{Total} & & 100\\
+  \hline
+\end{array}
+$$
+
+\newpage
+
+\section{Problems}
+
+For each of the following problems, decide which method of integration is appropriate and compute the given integrals.
+You will find some useful trigonmetric identities on the last page.
+If you need more space for a problem, use the back of the page.
+
+\begin{thm}[20 Points]
+  Compute the following integrals.
+  \begin{enumerate}[(a)]
+  \item\label{1.a}
+    $\displaystyle{\int \theta\cos(\theta^2)d\theta}$.
+    \vspace{3in}
+  \item
+    $\displaystyle{\int \theta^3\cos(\theta^2)d\theta}$.
+  \end{enumerate}
+\end{thm}
+
+\newpage
+
+\begin{thm}[20 Points]
+  Compute $\displaystyle{\int\frac{dx}{\sqrt{x^2 + 16}}}$.
+\end{thm}
+
+\newpage
+
+\begin{thm}[20 Points]
+  Compute $\displaystyle{\int\cos^2(\theta)\tan^3(\theta)d\theta}$.
+\end{thm}
+
+\newpage
+
+\begin{thm}[20 Points]
+  Compute $\displaystyle{\int 2x\tan(x^2)dx}$.
+  %Hint: $\displaystyle{\tan(x) = \frac{\tan(x)\sec(x)}{\sec(x)}}$
+\end{thm}
+
+\newpage
+
+\begin{thm}[20 Points]
+  Compute $\displaystyle{\int\frac{x}{x^2 + x - 2}}dx$.
+\end{thm}
+
+\newpage
+
+\begin{thm}[Bonus - 10 points]
+  Compute $\displaystyle{\int \sqrt{\frac{1-x}{1+x}}}dx$.
+\end{thm}
+
+\newpage
+\section{Useful Formulae}
+
+\begin{itemize}
+\item
+  $\sin^2(\theta) + \cos^2(\theta) = 1$.
+\item
+  $\tan^2(\theta) + 1 = \sec^2(\theta)$.
+\item
+  $\cot^2(\theta) + 1 = \csc^2(\theta)$.
+\item
+  $2\sin^2(\theta) = 1 - \cos(2\theta)$.
+\item
+  $2\cos^2(\theta) = 1 + \cos(2\theta)$.
+\item
+  $\sin(2\theta) = 2\sin(\theta)\cos(\theta)$.
+\item
+  $2\sin(\theta)\cos(\varphi) = \sin(\theta - \varphi) + \sin(\theta + \varphi)$.
+\item
+  $2\sin(\theta)\sin(\varphi) = \cos(\theta - \varphi) - \cos(\theta + \varphi)$.
+\item
+  $2\cos(\theta)\cos(\varphi) = \cos(\theta - \varphi) + \cos(\theta + \varphi)$.
+\end{itemize}
+
+\end{document}
