@@ -1,0 +1,161 @@
+\documentclass[12pt]{amsart}
+\usepackage{amsmath,amsthm,amssymb,amsfonts,enumerate,mymath,tikz-cd,fancyhdr}
+\openup 5pt
+\author{Blake Farman\\University of South Carolina}
+\title{Math 170\\ Exam 01}
+\date{February 26, 2016}
+\pdfpagewidth 8.5in
+\pdfpageheight 11in
+\usepackage[margin=1in]{geometry}
+
+\renewcommand{\qedsymbol}{}
+
+\begin{document}
+\maketitle
+
+\begin{center}
+  \fbox{\fbox{\parbox{5.5in}{\centering
+        Answer the questions in the spaces provided on the
+        question sheets and turn them in at the end of the class period.
+        If you require extra space, use the back of the page and indicate that you have done so.
+        
+        Unless otherwise stated, all supporting work is required.
+        Unsupported or otherwise mysterious answers will {\bf not receive credit.}}}}
+\end{center}
+
+\vspace{0.2in}
+\makebox[\textwidth]{Name:\enspace\hrulefill}
+\vspace{0.2in}
+
+$$
+\begin{array}{|c|c|c|}
+  \hline
+  \text{Problem} & \text{Points Earned} & \text{Points Possible}\\
+  \hline
+  1 & & 10\\
+  \hline
+  2 & & 20\\
+  \hline
+  3 & & 12\\
+  \hline
+  4 & & 18\\
+  \hline
+  5 & & 20 \\
+  \hline
+  6 & & 20 \\
+  \hline
+  \text{Bonus} & & 10\\
+  \hline
+  \text{Total} & & 100\\
+  \hline
+\end{array}
+$$
+
+\theoremstyle{plain}
+\newtheorem{thm}{}
+\newtheorem{lem}{Lemma}
+\theoremstyle{definition}
+\newtheorem{defn}{Definition}
+
+\newpage
+
+%\section{Problems}
+
+\begin{thm}[10 Points]\label{ex1}
+  Let $S$ be the set of all students at the University of South Carolina.
+  Let $A$ be the subset of all students not taking Math 170 this semester.
+  Let $B$ be the subset of all students majoring in business.
+  \begin{enumerate}[(a)]
+  \item
+    In words, what does the set $A \cup B$ represent?
+    \vspace{1.5in}
+  \item
+    In words, what does the set $A \cap B$ represent?
+    \vspace{1.5in}
+  \item
+    In words, what do the sets $S \setminus A$ and $S \setminus B$ represent?
+    \vspace{1.5in}
+  \item
+    In words, what does the set $\left(S \setminus A\right) \cap \left(S \setminus B\right)$ represent?
+    \vspace{1.5in}
+  \item
+    In words, what does the set $\left(S \setminus A\right) \cup \left(S \setminus B\right)$ represent?
+  \end{enumerate}
+  
+\end{thm}
+
+\newpage
+\begin{thm}[20 Points]\label{ex2}
+  A bag contains two red marbles, two green marbles, two lavender marbles, one yellow marble, and one orange marble.
+  The marbles are all distinguishable.
+  \begin{enumerate}[(a)]
+  \item
+    How many sets of four marbles include none of the red ones?
+    \vspace{4in}
+  \item
+    How many sets of four marbles include exactly one red marble?
+  \end{enumerate}  
+\end{thm}
+
+\newpage
+
+\begin{thm}[12 Points]\label{ex3}
+  How many three letter sequences can be made using the six letters 
+  \begin{center}q, u, a, k, e?\end{center}
+\end{thm}
+
+\newpage
+
+\noindent Let $U = \{A, B, C, D, E, F, G\}$.
+Let 
+$X = \{A,C,E,G\},$
+$Y = \{B, C, D, E\},\, \text{and}$
+$Z = \{C, D, F\}.$
+Use these sets to answer problems \ref{ex4} and \ref{ex5}.
+\begin{thm}[18 Points]\label{ex4}
+  Compute
+  \begin{enumerate}[(a)]
+  \item
+    $X \cap Y$,
+    \vspace{2.5in}
+  \item
+    $X \cup Z$,
+    \vspace{2.5in}
+  \item
+    The complement of $Z$ in $U$, $U \setminus Z$.
+  \end{enumerate}
+\end{thm}
+
+\newpage
+
+\begin{thm}[20 Points]\label{ex5}
+  \begin{enumerate}[(a)]
+  \item
+    What is the cardinality of $X \times Z$?
+    \vspace{4in}
+  \item
+    What is the cardinality of $Y \cup Z$?
+  \end{enumerate}
+\end{thm}
+
+\newpage
+
+\begin{thm}[20 Points]\label{ex9}
+  Use a truth table to prove the following logical equivalences.
+  \begin{enumerate}[(a)]
+  \item
+    $$\neg p \vee q \equiv p \implies q.$$
+    \vspace{4in}
+  \item
+    $$p \vee (p \wedge q) \equiv p.$$
+  \end{enumerate}
+\end{thm}
+
+\newpage
+
+\begin{thm}[Bonus - 10 Points]\label{bonus}
+  Write out Modus Ponens symbolically.
+  State the conditions for an argument to be valid and then prove that Modus Tollens is a valid argument.
+  Can you give an example of how Modus Tollens is used?
+\end{thm}
+\end{document}

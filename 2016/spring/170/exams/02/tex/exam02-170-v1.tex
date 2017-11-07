@@ -1,0 +1,142 @@
+\documentclass[12pt]{amsart}
+\usepackage{amsmath,amsthm,amssymb,amsfonts,enumerate,mymath,tikz-cd,fancyhdr}
+\openup 5pt
+\author{Blake Farman\\University of South Carolina}
+\title{Math 170\\Exam 02}
+\date{April 18, 2016}
+\pdfpagewidth 8.5in
+\pdfpageheight 11in
+\usepackage[margin=1in]{geometry}
+
+\renewcommand{\qedsymbol}{}
+
+\begin{document}
+\maketitle
+
+\begin{center}
+  \fbox{\fbox{\parbox{5.5in}{\centering
+        Answer the questions in the spaces provided on the
+        question sheets and turn them in at the end of the class period.
+        If you require extra space, use the back of the page and indicate that you have done so.
+        
+        Unless otherwise stated, all supporting work is required.
+        Unsupported or otherwise mysterious answers will {\bf not receive credit.}}}}
+\end{center}
+
+\vspace{0.2in}
+\makebox[\textwidth]{Name:\enspace\hrulefill}
+\vspace{0.2in}
+
+\theoremstyle{plain}
+\newtheorem{thm}{}
+\newtheorem{lem}{Lemma}
+\theoremstyle{definition}
+\newtheorem{defn}{Definition}
+$$
+\begin{array}{|c|c|c|}
+  \hline
+  \text{Problem} & \text{Points Earned} & \text{Points Possible}\\
+  \hline
+  1 & & 20\\
+  \hline
+  2 & & 20\\
+  \hline
+  3 & & 20\\
+  \hline
+  4 & & 20\\
+  \hline
+  5 & & 20 \\
+  \hline
+ % 6 & & 20 \\
+%  \hline
+%  \text{Bonus} & & 10\\
+%  \hline
+  \text{Total} & & 100\\
+  \hline
+\end{array}
+$$
+
+\newpage
+
+\section{Problems}
+
+\begin{thm}[20 Points]\label{ex1}
+  Consider the system of equations
+  \begin{eqnarray*}
+    2x + 3y &=& 1\\
+    x + 2y &=& 2.
+  \end{eqnarray*}
+  \begin{enumerate}[(a)]
+  \item\label{1.a}
+    Write down the {\bf matrix equation} (not the augmented matrix) associated to this system.
+    \vspace{1.5in}
+  \item
+    What is the inverse of the coefficient matrix?
+    \vspace{2in}
+  \item
+    Use your answers from the previous parts to solve the system.
+  \end{enumerate}
+\end{thm}
+
+\newpage
+
+\begin{thm}[20 Points]\label{ex2}
+  Solve the system
+  \begin{eqnarray*}
+    2x -3y &=& 3\\
+    -x + 2y &=& 4
+  \end{eqnarray*}
+\end{thm}
+
+\newpage
+
+\begin{thm}[20 Points]\label{ex3}
+  Solve the system of equations
+  \begin{eqnarray*}
+    x + 3y + z &=& 4\\
+    3x + 3z &=& 12.
+  \end{eqnarray*}
+  If there is no solution, simply write 'no solution.'  If the system is dependent, express your answer in terms of $x$, where $y = y(x)$ and $z = z(x)$.
+\end{thm}
+
+\newpage
+
+\begin{thm}[20 Points]\label{ex4}
+  Solve the system of equations
+  \begin{eqnarray*}
+    x + z &=& 4\\
+    2y    &=& 4\\
+    3x - 3z &=& -6
+  \end{eqnarray*}
+  If there is no solution, simply write 'no solution.'  If the system is dependent, express your answer in terms of $x$, where $y = y(x)$ and $z = z(x)$.
+\end{thm}
+
+
+\newpage
+
+\begin{thm}[20 Points]\label{ex5}
+  Consider the system of equations
+  \begin{eqnarray*}
+    x + y &=& 1\\
+    2x - y + z &=& 2\\
+    -4x + y - 2z &=& 3.
+  \end{eqnarray*}
+  Given  
+  $$\left(\begin{array}{ccc}
+    1 & 1 & 0\\
+    2 & -1 & 1\\
+    -4 & 1 & -2
+  \end{array}\right)^{-1} = \left(\begin{array}{ccc}
+    1 & 2 & 1\\
+    0 & -2 & -1\\
+    -2 & -5 & -3
+  \end{array}\right),$$
+  solve the system.
+\end{thm}
+
+%\newpage
+
+%\begin{thm}[Bonus - 10 Points]\label{bonus}
+%\end{thm}
+
+\end{document}

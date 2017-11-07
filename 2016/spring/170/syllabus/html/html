@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+CLASS=170
+SECTION=002
+NAME="syllabus-${CLASS}-${SECTION}"
+PDFDIR=../pdf/
+FILE="$NAME.tex"
+
+htlatex $FILE
+
+rm -fr *.log
+rm -fr *.aux
+rm -fr *.bbl
+rm -fr *.blg
+rm -fr *~
+rm -fr *.out
+rm -fr *.4ct
+rm -fr *.4tc
+rm -fr *.dvi
+rm -fr *.idv
+rm -fr *.lg
+rm -fr *.tmp
+rm -fr *.xref

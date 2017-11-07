@@ -1,0 +1,304 @@
+\documentclass[12pt]{amsart}
+\usepackage{amsmath,amsthm,amssymb,amsfonts,enumerate,mymath,tikz-cd,fancyhdr,multicol}
+\openup 5pt
+\author{Blake Farman\\University of South Carolina}
+\title{Math 116\\Final Exam}
+\date{December 6, 2016}
+\pdfpagewidth 8.5in
+\pdfpageheight 11in
+\usepackage[margin=1in]{geometry}
+
+\renewcommand{\qedsymbol}{}
+
+\begin{document}
+\maketitle
+
+\begin{center}
+  \fbox{\fbox{\parbox{5.5in}{\centering
+        Answer the questions in the spaces provided on the
+        question sheets and turn them in at the end of the class period.
+        If you require extra space, use the back of the page and indicate that you have done so.
+        
+        Unless otherwise stated, all supporting work is required.
+        Unsupported or otherwise mysterious answers will {\bf not receive credit.}
+        You may {\it not} use any calculators.}}}
+\end{center}
+
+\vspace{0.2in}
+\makebox[\textwidth]{Name:\enspace\hrulefill}
+\vspace{0.2in}
+
+$$
+\begin{array}{|c|c|c|c|c|c|}
+  \hline
+  \text{Definition} & \text{Points Earned} & \text{Points Possible} & \text{Problem} & \text{Points Earned} & \text{Points Possible}\\
+  \hline
+  1 & & 6 & 1 & & 8\\
+  \hline
+  2 & & 1 & 2 & & 4\\
+  \hline
+  3 & & 1 & 3 & & 2\\
+  \hline
+  4 & & 2 & 4 & & 10\\
+  \hline
+  5 & & 2 & 5 & & 10\\
+  \hline
+  6 & & 7 & 6 & & 10\\
+  \hline
+  7 & & 6 & 7 & & 4\\
+  \hline
+  8 & & 1 & 8 & & 5\\
+  \hline
+  9 & & 1 & 9 & & 5\\
+  \hline
+  \text{Subtotal} & & 27 & 10  & & 15\\
+  \hline
+  \text{Total} & & & & & 100\\
+  \hline
+\end{array}
+$$
+
+\newpage
+
+\theoremstyle{definition}
+\newtheorem{thm}{}
+\newtheorem{lem}{Lemma}
+\theoremstyle{definition}
+\newtheorem{defn}{Definition}
+
+\section{Definitions}
+
+\begin{thm}[6 Points]\label{ex2}
+  Let $a, b$ be non-zero real numbers and $m, n$ rational numbers.
+  Fill in the blanks
+  \begin{multicols}{2}
+    \begin{enumerate}[(i)]
+    \item
+      $\displaystyle{a^0 =\ \line(1,0){60}}$,
+      \vspace{.15in}
+    \item
+      $\displaystyle{\left(\frac{a}{b}\right)^{-n} =\ \line(1,0){60}}.$
+      \vspace{.15in}
+    \item
+      $\displaystyle{a^m \cdot a^n =\ \line(1,0){60}}$
+      \vspace{.15in}
+    \item
+      $\displaystyle{\frac{a^m}{a^n} =\ \line(1,0){60}}$
+      \vspace{.15in}
+    \item
+      $\displaystyle{\left(a \cdot b\right)^n =\ \line(1,0){60}}$
+      \vspace{.15in}
+    \item
+      $\displaystyle{\left(\frac{a}{b}\right)^n =\ \line(1,0){60}}$
+    \end{enumerate}
+  \end{multicols}
+\end{thm}
+
+\begin{thm}[1 Points]\label{ex3}
+  State the Quadratic Formula.
+  That is, state the values of $x$ that satisfy the equation $ax^2 + bx + c = 0$.
+  \vspace{1in}
+\end{thm}
+
+\begin{thm}[1 Points]\label{ex4}
+  Fill in the blanks:\\
+  \begin{center}
+    To make $x^2 + bx$ a perfect square, add and subtract $\fbox{\raisebox{16px}{\hspace{16px}}}$\,.
+    This gives
+    $$x^2 + bx + \fbox{\raisebox{16px}{\hspace{16px}}} - \fbox{\raisebox{16px}{\hspace{16px}}} = \left(x + \fbox{\raisebox{16px}{\hspace{16px}}}\,\right)^2 - \fbox{\raisebox{16px}{\hspace{16px}}}.$$
+  \end{center}
+\end{thm}
+
+\begin{thm}[2 Points]\label{ex1}
+  \begin{enumerate}[(i)]
+  \item
+    State the Point-Slope form of a line passing through the point $(x_0, y_0)$ with slope $m$.
+    \vspace{1in}
+  \item
+    State the Slope-Intercept form of a line with slope $m$ and $y$-intercept $b$.
+  \end{enumerate}
+\end{thm}
+
+\newpage
+
+\begin{thm}[2 Points]
+  Let $f(x)$ be a function with composition inverse $f^{-1}(x)$.
+  Fill in the blanks:
+  \vspace{.15in}
+  \begin{multicols}{2}
+    \begin{enumerate}[(i)]
+    \item
+      $\displaystyle{f \circ f^{-1}(x)\ =\ \line(1,0){60}}$,
+    \item
+      $\displaystyle{f^{-1} \circ f(x)\ =\ \line(1,0){60}}$.
+    \end{enumerate}
+  \end{multicols}
+\end{thm}
+
+\begin{thm}[7 Points]
+  Let $0 < a \neq 1$, $0 < b \neq 1$, and let $0 < x, 0 < y$ be given.
+  Fill in the blanks:
+  \vspace{.15in}
+  \begin{multicols}{2}
+    \begin{enumerate}[(i)]
+    \item
+      $\displaystyle{\log_a(1) =\ \line(1,0){100}}$,
+      \vspace{.15in}
+    \item
+      $\displaystyle{\log_a(xy) =\ \line(1,0){100}}$,
+      \vspace{.15in}
+      \item
+        $\displaystyle{\log_a\left(\frac{x}{y}\right) =\ \line(1,0){100}}$,
+        \vspace{.15in}
+      \item
+        $\displaystyle{\log_a(x^r) =\ \line(1,0){100}}$,
+        \vspace{.15in}
+      \item
+        $\displaystyle{\log_a(x) =\ \frac{\log_b\left(\line(1,0){20}\right)}{\log_b\left(\line(1,0){20}\right)}}$,
+        \vspace{.15in}
+      \item
+        $\displaystyle{\log_a\left(a^x\right) =\ \line(1,0){100}}$,
+        \vspace{.15in}
+      \item
+        $\displaystyle{a^{\log_a(x)} =\ \line(1,0){100}}$.
+    \end{enumerate}
+  \end{multicols}
+\end{thm}
+
+\begin{thm}[6 Points]
+  Fill in the blanks:
+  \vspace{.15in}
+  \begin{multicols}{2}
+    \begin{enumerate}[(i)]
+    \item
+      $\displaystyle{\arcsin \circ \sin(x) =\ \line(1,0){60}}$,
+      \vspace{.15in}
+    \item
+      $\displaystyle{\sin \circ \arcsin(x) =\ \line(1,0){60}}$,
+      \vspace{.15in}
+    \item
+      $\displaystyle{\arctan \circ \tan(x) =\ \line(1,0){60}}$,
+      \vspace{.15in}
+    \item
+      $\displaystyle{\tan \circ \arctan(x) =\ \line(1,0){60}}$,
+      \vspace{.15in}
+    \item
+      $\displaystyle{\operatorname{arcsec} \circ \sec(x) =\ \line(1,0){60}}$,
+      \vspace{.15in}
+    \item
+      $\displaystyle{\sec \circ \operatorname{arcsec}(x) =\ \line(1,0){60}}$.
+    \end{enumerate}
+  \end{multicols}
+\end{thm}
+
+\begin{thm}[1 Point]
+  Fill in the blanks:
+  \begin{center}
+    The conjugate of the expression $x + \sqrt{a}$ is given by 
+    \vspace{.15in}
+    $$\line(1,0){100}.$$
+    The product of $x + \sqrt{a}$ and its conjugate is
+    \vspace{.15in}
+    $$\left(x + \sqrt{a}\right) \cdot \left(\line(1,0){100}\right)\ =\ \line(1,0){100}.$$
+  \end{center}
+\end{thm}
+
+\begin{thm}[1 Point]
+  Write the difference quotient for the function $f(x)$.
+\end{thm}
+\newpage
+
+\section{Problems}
+\setcounter{thm}{0}
+\begin{thm}[8 Points]\label{ex1}
+  Find the period, frequency, and amplitude of $y = 3\sin(3x) + 3$, then graph one period.
+\end{thm}
+
+\newpage
+
+\begin{thm}[4 Points]
+	Graph the function $f(x) = x^2 + 2x - 3$.
+	Label the $y$-intercept, the vertex, and any x-intercepts.
+	\vspace{3.5in}
+\end{thm}
+
+\newpage
+
+\begin{thm}[2 Points]\label{ex3}
+  Let $f(x) = x^2 + 4$ and $g(x) = \sqrt{x}$.
+  \begin{enumerate}[(a)]
+  \item
+    Compute $(f \circ g)(x)$.
+    \vspace{2in}
+  \item
+    Compute $(g \circ f)(x)$.
+    \vspace{2in}
+  \end{enumerate}
+\end{thm}
+
+\newpage
+
+\begin{thm}[10 Points]
+	Find all the solutions (real and complex) to the equation 
+	$$x^4 + 8x = 0.$$
+        {\it Hint}: $x^3 + y^3 = (x + y)(x^2 - xy + y^2)$.
+	\vspace{3in}
+\end{thm}
+
+\newpage
+
+\begin{thm}[10 Points]
+  Show that
+  $$\tan \circ \operatorname{arcsec}(x) = \sqrt{x^2 - 1}.$$
+\end{thm}
+
+\newpage
+
+\begin{thm}[10 Points]
+	Consider the polynomial $p(x) = x^3 - 3x^2 - x + 3$.
+	Observe that 
+	$$p(3) = (3)^3 - 3(3)^2 - 3 + 3 = 3^3 - 3^3 = 0.$$
+	Use this information to {\bf factor} $p(x)$ completely.
+	\vspace{3.5in}
+\end{thm}
+
+\newpage
+
+\begin{thm}[4 Points]
+	Use the identity
+        $$\sin(\theta - \phi) = \sin(\theta)\cos(\phi) - \sin(\phi)\cos(\theta)$$
+	to show that
+	$$\sin\left(\frac{\pi}{6}\right) = \cos\left(\frac{\pi}{3}\right).$$
+        Hint: $\frac{1}{6} = \frac{1}{2} - \frac{1}{3}.$
+\end{thm}
+
+\newpage
+
+\begin{thm}[5 Points]
+	Simplify 
+	$$\frac{x - \sqrt{3}}{x^2 - 3}$$
+	by rationalizing the numerator.
+	\vspace{3in}
+\end{thm}
+
+\newpage
+
+\begin{thm}[5 Points]\label{ex4}
+  Determine whether $f(x) = 2^{3x - 1}$ is invertible.
+  If it is, then compute the inverse.  
+  Otherwise, explain why it does not have an inverse.
+\end{thm}
+
+\newpage
+
+\begin{thm}[15 Points]\label{ex5}
+  Solve the following equations for $x$.
+  \begin{enumerate}[(a)]
+  \item
+    $$\log_3(x^2 - 4) - \log_3(x - 2) = 1$$
+    \vspace{3.5in}
+  \item
+    $$3^{x^2} = 9^{2x - 2}$$
+  \end{enumerate}
+\end{thm}
+\end{document}

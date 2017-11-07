@@ -1,0 +1,354 @@
+\documentclass[12pt]{amsart}
+\usepackage{amsmath,amsthm,amssymb,amsfonts,enumerate,mymath,tikz-cd,fancyhdr}
+\openup 5pt
+\author{Blake Farman\\University of South Carolina}
+\title{Math 170\\Practice}
+\date{April 13, 2016}
+\pdfpagewidth 8.5in
+\pdfpageheight 11in
+\usepackage[margin=1in]{geometry}
+
+\renewcommand{\qedsymbol}{}
+
+\begin{document}
+\maketitle
+
+\begin{center}
+  \fbox{\fbox{\parbox{5.5in}{\centering
+        Answer the questions in the spaces provided on the
+        question sheets and turn them in at the end of the class period.
+        If you require extra space, use the back of the page and indicate that you have done so.
+        
+        Unless otherwise stated, all supporting work is required.
+        Unsupported or otherwise mysterious answers will {\bf not receive credit.}}}}
+\end{center}
+
+\vspace{0.2in}
+\makebox[\textwidth]{Name:\enspace\hrulefill}
+\vspace{0.2in}
+
+\theoremstyle{plain}
+\newtheorem{thm}{}
+\newtheorem{lem}{Lemma}
+\theoremstyle{definition}
+\newtheorem{defn}{Definition}
+$$
+\begin{array}{|c|c|c|}
+  \hline
+  \text{Problem} & \text{Points Earned} & \text{Points Possible}\\
+  \hline
+  1 & & 20\\
+  \hline
+  2 & & 20\\
+  \hline
+  3 & & 20\\
+  \hline
+  4 & & 20\\
+  \hline
+  5 & & 20 \\
+  \hline
+ % 6 & & 20 \\
+%  \hline
+%  \text{Bonus} & & 10\\
+%  \hline
+  \text{Total} & & 100\\
+  \hline
+\end{array}
+$$
+
+\newpage
+
+\section{Problems}
+
+\begin{thm}[20 Points]\label{ex1}
+  Consider the system of equations
+  \begin{eqnarray*}
+    2x + 3y &=& 4\\
+    5x + 7y &=& 4.
+  \end{eqnarray*}
+  \begin{enumerate}[(a)]
+  \item\label{1.a}
+    Write down the {\bf matrix equation} (not the augmented matrix) associated to this system.
+    %\vspace{1.5in}
+  \item
+    What is the inverse of the coefficient matrix?
+    %\vspace{2in}
+  \item
+    Use your answers from the previous parts to solve the system.
+  \end{enumerate}
+  \begin{proof}[Solution]
+    \begin{enumerate}[(a)]
+    \item
+      The associated matrix equation is
+      $$\left(\begin{array}{cc}
+        2 & 3\\
+        5 & 7
+      \end{array}
+      \right)
+      \left(\begin{array}{c}
+        x\\
+        y
+      \end{array}
+      \right)
+      =
+      \left(\begin{array}{c}
+        4\\
+        4
+      \end{array}
+      \right)$$
+    \item
+      The inverse of the coefficient matrix
+      $$A = \left(\begin{array}{cc}
+        2 & 3\\
+        5 & 7
+      \end{array}
+      \right)$$
+      is
+      $$A^{-1} = \frac{1}{2\cdot 7 - 3 \cdot 5} \cdot \left(\begin{array}{ccc}
+            7 & -3\\
+            -5 & 2
+        \end{array}
+      \right) = 
+      -1 \cdot \left(\begin{array}{ccc}
+            7 & -3\\
+            -5 & 2
+        \end{array}
+      \right)
+      = \left(\begin{array}{ccc}
+            -7 & 3\\
+            5 & -2
+        \end{array}
+      \right).$$
+    \item
+      The solution to the system is given by 
+      $$\left(\begin{array}{ccc}
+            -7 & 3\\
+            5 & -2
+        \end{array}
+      \right)
+      \left(\begin{array}{c}
+        4\\
+        4
+      \end{array}
+      \right) 
+      = 
+      \left(\begin{array}{c}
+        -16\\
+        12
+      \end{array}
+      \right).$$
+      That is, the solution to the system is the point in $\mathbb{R}^2$ with coordinates (-16,12).
+    \end{enumerate}
+    
+    Note that the reason this is the solution is the following: Multiply both sides of the equation from part (\ref{1.a}) by $A^{-1}$ on the left 
+    $$\left(\begin{array}{ccc}
+            -7 & 3\\
+            5 & -2
+        \end{array}
+      \right)\left(\begin{array}{cc}
+        2 & 3\\
+        5 & 7
+      \end{array}
+      \right)
+      \left(\begin{array}{c}
+        x\\
+        y
+      \end{array}
+      \right)
+      =
+      \left(\begin{array}{ccc}
+            -7 & 3\\
+            5 & -2
+        \end{array}
+      \right)\left(\begin{array}{c}
+        4\\
+        4
+      \end{array}
+      \right) = \left(\begin{array}{c}
+      -16\\
+      12\end{array}\right).$$
+      Carrying out the multiplication $A^{-1} \cdot A$ gives the 2x2 identity matrix, so we have the equation
+      $$\left(\begin{array}{cc}
+        1 & 0\\
+        0 & 1
+      \end{array}
+      \right)\left(\begin{array}{c}
+        x\\
+        y
+      \end{array}
+      \right) = 
+      \left(\begin{array}{c}
+        x\\
+        y
+      \end{array}
+      \right)
+      = \left(\begin{array}{c}
+      -16\\
+      12\end{array}\right).$$
+  \end{proof}
+\end{thm}
+
+\newpage
+
+\begin{thm}[20 Points]\label{ex2}
+  Solve the system
+  \begin{eqnarray*}
+    2x + 3y &=& 9\\
+    5x + 7y &=& 19
+  \end{eqnarray*}
+  \begin{proof}[Solution]
+    Note that we've already done most of the work in the previous problem.
+    The associated matrix equation is 
+          $$\left(\begin{array}{cc}
+        2 & 3\\
+        5 & 7
+      \end{array}
+      \right)
+      \left(\begin{array}{c}
+        x\\
+        y
+      \end{array}
+      \right)
+      =
+      \left(\begin{array}{c}
+        9\\
+        19
+      \end{array}
+      \right),$$
+      so the solution is
+      $$\left(\begin{array}{ccc}
+            -7 & 3\\
+            5 & -2
+        \end{array}
+      \right)
+      \left(\begin{array}{c}
+        9\\
+        19
+      \end{array}
+      \right) 
+      = 
+      \left(\begin{array}{c}
+        -6\\
+        7
+      \end{array}
+      \right).$$
+      
+  \end{proof}
+\end{thm}
+
+\newpage
+
+\begin{thm}[20 Points]\label{ex3}
+  Solve the system of equations
+  \begin{eqnarray*}
+    x - y + 7z &=& 4\\
+    x - y + 8z &=& 3.
+  \end{eqnarray*}
+  If there is no solution, simply write 'no solution.'  If the system is dependent, express your answer in terms of $x$, where $y = y(x)$ and $z = z(x)$.
+  \begin{proof}[Solution]
+    The augmented matrix associated to this system is
+    $$\left(\begin{array}{cccc}
+      1 & -1 & 7 & 4\\
+      1 & -1 & 8 & 3
+    \end{array}
+    \right).$$
+    Performing Gauss-Jordan row reduction, we obtain the augmented matrix
+    $$\left(\begin{array}{cccc}
+      1 & -1 & 0 & 11\\
+      0 & 0 & 1 & -1
+    \end{array}
+    \right).$$
+    This is a dependent system, and the reduced augmented matrix gives us the two equations
+    \begin{eqnarray*}
+      x - y &=& 11\\
+      z &=& -1
+    \end{eqnarray*}
+    Since we are asked to write our solutions in terms of $x$, we solve the first equation for $y$ in terms of $x$:
+    $$y = x - 11$$
+    and so we have that the set of solutions is
+    $$\left\{(x, x - 11, -1)  \;\mid\; x\ \text{is a real number}\right\}.$$
+  \end{proof}
+\end{thm}
+
+\newpage
+
+\begin{thm}[20 Points]\label{ex4}
+  Solve the system of equations
+  \begin{eqnarray*}
+    2x - y &=& 0\\
+    x + y + z &=& 18\\
+    x - z &=& 2
+  \end{eqnarray*}
+  If there is no solution, simply write 'no solution.'  If the system is dependent, express your answer in terms of $x$, where $y = y(x)$ and $z = z(x)$.
+  \begin{proof}[Solution]
+    The associated augmented matrix is
+    $$\left(\begin{array}{cccc}
+      2 & -1 & 0 & 0\\
+      1 & 1 & 1 & 18\\
+      1 & 0 & -1 & 2
+    \end{array}\right)$$
+    which reduces by Guass-Jordan row reduction to
+    $$\left(\begin{array}{cccc}
+      1 & 0 & 0 & 5\\
+      0 & 1 & 0 & 10\\
+      0 & 0 & 1 & 3
+    \end{array}\right).$$
+    Therefore the solution to the system is the point in $\mathbb{R}^3$ with coordinates
+    $$(5,10,3).$$
+  \end{proof}
+\end{thm}
+
+
+\newpage
+
+\begin{thm}[20 Points]\label{ex5}
+  Consider the system of equations
+  \begin{eqnarray*}
+    2x + z &=& 0\\
+    2x + y - z &=& 1\\
+    3x + y - z &=& 2.
+  \end{eqnarray*}
+  Given  
+  $$\left(\begin{array}{ccc}
+    2 & 0 & 1\\
+    2 & 1 & -1\\
+    3 & 1 & -1
+  \end{array}\right)^{-1} = \left(\begin{array}{ccc}
+  0 & -1 & 1\\
+  1 & 5 & -4\\
+  1 & 2 & -2
+  \end{array}\right),$$
+  solve the system.
+  \begin{proof}[Solution]
+    Since we are given the inverse of the coefficient matrix, our solution is
+    $$\left(\begin{array}{c}
+      x\\
+      y\\
+      z
+    \end{array}\right) = 
+    \left(\begin{array}{ccc}
+      0 & -1 & 1\\
+      1 & 5 & -4\\
+      1 & 2 & -2
+  \end{array}\right)
+    \left(\begin{array}{c}
+      0\\
+      1\\
+      2
+    \end{array}\right) = 
+    \left(\begin{array}{c}
+      1\\
+      -3\\
+      -2
+    \end{array}\right).$$
+    That is, the solution is the point in $\mathbb{R}^3$ with coordinates
+    $$(1, -3, -2).$$
+  \end{proof}
+\end{thm}
+
+%\newpage
+
+%\begin{thm}[Bonus - 10 Points]\label{bonus}
+%\end{thm}
+
+\end{document}

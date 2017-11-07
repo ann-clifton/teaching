@@ -1,0 +1,392 @@
+\documentclass[12pt]{amsart}
+\usepackage{amsmath,amsthm,amssymb,amsfonts,enumerate,mymath,tikz-cd,fancyhdr}
+\openup 5pt
+\author{Blake Farman\\University of South Carolina}
+\title{Math 170\\Final Exam}
+\date{May 5, 2014}
+\pdfpagewidth 8.5in
+\pdfpageheight 11in
+\usepackage[margin=1in]{geometry}
+
+\renewcommand{\qedsymbol}{}
+
+\begin{document}
+\maketitle
+
+\begin{center}
+  \fbox{\fbox{\parbox{5.5in}{\centering
+        Answer the questions in the spaces provided on the
+        question sheets and turn them in at the end of the class period.
+        If you require extra space, use the back of the page and indicate that you have done so.
+        
+        Unless otherwise stated, all supporting work is required.
+        Unsupported or otherwise mysterious answers will {\bf not receive credit.}}}}
+\end{center}
+
+\vspace{0.2in}
+\makebox[\textwidth]{Name:\enspace\hrulefill}
+\vspace{0.2in}
+
+$$
+\begin{array}{|c|c|c|}
+  \hline
+  \text{Problem} & \text{Points Earned} & \text{Points Possible}\\
+  \hline
+  1 & & 20\\
+  \hline
+  2 & & 20\\
+  \hline
+  3 & & 20\\
+  \hline
+  4 & & 20\\
+  \hline
+  5 & & 20 \\
+  \hline
+ % 6 & & 20 \\
+%  \hline
+%  \text{Bonus} & & 10\\
+%  \hline
+  \text{Total} & & 100\\
+  \hline
+\end{array}
+$$
+
+\newpage
+
+\theoremstyle{plain}
+\newtheorem{thm}{}
+\newtheorem{lem}{Lemma}
+\theoremstyle{definition}
+\newtheorem{defn}{Definition}
+
+\section{Problems}
+
+\begin{thm}[10 Points]\label{ex4}
+  Let $S$ be the set of all cars.
+  Let $A$ be the subset of all cars that are blue.
+  Let $B$ be the subset of all cars that are Volvos.
+  \begin{enumerate}[(a)]
+  \item
+    In words, what does the set $A \cup B$ represent?
+%    \vspace{1.5in}
+  \item
+    In words, what does the set $A \cap B$ represent?
+%    \vspace{1.5in}
+  \item
+    In words, what do the sets $S \setminus A$ and $S \setminus B$ represent?
+%    \vspace{1.5in}
+  \item
+    In words, what does the set $\left(S \setminus A\right) \cap \left(S \setminus B\right)$ represent?
+ %   \vspace{1.5in}
+  \item
+    In words, what does the set $\left(S \setminus A\right) \cup \left(S \setminus B\right)$ represent?
+  \end{enumerate}
+  \begin{proof}[Solution]
+    \begin{enumerate}[(a)]
+    \item
+      The set of all cars that are either blue or a Volvo.
+    \item
+      The set of all blue volvos.
+    \item
+      $S\setminus A$ is the set of all cars that are not blue.
+      $S\setminus B$ is the set of all cars that are not volvos.
+    \item
+      The set of all cars that are not blue Volvos.
+    \item
+      The set of all cars that are either not blue or not a Volvo.
+    \end{enumerate}
+  \end{proof}
+\end{thm}
+
+\newpage
+
+\begin{thm}[10 Points]\label{ex3}
+  How many three letter sequences can be made using the five letters 
+  \begin{center}q, u, a, k, e?\end{center}
+  \begin{proof}[Solution]
+    $$P(5,3) = \frac{5!}{(5 - 3)!} = 5 \cdot 4 \cdot 3 = 60.$$
+  \end{proof}
+    
+\end{thm}
+
+\newpage
+
+\noindent Let $U = \{A,\, B,\, C, D,\, E,\, F,\, G\}$.
+Let 
+$$X = \{A,\, B,\, C\},$$
+$$Y = \{A,\, B,\, E,\, F,\, G\}, \text{and}$$
+$$Z = \{A,\, D,\, E,\, F,\, G\}.$$
+\begin{thm}[10 Points]\label{ex4}
+  Compute the following sets.
+  \begin{enumerate}[(a)]
+  \item
+    $X \cap Y$,
+%    \vspace{1in}
+  \item
+    $X \cup Z$,
+%    \vspace{1in}
+  \item
+    The complement of $Z$ in $U$.
+%    \vspace{1in}
+  \end{enumerate}
+  \begin{proof}[Solution]
+    \begin{enumerate}[(a)]
+    \item
+      $X \cap Y = \{A, B\}$.
+    \item
+      $X \cup Z = \{A,B,C,D,E,F,G\} = U$.
+    \item
+      $U \setminus Z = \{B,C\}$.
+    \end{enumerate}
+  \end{proof}
+\end{thm}
+
+\newpage
+
+\begin{thm}[10 Points]
+  \begin{enumerate}[(a)]
+  \item
+    What is the cardinality of $X \times Z$?
+%    \vspace{1in}
+  \item
+    What is the cardinality of $Y \cup Z$?
+%    \vspace{1in}
+  \end{enumerate}
+  \begin{proof}[Solution]
+    \begin{enumerate}[(a)]
+    \item
+      $\abs{X \times Z} = \abs{X}\cdot \abs{Z} = 3 \cdot 5 = 15$.
+    \item
+      $\abs{Y \cup Z} = \abs{Y} + \abs{Z} - \abs{Y \cap Z} = 5 + 5 - 4 = 6$.
+    \end{enumerate}
+  \end{proof}
+\end{thm}
+\newpage
+
+\begin{thm}[10 Points]\label{ex9}
+  Use a truth table to prove the following logical equivalences.
+  \begin{enumerate}[(a)]
+  \item
+    $$p \vee q \equiv \neg p \Rightarrow q.$$
+%    \vspace{2in}
+  \item
+    $$p \wedge q \equiv \neg\left(p \Rightarrow \neg q\right).$$
+%    \vspace{2in}
+  \end{enumerate}
+  \begin{proof}[Solution]
+    \begin{enumerate}[(a)]
+    \item
+      $$\begin{array}{c|c|c|c|c|c}
+        p & q & p \vee q & \neg p & q & \neg p \Rightarrow q\\
+        \hline
+        T & T & T & F & T & T\\
+        T & F & T & F & F & T\\
+        F & T & T & T & T & T\\
+        F & F & F & T & F & F
+        \end{array}$$
+      The logical equivalence follows because the third and sixth columns are the same.
+      \item
+        $$\begin{array}{c|c|c|c|c|c|c}
+        p & q & p \wedge q & p & q & p \Rightarrow \neg q & \neg(p \Rightarrow \neg q)\\
+        \hline
+        T & T & T & T & F & F & T\\
+        T & F & F & T & T & T & F\\
+        F & T & F & F & F & T & F\\
+        F & F & F & F & T & T & F
+      \end{array}$$
+        The logical equivalence follows because the third and seventh columns are the same.
+    \end{enumerate}
+  \end{proof}
+\end{thm}
+
+\newpage
+\begin{thm}[15 Points]\label{ex2}
+  Solve the system of equations
+  \begin{eqnarray*}
+    x + 2y + z &=& 0\\
+    3x + 7y + z &=& 0.
+  \end{eqnarray*}
+  If there is no solution, simply write 'no solution.'  If the system is dependent, express your answer in terms of $z$.
+%  \vspace{2in}
+  \begin{proof}[Solution]
+    Row reducing the associated augmented matrix gives the matrix
+    $$\left(\begin{array}{cccc}
+      1 & 0 & 5 & 0\\
+      0 & 1 & -2 & 0
+    \end{array}\right)$$
+    which translates to two equations
+    \begin{eqnarray*}
+      x + 5z &=& 0\\
+      y - 2z &=& 0
+    \end{eqnarray*}
+    Since we are asked to present our solution in terms of $z$, we solve the first for $x$ and the second for $y$.
+    The first gives
+    $$x = -5z,$$
+    the second gives
+    $$y = 2z,$$
+    and the solutions are therefore
+    $$\left\{(-5z, 2z, z) \;\mid\; z \in \R\right\}.$$
+  \end{proof}
+\end{thm}
+
+\newpage
+
+\begin{thm}[15 Points]\label{ex3}
+  Solve the system of equations
+  \begin{eqnarray*}
+    x + 3y - z &=& 2\\
+    2x + 5y - z &=& 2\\
+    2x + 8y - 2z &=& 6
+  \end{eqnarray*}
+  If there is no solution, simply write 'no solution.'  If the system is dependent, express your answer in terms of $x$.
+  \begin{proof}[Solution]
+    The associated augmented matrix row reduces to the matrix
+    $$\left(\begin{array}{cccc}
+      1 & 0 & 0 & -2\\
+      0 & 1 & 0 & 1\\
+      0 & 0 & 1 & -1
+    \end{array}\right)$$
+    so the solution is $(-2,1,-1)$.
+  \end{proof}
+\end{thm}
+
+\newpage
+
+\begin{thm}[10 Points]
+  Use {\bf matrix inversion} to solve the given equation
+  $$\left(\begin{array}{rr}
+    1 & 1 \\
+    -3 & -2
+  \end{array}\right) 
+  \left(\begin{array}{r}
+    x \\
+    y
+  \end{array}\right) = 
+  \left(\begin{array}{r}
+    5 \\
+    7
+  \end{array}\right)$$
+  for $x$ and $y$.
+  %\begin{eqnarray*}
+  %    -4x + y &=& 4\\
+  %    -4x - 3y &=& 4.
+  %  \end{eqnarray*}
+  \begin{proof}[Solutions]
+    The determinant of 
+    $$\left(\begin{array}{rr}
+    1 & 1 \\
+    -3 & -2
+  \end{array}\right)$$
+    is 
+    $$1 \cdot -2 - 1 \cdot -3 = -2 + 3 = 1$$
+    so the inverse is
+    $$\left(\begin{array}{rr}
+      -2 & -1 \\
+      3 & 1
+  \end{array}\right).$$
+    The solution is therefore
+    $$\left(\begin{array}{r}
+    x \\
+    y
+  \end{array}\right) = 
+    \left(\begin{array}{rr}
+      -2 & -1 \\
+      3 & 1
+  \end{array}\right)
+    \left(\begin{array}{r}
+    5 \\
+    7
+  \end{array}\right) = \left(\begin{array}{r}
+    -17 \\
+    22
+  \end{array}\right)$$
+  \end{proof}
+\end{thm}
+\newpage
+
+
+\begin{thm}[10 Points]\label{ex1}
+  A bag contains five red marbles, two green marbles, one lavender marble, one yellow marble, and three orange marbles.
+  \begin{enumerate}[(a)]
+  \item
+    How many sets of four marbles have only red marbles?
+%    \vspace{2in}
+  \item
+    How many sets of four marbles do not have any orange marbles and have {\bf at most} two red marbles?
+%    \vspace{2in}
+  \end{enumerate}
+  
+  \begin{proof}[Solution]
+    
+    \begin{enumerate}[(a)]
+    \item
+      There are
+      $${5 \choose 4} = \frac{5!}{(5 - 4)!4!} = \frac{5!}{4!} = 5$$
+      ways to choose 4 marbles from the 5 red marbles.
+    \item
+      Note that without the orange marbles, there are 9 total marbles.
+      There are three cases.
+      Case 1: There are no red marbles.
+      Without the red marbles, there are then 4 marbles from which to choose.
+      Hence there is  
+      $${4 \choose 4} = 1$$
+      way to do this.
+      
+      Case 2: There is one red marble.
+      There are
+      $${5 \choose 1} = 5$$
+      ways to choose a red marble and
+      $${4 \choose 3} = 4$$
+      ways to choose the other three marbles.
+      Hence there are $5 \cdot 4 = 20$ ways to choose a set of four with one red marble.
+      
+      Case 3: There are two red marbles.
+      There are 
+      $${5 \choose 2} = 10$$
+      ways to choose 2 red marbles and 
+      $${4 \choose 2} = 6$$
+      ways to choose the other two marbles.
+      Hence there are $10 \cdot 6 = 60$ ways to choose a set of four with two red marbles.
+      
+      The number of ways to choose a set of four marbles with at most 2 red marbles is therefore
+      $$1 + 20 + 60 = 81$$
+    \end{enumerate}
+  \end{proof}
+\end{thm}
+
+\newpage
+
+%\begin{thm}[Bonus - 10 Points]\label{bonus}
+%  Let 
+%  $$A = \left(\begin{array}{cc} 
+%    a & b\\
+%    c & d
+%  \end{array}\right)$$
+%  be a matrix with entries real numbers.
+%  You may assume that $a \neq 0$ and $ad - bc \neq 0$.
+%  Use Gauss-Jordan row reduction on the appropriate augmented matrix to compute the inverse of $A$.
+%  NOTE:  I would like you to explicitly compute the inverse of $A$, not simply write down the matrix $A^{-1}$.
+%\end{thm}
+
+%\newpage
+%\section{Useful Formulae}
+
+%\begin{itemize}
+%  \newcommand{\INT}{\operatorname{INT}}
+%  \newcommand{\PV}{\operatorname{PV}}
+%  \newcommand{\FV}{\operatorname{FV}}
+%  \newcommand{\PMT}{\operatorname{PMT}}
+%\item
+%  $\INT = \FV - \PV$
+%\item
+%  $\FV = \PV(1 + rt)$
+%\item
+%  $\FV = \PV \left(1 + \frac{r}{m}\right)^{mt}$
+%\item
+%  $r_\text{eff} = \displaystyle{\left( 1 + \frac{r_\text{nom}}{m}\right)^m - 1}$
+%\item
+%  $\FV = \PMT \displaystyle{\frac{(1 + i)^n - 1}{i}},\, \text{where}\ i = \frac{r}{m}\ \text{and}\ n = mt$
+%\item
+%  $\PV = \PMT \displaystyle{\frac{1 - (1 + i)^{-n}}{i}},\, \text{where}\ i = \frac{r}{m}\ \text{and}\ n = mt$
+%\end{itemize}
+\end{document}

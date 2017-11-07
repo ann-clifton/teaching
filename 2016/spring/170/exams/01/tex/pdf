@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+NUM=01
+CLASS=170
+NAME="exam${NUM}-${CLASS}"
+PDFDIR=../pdf/
+#FILE="$NAME.tex"
+
+texi2pdf $NAME-v1.tex 
+texi2pdf $NAME-v2.tex 
+texi2pdf $NAME-sds.tex
+
+if [ ! -d ../pdf ]; then
+    mkdir ../pdf
+fi
+
+mv $NAME-v1.pdf ../pdf
+mv $NAME-v2.pdf ../pdf
+mv $NAME-sds.pdf ../pdf
+
+rm -fr *.log
+rm -fr *.aux
+rm -fr *.bbl
+rm -fr *.blg
+rm -fr *~
+rm -fr *.out
