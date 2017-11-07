@@ -1,0 +1,285 @@
+\documentclass[12pt]{amsart}
+\usepackage{amsmath,amsthm,amssymb,amsfonts,enumerate,mymath,tikz-cd,fancyhdr}
+\openup 5pt
+\author{Blake Farman\\University of South Carolina}
+\title{Math 111: Exam 01}
+\date{May 24, 2013}
+\pdfpagewidth 8.5in
+\pdfpageheight 11in
+\usepackage[margin=1in]{geometry}
+
+\renewcommand{\qedsymbol}{}
+
+\begin{document}
+\maketitle
+
+\begin{center}
+\fbox{\fbox{\parbox{5.5in}{\centering
+Answer the questions in the spaces provided on the
+question sheets and turn them in at the end of the class period. 
+Unless otherwise stated, all supporting work is required.}}}
+\end{center}
+
+\vspace{0.2in}
+\makebox[\textwidth]{Name:\enspace\hrulefill}
+\vspace{0.2in}
+
+\theoremstyle{plain}
+\newtheorem{thm}{}
+\newtheorem{lem}{Lemma}
+\theoremstyle{definition}
+\newtheorem{defn}{Definition}
+
+\section{Definitions}
+\begin{thm}[3 Points]\label{ex1}
+  State the three Special Product Formulas for algebraic expressions $A$ and $B$:
+  \begin{enumerate}[(a)]
+  \item
+    Sum and difference of same terms:
+  \item
+    Square of a sum:
+  \item
+    Square of a difference:
+  \end{enumerate}
+  
+  \begin{proof}[Solution]
+    \begin{enumerate}[(a)]
+    \item
+      The sum and difference of same terms is given by
+      $$(A + B)(A - B) = A^2 - B^2.$$
+    \item
+      The square of a sum is given by
+      $$(A + B)^2 = A^2 + 2AB + B^2.$$
+    \item
+      The square of a difference is given by
+      $$(A - B)^2 = A^2 - 2AB + B^2.$$
+    \end{enumerate}
+  \end{proof}
+\end{thm}
+
+\begin{thm}[6 Points]\label{ex2}
+  Let $a, b$ be non-zero real numbers and $m, n$ integers.
+  Fill in the blanks
+  \begin{enumerate}[(i)]
+  \item
+    $\displaystyle{a^0 =\ \line(1,0){40}}$,
+  \item
+    $\displaystyle{a^{-n} =\ \line(1,0){40}}.$
+  \item
+    $\displaystyle{a^m \cdot a^n =\ \line(1,0){40}}$
+  \item
+    $\displaystyle{\frac{a^m}{a^n}\ \line(1,0){40}}$
+  \item
+    $\displaystyle{\left(a \cdot b\right)^n\ \line(1,0){40}}$
+  \item
+    $\displaystyle{\left(\frac{a}{b}\right)^n\ \line(1,0){40}}$
+  \end{enumerate}
+  
+  \begin{proof}[Solution]
+    The identities are as follows
+    \begin{enumerate}[(i)]
+    \item
+      $\displaystyle{a^0 = 1}$,
+    \item
+      $\displaystyle{a^{-n} = \frac{1}{a^n}}.$
+    \item
+      $\displaystyle{a^m \cdot a^n = a^{m + n}}.$
+    \item
+      $\displaystyle{\frac{a^m}{a^n} = a^{m - n}}.$
+    \item
+      $\displaystyle{\left( a \cdot b \right)^n = a^nb^n}.$
+    \item
+      $\displaystyle{\left( \frac{a}{b} \right)^n = \frac{a^n}{b^n}}.$
+    \end{enumerate}
+  \end{proof}
+\end{thm}
+
+
+
+\begin{thm}[2 Points]\label{ex3}
+  State the general form of a quadratic equation and the Quadratic Formula.
+  
+  \begin{proof}[Solution]
+    The general form of a quadratic equation is $ax^2 + bx + c = 0$.
+    The Quadratic Formula, which gives the roots of these equations, is
+    $$x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}.$$
+  \end{proof}
+\end{thm}
+
+\begin{thm}[3 Points]\label{ex4}
+  Fill in the blanks:\\
+  \begin{center}
+    To make $x^2 + bx$ a perfect square, add $\fbox{\raisebox{10px}{\hspace{10px}}}$\,.
+    This gives the perfect square
+    $$x^2 + bx + \fbox{\raisebox{10px}{\hspace{10px}}} = \left(x + \fbox{\raisebox{10px}{\hspace{10px}}}\,\right)^2.$$
+  \end{center}
+
+  \begin{proof}[Solution]
+    To make $x^2 + bx$ a perfect square, add $\displaystyle{\left(\frac{b}{2}\right)^2}$.
+    This gives the perfect square
+    $$x^2 + bx + \left(\frac{b}{2}\right)^2 = \left(x + \frac{b}{2}\right)^2.$$
+  \end{proof}
+\end{thm}
+
+\begin{thm}[3 Points]\label{ex5}
+  Fill in the blanks:\\
+  \begin{center}
+    A variable $y$ is a function of a variable $x$ if each value of\ \line(1,0){40}\ corresponds to exactly\ \line(1,0){40}\ value of\ \line(1,0){40}.
+  \end{center}
+
+  \begin{proof}[Solution]
+    A variable $y$ is a function of a variable $x$ if each value of $x$ corresponds to exactly one value of $y$.
+  \end{proof}
+\end{thm}
+
+\begin{thm}[3 Points]\label{ex6}
+  Expand the following product $(a + b)(c + d)$
+  \begin{enumerate}[(a)]
+    \item
+      using the distributive method.
+    \item
+      using FOIL.
+  \end{enumerate}
+
+  \begin{proof}[Solution]
+    \begin{enumerate}[(a)]
+    \item
+      Using the distributive method from left to right, we have 
+      $$(a+ b)(c + d) = (a + b)c + (a + b)d = ac + bc + ad + bc.$$
+      Similarly, from right to left,
+      $$(a + b)(c + d) = a(c + d) + b(c + d) = ac + ad + bc + bd.$$
+    \item
+      Using the FOIL method we have
+      $$(a + b)(c + d) = ac + ad + bc + bd.$$
+    \end{enumerate}
+  \end{proof}
+\end{thm}
+
+
+\section{Exercises}
+\begin{thm}[20 Points]\label{ex7}
+  Consider the equation
+  $$x^2 + 3y = 9.$$
+  \begin{enumerate}[(a)]
+    \item
+      Does this equation define $y$ as function of $x$?  
+      {\it Briefly} justify why or why not.
+      If it does, give the value of $y$ when $x = 3$.
+    \item
+      Does this equation define $x$ as function of $y$?  {\it Briefly} justify why or why not.
+      If it does, give the value of $x$ when $y = 5/3$.
+  \end{enumerate}
+  
+  \begin{proof}[Solution]
+    \begin{enumerate}[(a)]
+    \item
+      Yes, this equation does define $y$ as a function of $x$.
+      To see this, solve for $y$ in terms of $x$ to get
+      $$y = \frac{9 - x^2}{3},$$
+      and so we see that for every input $x$, there is exactly one output value $y$.
+
+      When $x = 3$, we have 
+      $$y = \frac{9 - (3)^2}{3} = \frac{9 - 9}{3} = 0.$$
+    \item
+      This equation does {\it not} define $x$ as a function of $y$.
+      Subtracting $3y$ from both sides of the equation gives us
+      $$x^2 = 9 - 3y.$$
+      To solve for $x$, we take the square root of both sides to obtain
+      $$x = \pm\sqrt{9 - 3y}.$$
+      This means that for each value of $y$, there are {\it two} values of $x$ and hence this is not a function.
+    \end{enumerate}
+  \end{proof}
+\end{thm}
+
+\begin{thm}[20 Points]\label{ex8}
+  Add the following rational expressions and simplify the result,
+  $$\frac{2}{x^2 - 1} + \frac{1}{x+1}.$$
+  
+  \begin{proof}[Solution]
+    We first observe that as the difference of two squares, we have the factorization $x^2 - 1 = (x + 1)(x -1)$.
+    Hence we find a common denominator by multiplying the numerator and denominator of the second term by $x - 1$,
+    \begin{eqnarray*}
+      \frac{2}{x^2 - 1} + \frac{1}{x+1} &=& \frac{2}{(x + 1)(x - 1)} + \frac{x - 1}{x - 1} \cdot \left(\frac{1}{x+1}\right)\\
+      &=& \frac{2 + (x - 1)}{(x+1)(x-1)}\\
+      &=& \frac{x + 1}{(x + 1)(x - 1)}\\
+      &=& \frac{1}{x - 1}.      
+    \end{eqnarray*}
+  \end{proof}
+\end{thm}
+
+\begin{thm}[20 Points]\label{ex9}
+  Solve the equation
+  $$2x^2 - 8x + 4 = 0.$$
+
+  \begin{proof}[Solution]
+    We can solve this equation using the Quadratic Formula.
+    Namely,
+    \begin{eqnarray*}
+      x &=& \frac{8 \pm \sqrt{(-8)^2 - 4(2)(4)}}{2(2)}\\
+      &=& \frac{8 \pm \sqrt{64 - 32}}{4}\\
+      &=& \frac{8 \pm \sqrt{32}}{4}\\
+      &=& \frac{8 \pm \sqrt{2^5}}{4}\\
+      &=& \frac{8 \pm 4\sqrt{2}}{4}\\
+      &=& \frac{4(2 \pm \sqrt{2})}{4}\\
+      &=& 2 \pm \sqrt{2}.
+    \end{eqnarray*}
+
+    Alternatively, this can be done by completing the square.
+    First we divide both sides of the equation by $2$ to obtain $x^2 - 4x + 2 = 0.$
+    Since the signs alternate through the expression, the best match is to turn this equation into a square of a difference, which has the form $(A - B)^2 = A^2 - 2AB + B^2$.
+    Subtracting $2$ from both sides, we have 
+    $$x^2 - 4x = -2,$$
+    we see that if we add $\displaystyle{\left(\frac{4}{2}\right)^2} = (2)^2 = 4$ to both sides, we have
+    $$x^2 - 4x + 4 = (x - 2)^2 = 2.$$
+    Taking the square root of both sides we have 
+    $$x - 2 = \pm \sqrt{2}$$
+    and then adding $2$ to boths sides gives us our final answer,
+    $$x = 2 \pm \sqrt{2}$$.
+  \end{proof}
+\end{thm}
+
+\begin{thm}[20 Points]\label{ex10}
+  Solve the inequality $$x^2 \geq 9.$$
+  Express the solution using interval notation and graph the solution.
+  
+  \begin{proof}[Solution]
+    By first subtracting $9$ from both sides of the inequality, we have the inequality
+    $$x^2 - 9 = (x - 3)(x + 3) \geq 0.$$
+    Hence when $x = 3$ or $x = -3$, the inequality is satisifed.
+    It remains only to check points between $-3$ and $3$, to the left of $-3$, and to the right of $3$.
+
+    For the point between $-3$ and $3$, we choose $x = 0$ and see that
+    $$0^2 - 9 = -9 < 0,$$
+    so the inequality is {\it not} satisified in the region $(-3,3)$.
+    For the point to the left of $-3$, we choose $x = -4$ and get
+    $$(-4)^2 - 9 = 16 - 9 = 7 \geq 0,$$
+    which shows us that the inequality is satisified to the left of $-3$.
+    Similarly, for $x = 4$ we have
+    $$(4)^2 - 9 = 16 - 9 = 7 \geq 0,$$
+    which shows us that the inequality is satisfied to the right of $3$.
+    Therefore our solutions lie in the set
+    $$(-\infty, -3] \cup [3, \infty).$$
+  \end{proof}
+\end{thm}
+
+\begin{thm}[Bonus - 10 Points]\label{bonus}
+  Derive the Quadratic Formula, as stated in Problem~\ref{ex3}.
+  [Hint: Use Problem~\ref{ex4}].
+  
+  \begin{proof}[Solution]
+    To derive the Quadratic Formula, we use the equation $ax^2 + bx + c = 0$ and completing the square.
+    First, divide both sides of the equation by $a$ to obtain
+    $$x^2 + \frac{b}{a}x + \frac{c}{a} = 0$$
+    and then subtract $\frac{c}{a}$ from both sides, which yields
+    $$x^2 + \frac{b}{a}x = -\frac{c}{a}.$$
+    We now complete the square by adding to both sides the quantity $\displaystyle{\left(\frac{b}{2a}\right)^2},$
+    $$x^2 + \frac{b}{a}x + \left(\frac{b}{2a}\right)^2 = \left(x + \left(\frac{b}{2a}\right) \right)^2 = \left(\frac{b}{2a}\right)^2 -\frac{c}{a} = \frac{b^2}{4a^2} - \frac{c}{a}.$$
+    Using the common denominator $4a^2$ on the right-hand side, we have
+    $$\left(x + \left(\frac{b}{2a}\right) \right)^2 = \frac{b^2}{4a^2} - \frac{4a}{4a} \cdot \left(\frac{c}{a}\right) = \frac{b^2 - 4ac}{4a^2}.$$
+    Next we take the square root of both sides to obtain
+    $$x + \frac{b}{2a} = \pm \sqrt{\frac{b^2 - 4ac}{4a^2}} = \pm \frac{\sqrt{b^2 - 4ac}}{\sqrt{4a^2}} = \pm\frac{\sqrt{b^2 - 4ac}}{2a}.$$
+    Finally, subtracting $\frac{b}{2a}$ from both sides gives the familiar equation
+    $$x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}.$$
+  \end{proof}
+\end{thm}
+\end{document}

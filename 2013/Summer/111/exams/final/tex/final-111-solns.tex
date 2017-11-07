@@ -1,0 +1,274 @@
+\documentclass[12pt]{amsart}
+\usepackage{amsmath,amsthm,amssymb,amsfonts,enumerate,mymath,tikz-cd,fancyhdr}
+\openup 5pt
+\author{Blake Farman\\University of South Carolina}
+\title{Math 111: Exam 03}
+\date{June 17, 2013}
+\pdfpagewidth 8.5in
+\pdfpageheight 11in
+\usepackage[margin=1in]{geometry}
+
+\renewcommand{\qedsymbol}{}
+
+\begin{document}
+\maketitle
+
+\begin{center}
+  \fbox{\fbox{\parbox{5.5in}{\centering
+        Answer the questions in the spaces provided on the
+        question sheets and turn them in at the end of the class period. 
+        Unless otherwise stated, all supporting work is required.}}}
+\end{center}
+
+\vspace{0.2in}
+\makebox[\textwidth]{Name:\enspace\hrulefill}
+\vspace{0.2in}
+
+\theoremstyle{plain}
+\newtheorem{thm}{}
+\newtheorem{lem}{Lemma}
+\theoremstyle{definition}
+\newtheorem{defn}{Definition}
+
+\section{Definitions}
+\begin{thm}[4 Points]\label{ex1}
+  Let $P$ be a principal investment, $r$ the interest rate, $n$ the number of times interest compounds per year, and $t$ the number of years since the investment.
+  State the formula for computing compound interest.
+  
+  \begin{proof}[Solution]
+    The formula for compound interest is 
+    $$I(t) = P\left(1 + \frac{r}{n}\right)^{nt}.$$
+  \end{proof}
+\end{thm}
+
+\begin{thm}[2 Points]\label{ex2}
+  For an exponential function, $f(x)$, state the formula for percentage rate of change.
+  
+  \begin{proof}[Solution]
+    The formula for percentage rate of change is
+    $$r = \frac{f(x + 1) - f(x)}{f(x)}.$$
+  \end{proof}
+\end{thm}
+
+\begin{thm}[4 Points]\label{ex3}
+  Let $a$ be a fixed positive number.
+  The base $a$ logarithm of $x$ is defined by
+  $$\log_a(x) = y\  \text{if and only if}\ \ \line(1,0){40}.$$
+  
+  \begin{proof}[Solution]
+    The base $a$ logarithm of $x$ is defined by
+    $$\log_a(x) = y\  \text{if and only if}\ a^y = x.$$
+  \end{proof}
+\end{thm}
+
+
+
+\begin{thm}[4 Points]\label{ex4}
+  Let $a$ be a positive number.  Fill in the blanks.
+  \begin{enumerate}[(a)]
+  \item
+    $\log_a(1) = \ \line(1,0){40}$.
+  \item
+    $\log_a(a) = \ \line(1,0){40}$.
+  \item
+    $\log_a(a^x) = \ \line(1,0){40}$.
+  \item
+    $a^{\log_a(x)} = \ \line(1,0){40}$.
+  \end{enumerate}
+
+  \begin{proof}[Solution]
+    \begin{enumerate}[(a)]
+    \item
+      $\log_a(1) = 0$.
+    \item
+      $\log_a(a) = 1$.
+    \item
+      $\log_a(a^x) = x$.
+    \item
+      $a^{\log_a(x)} = x$.
+    \end{enumerate}
+  \end{proof}  
+\end{thm}
+
+\begin{thm}[3 Points]
+  Let $a$ and $C$ be fixed positive numbers.  Fill in the blanks.
+  \begin{enumerate}[(a)]
+  \item
+    $\log_a(xy) = \ \line(1,0){80}$.
+  \item
+    $\log_a\left(\frac{x}{y}\right) = \ \line(1,0){80}$.
+  \item
+    $\log_a(x^C) = \ \line(1,0){80}$.
+  \end{enumerate}
+
+  \begin{proof}[Solution]
+    \begin{enumerate}[(a)]
+    \item
+      $\log_a(xy) = \log_a(x) + \log_a(y)$.
+    \item
+      $\log_a\left(\frac{x}{y}\right) = \log_a(x) - \log_a(y)$.
+    \item
+      $\log_a(x^C) = C \log_a(x)$.
+    \end{enumerate}
+  \end{proof}
+
+\end{thm}
+
+\begin{thm}[2 Points]
+  Let $a$ and $b$ be fixed positive numbers.
+  Use the Change of Base formula to rewrite $\log_a(x)$ with base $b$.
+
+  \begin{proof}[Solution]
+    The Change of Base Formula states
+    $$\log_a(x) = \frac{\log_b(x)}{\log_b(a)}.$$
+  \end{proof}
+\end{thm}
+
+\begin{thm}[1 Point]
+  State the Horizontal Line Test.
+  
+  \begin{proof}[Solution]
+    The Horizontal Line Test states that the graph of a function is injective (one-to-one) if and only if any horizontal line passes through the graph in at most one place.
+  \end{proof}
+\end{thm}
+
+
+\section{Problems}
+
+\begin{thm}[16 Points]\label{ex5}
+  A \$400 investment is made in an account with an annual interest rate of 10\% that compounds semiannually.
+  \begin{enumerate}[(a)]
+  \item
+    Give the formula for the interest accrued as a function of time, $t$. 
+    [Hint: If you compute the growth factor without using decimals, this will make the next computation significantly easier.]
+  \item
+    Compute the interest accrued after 1 year.
+  \item
+    Give the Annual Percentage Yield for the investment.
+  \end{enumerate}
+  
+  \begin{proof}[Solution]
+    \begin{enumerate}[(a)]
+    \item
+      First compute the growth factor,
+      $$a = \left(1 + \frac{10}{200}\right)^2 = \left(\frac{210}{200}\right)^2 = \frac{21^2}{20^2} = \frac{441}{400}.$$
+      The formula for the interest accrued as a function of time, $t$, is then
+      $$I = 400 \left(\frac{441}{400}\right)^t.$$
+    \item
+      The interest accrued after 1 year is
+      $$I(1) - I(0) = 400 \left(\frac{441}{400}\right)^1 - 400= 400 - 441 = 41.$$
+    \item
+      Using the formula for the Annual Percentage Yield for the investment we have
+      $$\text{APY} = \frac{I(1) - I(0)}{I(0)} = \frac{41}{400}.$$
+    \end{enumerate}
+  \end{proof}
+\end{thm}
+
+\begin{thm}[16 Points]\label{ex10}
+  Compute the following logarithms.
+  \begin{enumerate}[(a)]
+  \item
+    $\log_{3}(27)$.
+  \item
+    $\log_{3}(81)$.
+  \item
+    $\log_{16}(8)$.
+  \item
+    $\log_{27}(81)$.
+  \end{enumerate}
+
+  \begin{proof}[Solution]
+    \begin{enumerate}[(a)]
+    \item
+      $\log_{3}(27) = \log_3(3^3) = 3$.
+    \item
+      $\log_{3}(81) = \log_3(3^4) = 4$.
+    \item
+      Using the Change of Base formula we have
+      $$\log_{16}(8) = \frac{\log_2(8)}{\log_2(16)} = \frac{3}{4}.$$
+    \item
+      Using the Change of Base formula we have
+      $$\log_{27}(81) = \frac{\log_3(81)}{\log_3(27)} = \frac{4}{3}.$$
+    \end{enumerate}
+  \end{proof}
+\end{thm}
+
+\begin{thm}[16 Points]\label{ex9}
+  \begin{enumerate}[(a)]
+  \item
+    Simplify the expression 
+    $$2\log_2(\sqrt{x + 2}) - \log_2\left(\frac{1}{x - 2}\right).$$
+  \item
+    Solve the following equation for $x$
+    $$ 2\log_2(\sqrt{x + 2}) - \log_2\left(\frac{1}{x - 2}\right) = 5 $$
+  \end{enumerate}
+  
+  \begin{proof}[Solution]
+    \begin{enumerate}[(a)]
+    \item
+      The expression simplifies to 
+      \begin{eqnarray*}
+        2\log_2(\sqrt{x + 2}) - \log_2\left(\frac{1}{x - 2}\right) &=& \log_2((\sqrt{x + 2})^2) - (\log_2(1) -\log_2(x - 2))\\
+        &=& \log_2(x + 2) - (0 -  \log_2(x - 2))\\
+        &=& \log_2(x + 2) + \log_2(x - 2)\\
+        &=& \log_2((x + 2)(x - 2))\\
+        &=& \log_2(x^2 - 4).
+      \end{eqnarray*}
+    \item
+      Using the result of part (a) we have
+      $$2\log_2(\sqrt{x + 2}) - \log_2\left(\frac{1}{x - 2}\right) = \log_2(x^2 - 4) = 5.$$
+      Then it follows that
+      $$2^{\log_2(x^2 - 4)} = x^2 - 4 = 2^5 = 32.$$
+      Adding $4$ to both sides we have $x^2 = 36$ and so $x = \pm 6$.
+      Since $-6 + 2 < 0$ and $-6 - 2 < 0$, it follows $-6$ is not in the domain of either $\log_2(\sqrt{x + 2})$ or $\log_2\left(\frac{1}{x -2}\right)$ and so the only solution is $x = 6$.
+    \end{enumerate}
+  \end{proof}
+\end{thm}
+
+\begin{thm}[16 Points]\label{ex7}
+  Solve the following equation for $x$
+  $$2^{-4x} = 16 \cdot 2^{x^2}$$
+  
+  \begin{proof}[Solution]
+    Multiplying both sides of the equation by $2^{4x}$ and dividing by $16$ we have
+    $$2^{x^2} \cdot 2^{4x} = 2^{x^2 + 4x} = \frac{1}{16}.$$
+    Taking the base $2$ logarithm of both sides we have
+    $$x^2 + 4x = -4$$
+    which gives $x^2 + 4x + 4 = (x + 2)^2 = 0$.
+    Therefore the only solution is $x = -2$.
+  \end{proof}
+\end{thm}
+
+\begin{thm}[16 Points]
+  Let $f(x) = \sqrt{1 - x^2}$.  Determine the domain of this function.
+  Use this information to carefully justify whether this function is invertible.
+
+  \begin{proof}[Solution]
+    The domain of this function are all the values of $x$ satisfying $1 - x^2 = (1 + x)(1 - x) \geq 0$.
+    Checking the points $x = -2$, $x = 0$, and $x = 2$ we have
+    $(1 - 2)(1 + 2) = -3 < 0$, $(1 + 0)(1 - 0) = 1 > 0$, and $(1 + 2)(1 - 2) = -1 < 0$.
+    Hence the domain is the set $[-1, 1]$.
+    Since $f(1) = f(-1) = 0$, this function fails the Horizontal Line Test for the line $y = 0$ and so it is not injective.
+    Therefore $f$ is not invertible.
+  \end{proof}
+\end{thm}
+
+\begin{thm}[Bonus - 10 Points]\label{bonus}
+  Let $f(x)$ be as in the last problem.
+  Compute the composition $$f \circ f (x) = f(f(x)).$$
+  Determine for which values of $x$ the function $f$ is invertible and, on this set, find its inverse.
+  
+  \begin{proof}[Solution]
+    By composing the function $f$ with itself we get
+    $$f(f(x)) = \sqrt{1 - (\sqrt{1 - x^2})^2} = \sqrt{1 - (1 - x^2)} = \sqrt{x^2}.$$
+    Note that by squaring $x$ and then taking the square root, we are always getting the absolute value of $x$.
+    That is if $0 \leq x \leq 1$, 
+    $$f(f(-x)) = \sqrt{(-x)^2} = \sqrt{x^2} = x\ \text{and}\ f(f(x)) = \sqrt{(x)^2} = \sqrt{x^2} = x.$$
+    This tells us that the function $f(x)$ with domain $[0,1]$ is its own inverse.
+    %The second is that we observe for all numbers $-1 \leq x \leq 0$, $f(f(x)) \neq x$ and so $f$ is not the inverse of the function $f$ defined on $[-1,0]$. 
+    %However, not all is lost; the problem is rectified by using $-f(t)$.  
+    %Namely, if $0 \leq x \leq 1$, then 
+    %$$-f(f(t)) = $
+  \end{proof}
+\end{thm}
+\end{document}

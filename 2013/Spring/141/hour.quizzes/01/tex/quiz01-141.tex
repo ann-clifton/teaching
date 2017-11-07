@@ -1,0 +1,123 @@
+\documentclass[10pt]{amsart}
+\usepackage{amsmath,amsthm,amssymb,amsfonts,enumerate,mymath,tikz-cd,fancyhdr}
+\openup 5pt
+\author{Blake Farman\\University of South Carolina}
+\title{Math 141: Hour Quiz 1}
+\date{February 21, 2013}
+\pdfpagewidth 8.5in
+\pdfpageheight 11in
+\usepackage[margin=1in]{geometry}
+
+\begin{document}
+\maketitle
+
+\begin{center}
+\fbox{\fbox{\parbox{5.5in}{\centering
+Answer the questions in the spaces provided on the
+question sheets and turn them in at the end of the lab. 
+You may use all prior lab work (homework, lab activities, etc.).
+However, you may not work with any other student.
+Unless otherwise stated, no supporting work is required.}}}
+\end{center}
+
+\vspace{0.2in}
+\makebox[\textwidth]{Name and section:\enspace\hrulefill}
+\vspace{0.2in}
+
+\theoremstyle{plain}
+\newtheorem{thm}{}
+\newtheorem{lem}{Lemma}
+\theoremstyle{definition}
+\newtheorem{defn}{Definition}
+
+\begin{thm}[4 Points]
+  Let $f(x) = x + \frac{1}{x}$ and $g(x) = \frac{x+1}{x + 2}$.
+  \begin{enumerate}[(a)]
+  \item
+    What is the domain of $f(x)$?
+    \vspace{.5in}
+  \item
+    What is the domain of $g(x)$?
+    \vspace{.5in}
+  \item
+    Compute $(f \circ g)(x)$.
+    Simplify your answer.
+    \vspace{.5in}
+  \item
+    Find the domain of $(f \circ g)(x)$. 
+    \vspace{.5in}
+  \end{enumerate}
+\end{thm}
+
+\begin{thm}[1 Point]
+  Compute $\lim_{x \rightarrow 0} \frac{\sqrt{x + 4} - 2}{x}$.
+\end{thm}
+\pagebreak
+\begin{thm}[2 Points]
+  Let $f(x) = \frac{t^2 - 9}{2t^2 +7t + 3}$.
+  \begin{enumerate}[(a)]
+  \item
+    Compute $\lim_{t \rightarrow -3} f(t).$
+    \vspace{.5in}
+  \item
+    Justify whether $f(t)$ is continuous at $t = -3$?
+    If not, how can you make $f(t)$ continuous at $t = -3$?
+    \vspace{1.0in}
+  \end{enumerate}
+\end{thm}
+
+\begin{thm}[4 Points]
+  Let $f(x) = \frac{2x^2 + x - 1}{x^2 + x - 2}$.
+  \begin{enumerate}[(a)]
+  \item
+    What is the domain of $f(x)$?
+    \vspace{.5in}
+  \item
+    Find all horizontal asymptotes for $f(x)$.
+    \vspace{.5in}
+  \item
+    Find all vertical asymptotes for $f(x)$.
+    \vspace{.5in}
+  \item
+    Use this information to sketch a graph of $f(x)$.
+    \vspace{.5in}
+  \end{enumerate}
+\end{thm}
+\pagebreak
+\begin{thm}[2 Points]
+  A ball is thrown into the air with an initial velocity of $40$ ft/s.
+  Its height (in feet) after $t$ seconds is given by $f(t) = 40t - 16t^2$.
+  \begin{enumerate}[(a)]
+  \item
+    Find the velocity when $t = 2$.
+    \vspace{.5in}
+  \item
+    Find the tangent line at $t = 2$.
+    \vspace{.5in}
+  \end{enumerate}
+\end{thm}
+
+\begin{thm}[2 Points]
+  Let $f(x) = 2x^3 + x^2 + 2$.
+  \begin{enumerate}[(a)]
+    \item
+      Use the Intermediate Value Theorem to briefly justify that $f(x)$ has a root, $c$, in the interval (-2,-1).
+      [Hint: You may find it helpful to plot the function in Maple.]
+      \vspace{1.5in}
+    \item
+      Use the fsolve command to find the value of $c$.
+      Approximate this value to 5 decimal places.
+      \vspace{.5in}
+  \end{enumerate}
+\end{thm}
+
+\begin{thm}[Bonus - 5 Points]
+  Decide whether the following statement is true or false:
+  \begin{quotation}
+    Let $f(x)$ be a function defined on the closed interval $[a,b]$ with $f(a) \neq f(b)$.
+    For every real number $t$ satisfying $f(a) < t < f(b)$, there exists a real number $c$ satisfying $a < c < b$ such that $f(c) = t$.
+  \end{quotation}
+  If you believe it to be true, briefly explain why.
+  If you believe it to be false, provide a function $f(x)$ and a closed interval $[a,b]$ where this statement fails to be true.
+\end{thm}
+\end{document}

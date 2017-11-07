@@ -1,0 +1,333 @@
+\documentclass[12pt]{amsart}
+\usepackage{amsmath,amsthm,amssymb,amsfonts,enumerate, paralist,xcolor,mymath}
+\openup 5pt
+\author{Blake Farman\\University of South Carolina}
+\title{Math 111:\\Homework 08 Solutions}
+\date{May 22, 2013}
+\pdfpagewidth 8.5in
+\pdfpageheight 11in
+\usepackage[margin=1in]{geometry}
+
+\newtheorem{thm}{}
+
+\renewcommand{\qedsymbol}{}
+
+\begin{document}
+\maketitle
+
+\section*{4.1}
+
+\setcounter{thm}{15} 
+\begin{thm}
+  Find the given logarithm.
+  \begin{enumerate}[(a)]
+  \item
+    $\log_9(1)$,
+  \item
+    $\log_9(9^8)$,
+  \item
+    $\log_9(9)$.
+  \end{enumerate}
+
+  \begin{proof}[Solution]
+    \begin{enumerate}[(a)]
+    \item
+      Since $1 = 9^0$, we have $\log_9(1) = 0$.
+    \item
+      Here $\log_9(9^8) = 8$.
+    \item
+      Here $\log_9(9^1) = 1$.
+    \end{enumerate}
+  \end{proof}
+\end{thm}
+
+\setcounter{thm}{17} 
+\begin{thm}
+  Find the given logarithm.
+  \begin{enumerate}[(a)]
+  \item
+    $\log_7(1)$,
+  \item
+    $\log_7(49)$,
+  \item
+    $\log_7(\frac{1}{49})$.
+  \end{enumerate}
+  
+  \begin{proof}[Solution]
+    \begin{enumerate}[(a)]
+    \item
+      Since $7^0 = 1$ we have $\log_7(1)$.
+    \item
+      If we write $49 = 7^2$, then we have $\log_7(49) = \log_7(7^2) = 2.$
+    \item
+      Using the laws of logarithms we have 
+      $$\log_7\left(\frac{1}{49}\right) = \log_7(1) - \log_7(49) = 0 - 2 = -2.$$
+    \end{enumerate}
+  \end{proof}
+\end{thm}
+
+\setcounter{thm}{23} 
+\begin{thm}
+  Find the given logarithms
+  \begin{enumerate}[(a)]
+  \item
+    $\log_3\left(\frac{1}{27}\right)$,
+  \item
+    $log_{10}(\sqrt{10})$,
+  \item
+    $\log_5(0.2)$.
+  \end{enumerate}
+  
+  \begin{proof}[Solution]
+    \begin{enumerate}[(a)]
+    \item
+      If we write $27 = 3^3$, then by the laws of logarithms we have
+      $$\log_3\left(\frac{1}{27}\right) = \log_3(1) - \log_3(27) = 0 - \log_3(3^3) = -3.$$,
+    \item
+      If we write $\sqrt{10} = 10^{\frac{1}{2}}$ we have
+      $$log_{10}(\sqrt{10}) = \log_{10}(10^{\frac{1}{2}} = \frac{1}{2}.$$
+    \item
+      First, write $0.2 = \frac{2}{10} = \frac{1}{5}$ so that by the laws of logarithms
+      $$\log_5(0.2) = \log_5\left(\frac{1}{5}\right) = \log_5(1) - \log_5(5) = 0 - 1 = -1.$$
+    \end{enumerate}
+  \end{proof}
+\end{thm}
+
+\setcounter{thm}{31} 
+\begin{thm}
+  Express the equation in exponential form.
+  \begin{enumerate}[(a)]
+  \item
+    $\log_3(81) = 4$,
+  \item
+    $\log_2\left(\frac{1}{8}\right)$.
+  \end{enumerate}
+  \begin{proof}[Solution]
+    \begin{enumerate}[(a)]
+    \item
+      The equation $\log_3(81) = 4$ is true if and only if $3^4 = 81$, which is the exponential form.
+    \item
+      The equation $\log_2\left(\frac{1}{8}\right) = -3$ is true if and only if $2^{-3} = \frac{1}{8}$.
+    \end{enumerate}
+  \end{proof}
+\end{thm}
+
+\setcounter{thm}{33} 
+\begin{thm}
+  Express the equation in logarithmic form.
+  \begin{enumerate}[(a)]
+  \item
+    $10^3 = 1000$,
+  \item
+    $81^{1/2} = 9$.
+  \end{enumerate}
+
+  \begin{proof}[Solution]
+    \begin{enumerate}[(a)]
+    \item
+      The equation $10^3 = 1000$ tells us that $\log_{10}(1000) = 3$.
+    \item
+      The equation $81^{1/2} = 9$ tells us that $\log_{81}(9) = \frac{1}{2}$.
+    \end{enumerate}    
+  \end{proof}
+\end{thm}
+
+\section*{4.2}
+
+\setcounter{thm}{9} 
+\begin{thm}
+  Evaluate the given expression.
+  \begin{enumerate}[(a)]
+  \item
+    $\log_{10}(4) + log_{10}(25)$,
+  \item
+    $\log_2(160) - \log_2{5}$,
+  \item
+    $-\frac{1}{2}\log_2(64)$.
+  \end{enumerate}
+  \begin{proof}[Solution]
+    \begin{enumerate}[(a)]
+    \item
+      Using the law for multiplication we have
+      $$\log_{10}(4) + log_{10}(25) = \log_{10}(4 \cdot 25) = \log_{10}(100) = \log_{10}(10^2) = 2.$$
+    \item
+      Using the law for division we have
+      $$\log_2(160) - \log_2{5} = \log_2\left(\frac{160}{5}\right) = \log_2(32) = \log_2(2^5) = 5.$$
+    \item
+      Using the law for exponents we have
+      $$-\frac{1}{2}\log_2(64) = -\log_2(64^{1/2}) = -\log_2((2^6)^{1/2}) = -\log_2(2^{6/2}) = -\log_2(2^3) = -3.$$
+    \end{enumerate}    
+  \end{proof}
+\end{thm}
+
+\setcounter{thm}{11} 
+\begin{thm}
+  Use the laws of logarithms to expand the given expression.
+  \begin{enumerate}[(a)]
+  \item
+    $\log_5\left(\frac{x}{2}\right)$,
+  \item
+    $\log_3(x\sqrt{y})$.
+  \end{enumerate}
+
+  \begin{proof}[Solution]
+    \begin{enumerate}[(a)]
+    \item
+      Using the law for division we have
+      $$\log_5\left(\frac{x}{2}\right) = \log_5(x) - \log_5(2).$$
+    \item
+      Using the law for products and then the law for exponents we have
+      $$\log_3(x\sqrt{y}) = \log_3(xy^{1/2}) = \log_3(x) + \log_3(y^{1/2}) = \log_3(x) + \frac{\log_3(y)}{2}.$$
+    \end{enumerate}
+
+  \end{proof}
+\end{thm}
+
+\setcounter{thm}{13} 
+\begin{thm}
+  Use the laws of logarithms to expand the given expression.
+  \begin{enumerate}[(a)]
+  \item
+    $\log_3(5a)$,
+  \item
+    $\log_5\left(\frac{2a}{b}\right)$.
+  \end{enumerate}
+
+  \begin{proof}[Solution]
+    \begin{enumerate}[(a)]
+    \item
+      Using the law for products we have
+      $$\log_3(5a) = \log_3(5) + \log_3(a).$$
+    \item
+      Using the law for division, then the law for products we have
+      $$\log_5\left(\frac{2a}{b}\right) = \log_5\left(2a\right) - \log_5\left(b\right) = \log_5\left(2\right) + \log_5\left(a\right) - \log_5\left(b\right).$$
+    \end{enumerate}
+  \end{proof}
+\end{thm}
+
+\setcounter{thm}{15} 
+\begin{thm}
+  Use the laws of logarithms to expand the given expression.
+  \begin{enumerate}[(a)]
+  \item
+    $\log_{10}(w^2z)^{10}$
+  \item
+    $\log_7\left(\frac{\sqrt[3]{wz}}{x}\right)$
+  \end{enumerate}
+  
+
+  \begin{proof}[Solution]
+    Using the laws of logarithms we have
+    \begin{enumerate}[(a)]
+    \item
+      $$\log_{10}(w^2z)^{10} = (\log_{10}(w^2) + \log_{10}(z))^{10} = (2\log_{10}(w) + \log_{10}(z))^{10}.$$
+    \item
+      \begin{eqnarray*}
+        \log_7\left(\frac{\sqrt[3]{wz}}{x}\right) &=& \log_7\left(\frac{(wz)^{1/3}}{x}\right)\\
+        &=& \log_7((wz)^{1/3}) - \log_7(x)\\
+        &=& \frac{log_7(wz)}{3} - \log_7(x)\\
+        &=& \frac{log_7(w) + \log_7(z)}{3} - \log_7(x)\\
+        &=& \frac{log_7(w)}{3} + \frac{\log_7(z)}{3} - \log_7(x)\\
+      \end{eqnarray*}
+    \end{enumerate}
+  \end{proof}
+\end{thm}
+
+\setcounter{thm}{19} 
+\begin{thm}
+  Use the laws of logarithms to combine the given expression.
+  \begin{enumerate}[(a)]
+  \item
+    $4\log_2(x) - \frac{1}{3}\log_2(x^2 + 1)$.
+  \item
+    $\log_{10}(5) + 2\log_{10}(x) + 3\log_{10}(x^2 + 5)$.
+  \end{enumerate}
+
+  \begin{proof}[Solution]
+    Using the laws of logarithms we have
+    \begin{enumerate}[(a)]
+    \item
+      \begin{eqnarray*}
+        4\log_2(x) - \frac{1}{3}\log_2(x^2 + 1) &=& \log_2(x^4) - \log_2(\sqrt[3]{x^2 + 1})\\
+        &=& \log_2(\frac{x^4}{\sqrt[3]{x^2 + 1}})\\
+      \end{eqnarray*}
+    \item
+      \begin{eqnarray*}
+        \log_{10}(5) + 2\log_{10}(x) + 3\log_{10}(x^2 + 5) &=& \log_{10}(5) + \log_{10}(x^2) + \log_{10}((x^2 + 5)^3)\\
+        &=& \log_{10}(5x^2(x^2 + 5)^3)\\
+        &=& \log_{10}(5x^2(x^6 + 15x^4 + 75x^2 + 125))\\
+        &=& \log_{10}(5x^8 + 75x^6 + 375x^4 + 625x^2).\\
+      \end{eqnarray*}
+    \end{enumerate}
+  \end{proof}
+\end{thm}
+
+\setcounter{thm}{21} 
+\begin{thm}
+  Use the laws of logarithms to combine the given expression.
+  \begin{enumerate}[(a)]
+  \item
+    $2\log_8(x+1) + 2\log_8(x - 1)$    
+  \item
+    $\log_5(x^2 -1) - \log_5(x - 1)$.
+  \end{enumerate}
+
+  \begin{proof}[Solution]
+    Using the laws of logarithms we have
+    \begin{enumerate}[(a)]
+    \item
+      \begin{eqnarray*}
+        2\log_8(x+1) + 2\log_8(x - 1) &=& 2(\log_8(x+1) + \log_8(x - 1))\\
+        &=& 2(\log_8((x+1)(x - 1)))\\
+        &=& 2(\log_8(x^2 - 1))\\
+        &=& \log_8((x^2 - 1)^2)\\
+        &=& \log_8(x^4 - 2x^2 + 1).\\
+      \end{eqnarray*}
+    \item
+      $$\log_5(x^2 -1) - \log_5(x - 1) = \log_5\left(\frac{x^2 - 1}{x - 1}\right) = \log_5\left(\frac{(x + 1)(x - 1)}{x - 1}\right) = \log_5(x + 1).$$
+    \end{enumerate}
+  \end{proof}
+\end{thm}
+
+\setcounter{thm}{33} 
+\begin{thm}
+  Use the change of base formula and a calculator to evaluate the logarithm.
+  \begin{enumerate}[(a)]
+  \item
+    $\log_3(16)$,
+  \item
+    $\log_6(92)$.
+  \end{enumerate}
+  \begin{proof}[Solution]
+    Using the change of base formula and a calculator we have
+    \begin{enumerate}[(a)]
+    \item
+      $$\log_3(16) = \frac{\log_{10}(16)}{\log_{10}(3)} \approx 2.523719.$$
+    \item
+      $$\log_6(92) = \frac{\log_{10}(92)}{\log_{10}(6)} \approx 2.523658.$$
+    \end{enumerate}
+  \end{proof}
+\end{thm}
+
+\setcounter{thm}{35} 
+\begin{thm}
+  Use the change of base formula and a calculator to evaluate the logarithm.
+  \begin{enumerate}[(a)]
+  \item
+    $\log_4(125)$,
+  \item
+    $\log_{12}(2.5)$.
+  \end{enumerate}
+
+  \begin{proof}[Solution]
+    Using the change of base formula and a calculator we have
+    \begin{enumerate}[(a)]
+    \item
+      $$\log_4(125) = \frac{\log_{10}(125)}{\log_{10}(4)} \approx 3.482892.$$
+    \item
+      $$\log_{12}(2.5) = \frac{\log_{10}(2.5)}{\log_{10}(12)} \approx 0.368743.$$
+    \end{enumerate}
+  \end{proof}
+\end{thm}
+
+\end{document}

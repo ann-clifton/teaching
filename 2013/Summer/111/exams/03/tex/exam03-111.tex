@@ -1,0 +1,161 @@
+\documentclass[12pt]{amsart}
+\usepackage{amsmath,amsthm,amssymb,amsfonts,enumerate,mymath,tikz-cd,fancyhdr}
+\openup 5pt
+\author{Blake Farman\\University of South Carolina}
+\title{Math 111: Exam 03}
+\date{June 17, 2013}
+\pdfpagewidth 8.5in
+\pdfpageheight 11in
+\usepackage[margin=1in]{geometry}
+
+\renewcommand{\qedsymbol}{}
+
+\begin{document}
+\maketitle
+
+\begin{center}
+  \fbox{\fbox{\parbox{5.5in}{\centering
+        Answer the questions in the spaces provided on the
+        question sheets and turn them in at the end of the class period. 
+        Unless otherwise stated, all supporting work is required.}}}
+\end{center}
+
+\vspace{0.2in}
+\makebox[\textwidth]{Name:\enspace\hrulefill}
+\vspace{0.2in}
+
+\theoremstyle{plain}
+\newtheorem{thm}{}
+\newtheorem{lem}{Lemma}
+\theoremstyle{definition}
+\newtheorem{defn}{Definition}
+
+\section{Definitions}
+\begin{thm}[4 Points]\label{ex1}
+  Let $P$ be a principal investment, $r$ the interest rate, $n$ the number of times interest compounds per year, and $t$ the number of years since the investment.
+  State the formula for computing compound interest.
+  \vspace{1in}
+\end{thm}
+
+\begin{thm}[2 Points]\label{ex2}
+  For an exponential function, $f(x)$, state the formula for percentage rate of change.
+  \vspace{1 in}
+\end{thm}
+
+\begin{thm}[4 Points]\label{ex3}
+  Let $a$ be a fixed positive number.
+  The base $a$ logarithm of $x$ is defined by
+  $$\log_a(x) = y\  \text{if and only if}\ \ \line(1,0){40}.$$
+\end{thm}
+
+\newpage
+
+\begin{thm}[4 Points]\label{ex4}
+  Let $a$ be a positive number.  Fill in the blanks.
+  \begin{enumerate}[(a)]
+  \item
+    $\log_a(1) = \ \line(1,0){40}$.
+  \item
+    $\log_a(a) = \ \line(1,0){40}$.
+  \item
+    $\log_a(a^x) = \ \line(1,0){40}$.
+  \item
+    $a^{\log_a(x)} = \ \line(1,0){40}$.
+  \end{enumerate}
+  \vspace{1in}
+\end{thm}
+
+\begin{thm}[3 Points]
+  Let $a$ and $C$ be fixed positive numbers.  Fill in the blanks.
+  \begin{enumerate}[(a)]
+  \item
+    $\log_a(xy) = \ \line(1,0){80}$.
+  \item
+    $\log_a\left(\frac{x}{y}\right) = \ \line(1,0){80}$.
+  \item
+    $\log_a(x^C) = \ \line(1,0){80}$.
+  \end{enumerate}
+  \vspace{1in}
+\end{thm}
+
+\begin{thm}[2 Points]
+  Let $a$ and $b$ be fixed positive numbers.
+  Use the Change of Base formula to rewrite $\log_a(x)$ with base $b$.
+  \vspace{1in}
+\end{thm}
+
+\begin{thm}[1 Point]
+  State the Horizontal Line Test.
+\end{thm}
+
+\newpage
+\section{Problems}
+
+\begin{thm}[16 Points]\label{ex5}
+  A \$400 investment is made in an account with an annual interest rate of 10\% that compounds semiannually.
+  \begin{enumerate}[(a)]
+  \item
+    Give the formula for the interest accrued as a function of time, $t$. 
+    [Hint: If you compute the growth factor without using decimals, this will make the next computation significantly easier.]
+    \vspace{1in}
+  \item
+    Compute the interest accrued after 1 year.
+    \vspace{1in}
+  \item
+    Give the Annual Percentage Yield for the investment.
+    \vspace{1in}
+  \end{enumerate}
+\end{thm}
+
+\begin{thm}[16 Points]\label{ex10}
+  Compute the following logarithms.
+  \begin{enumerate}[(a)]
+  \item
+    $\log_{3}(27)$.
+    \vspace{.5in}
+  \item
+    $\log_{3}(81)$.
+    \vspace{.5in}
+  \item
+    $\log_{16}(8)$.
+    \vspace{.5in}
+  \item
+    $\log_{27}(81)$.
+    \vspace{.5in}
+  \end{enumerate}
+\end{thm}
+
+\newpage
+
+\begin{thm}[16 Points]\label{ex9}
+  \begin{enumerate}[(a)]
+  \item
+    Simplify the expression 
+    $$2\log_2(\sqrt{x + 2}) - \log_2\left(\frac{1}{x - 2}\right).$$
+    \vspace{2in}
+  \item
+    Solve the following equation for $x$
+    $$ 2\log_2(\sqrt{x + 2}) - \log_2\left(\frac{1}{x - 2}\right) = 5 $$
+    \vspace{1in}
+  \end{enumerate}
+\end{thm}
+
+\begin{thm}[16 Points]\label{ex7}
+  Solve the following equation for $x$
+  $$2^{-4x} = 16 \cdot 2^{x^2}$$
+\end{thm}
+
+\newpage
+
+\begin{thm}[16 Points]
+  Let $f(x) = \sqrt{1 - x^2}$.  Determine the domain of this function.
+  Use this information to carefully justify whether this function is invertible.
+  \vspace{4in}
+\end{thm}
+
+\begin{thm}[Bonus - 10 Points]\label{bonus}
+  Let $f$ be as in the last problem.
+  Compute the composition $$f \circ f (x) = f(f(x)).$$
+  Determine for which values of $x$ the function $f$ is invertible and, on this set, find its inverse.
+\end{thm}
+\end{document}

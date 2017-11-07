@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+NUM=01
+CLASS=111
+NAME="exam${NUM}-${CLASS}"
+NAME2="exam${NUM}-${CLASS}"
+PDFDIR=../pdf/
+FILE="$NAME.tex"
+FILE2="$NAME-solns.tex"
+#texi2pdf $FILE 
+texi2pdf $FILE2
+
+if [ ! -d ../pdf ]; then
+    mkdir ../pdf
+fi
+
+#mv $NAME.pdf $NAME-solns.pdf ../pdf
+mv $NAME-solns.pdf ../pdf
+
+rm -fr *.log
+rm -fr *.aux
+rm -fr *.bbl
+rm -fr *.blg
+rm -fr *~
+rm -fr *.out
