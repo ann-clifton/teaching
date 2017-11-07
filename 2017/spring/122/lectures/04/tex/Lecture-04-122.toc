@@ -1,0 +1,7 @@
+\beamer@endinputifotherversion {3.36pt}
+\select@language {english}
+\beamer@sectionintoc {1}{1.5: Exponential Functions}{4}{0}{1}
+\beamer@sectionintoc {2}{1.6: Logarithms}{40}{0}{2}
+\beamer@subsectionintoc {2}{1}{Inverse Functions}{40}{0}{2}
+\beamer@subsectionintoc {2}{2}{Definition}{42}{0}{2}
+\beamer@subsectionintoc {2}{3}{Exponential Functions with Base $e$}{58}{0}{2}

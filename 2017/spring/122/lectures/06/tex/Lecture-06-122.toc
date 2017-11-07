@@ -1,0 +1,5 @@
+\beamer@endinputifotherversion {3.36pt}
+\select@language {english}
+\beamer@sectionintoc {1}{1.9: Proportionality and Power Functions}{3}{0}{1}
+\beamer@subsectionintoc {1}{1}{Graphs of Power Functions}{16}{0}{1}
+\beamer@subsectionintoc {1}{2}{Quadratics}{24}{0}{1}

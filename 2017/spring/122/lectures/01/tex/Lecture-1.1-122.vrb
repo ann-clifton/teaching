@@ -1,0 +1,20 @@
+\frametitle{Properties of $\pi $}
+\begin{itemize}
+  \item
+    given an exact sequence
+    $$\begin{tikzcd}
+      0 \arrow{r} & K \arrow{r}{\ker{f}} & M \arrow{r}{f} & N \arrow{r}{\coker{f}} & C \arrow{r} & 0.
+    \end{tikzcd}$$
+    \begin{enumerate}[(i)]
+    \item
+      $\pi(f) = 0$ if and only if $f(M) \cong M/K$ is torsion,
+    \item
+      $\pi(f)$ is a monomorphism if and only if $K$ is torsion,
+    \item
+      $\pi(f)$ is an epimorphism if and only if $C$ is torsion,
+    \end{enumerate}
+  \item
+    $\pi$ is exact and admits a fully faithful adjoint, $\omega : \QGr{A} \rightarrow \Gr{A}$,
+  \item
+    $\pi$ preserves injectives.
+  \end{itemize}

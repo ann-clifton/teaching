@@ -1,0 +1,4 @@
+\beamer@endinputifotherversion {3.36pt}
+\select@language {english}
+\beamer@sectionintoc {1}{2.1: Instantaneous Rate of Change}{4}{0}{1}
+\beamer@sectionintoc {2}{2.2: The Derivative Function}{17}{0}{2}

@@ -1,0 +1,433 @@
+\documentclass[12pt]{amsart}
+\usepackage{amsmath,amsthm,amssymb,amsfonts,enumerate,mymath,tikz-cd,fancyhdr,multicol}
+\openup 5pt
+\author{Blake Farman\\University of South Carolina}
+\title{Math 122\\Exam 02}
+\date{March 16, 2017}
+\pdfpagewidth 8.5in
+\pdfpageheight 11in
+\usepackage[margin=1in]{geometry}
+
+\renewcommand{\qedsymbol}{}
+\theoremstyle{definition}
+\newtheorem{thm}{}
+\newtheorem{lem}{Lemma}
+\theoremstyle{definition}
+\newtheorem{defn}{Definition}
+
+\newcommand{\ddx}[1]{\frac{\operatorname{d}}{\operatorname{d}\!#1}}
+\newcommand{\dx}[1]{\!\!\;\operatorname{d}\!#1}
+
+\begin{document}
+\maketitle
+
+\begin{center}
+  \fbox{\fbox{\parbox{5.5in}{\centering
+        Answer the questions in the spaces provided on the
+        question sheets and turn them in at the end of the class period.
+        If you require extra space, use the back of the page and indicate that you have done so.
+        
+        Unless otherwise stated, all supporting work is required.
+        Unsupported or otherwise mysterious answers will {\bf not receive credit.}
+        You may use a calculator {\bf without a CAS} if you like, but a calculator is not necessary.
+        By writing your name on the line below, you acknowledge that you have read and understand these directions.}}}
+\end{center}
+
+\vspace{0.2in}
+\makebox[\textwidth]{Name:\enspace\hrulefill}
+\vspace{0.2in}
+
+$$
+\begin{array}{|c|c|c||c|c|c|}
+  \hline
+  \text{Derivative Rules} & \text{Points Earned} & \text{Points Possible} & \text{Problems} & \text{Points Earned} & \text{Points Possible}\\
+  \hline
+  1 & & 3 & 1 & & 5\\
+  \hline
+  2 & & 3 & 2 & & 10\\
+  \hline
+  3 & & 3 & 3 & & 12\\
+  \hline
+  4 & & 5 & 4 & & 12\\
+  \hline
+  5 & & 2 & 5 & & 10\\
+  \hline
+  6 & & 2 & 6 & & 12\\
+  \hline
+  7 & & 1 & 7 & & 20\\
+  \hline
+  \text{Subtotal} & & 19 & \text{Subtotal} & & 81\\
+  \hline
+  & & & \text{Total} & & 100\\
+  \hline
+\end{array}
+$$
+
+\newpage
+
+\section{Derivative Rules}
+Throughout this section, let $f$ and $g$ be differentiable functions.
+Fill in the blanks.
+\begin{thm}[3 Points]
+  \begin{enumerate}[(a)]
+    Let $a$ be a constant.
+  \item
+    \vspace{.05in}
+    $$\ddx{x}\left(a f(x)\right)\ =\ \line(1,0){250}$$
+    \vspace{.05in}
+  \item
+    \vspace{.05in}
+    $$\ddx{x}\left(f(x) + g(x)\right)\ =\ \line(1,0){250}$$ 
+    \vspace{.05in}
+  \item
+    \vspace{.05in}
+    $$\ddx{x}\left(f(x) - g(x)\right)\ =\ \line(1,0){250}$$ 
+  \end{enumerate}
+\end{thm}
+
+\vspace{.5in}
+
+\begin{thm}[3 Points]
+  \begin{enumerate}[(a)]
+  \item
+    For $n$ a number,
+    \vspace{.05in}
+    $$\ddx{x}\left(x^n\right)\ =\ \line(1,0){250}$$
+    \vspace{.05in}
+  \item
+    \vspace{.05in}
+    $$\ddx{x}\ln(x)\ =\ \line(1,0){250}$$
+    \vspace{.05in}
+  \item
+    \vspace{.05in}
+    $$\ddx{x}e^x\ =\ \line(1,0){250}$$
+    \vspace{.05in}
+  \end{enumerate}
+\end{thm}
+
+\newpage
+
+\begin{thm}[3 Points]
+  Write the formula for each of the following derivatives.
+  \vspace{.05in}
+  \begin{enumerate}[(a)]
+  \item
+    $$\ddx{x}\left(f(x)g(x)\right)$$
+    \vspace{2in}
+  \item
+    $$\ddx{x}\left(\frac{f(x)}{g(x)}\right)$$
+    \vspace{2in}
+  \item
+    $$\ddx{x}\left(f \circ g(x)\right)$$    
+  \end{enumerate}
+\end{thm}
+
+\newpage
+For each of the following questsions, circle the correct answer.
+\begin{thm}[5 Points]
+  Assume that $f$ is a function such that $f^\prime(x)$ and $f^{\prime\prime}(x)$ are defined for all $x$.
+  \begin{enumerate}[(a)]
+  \item
+    A point $p$ is a critical point of $f$ if
+    \begin{multicols}{2}
+      \begin{enumerate}[(i)]
+      \item
+        $f^\prime(p) = 0$
+        \vspace{.05in}
+      \item
+        $f^\prime(p) > 0$,
+      \item
+        $f^\prime(p) < 0$,
+        \vspace{.05in}
+      \item
+        $f(p) = 0$.
+      \end{enumerate}
+    \end{multicols}
+  \item
+    $f$ is increasing on an interval if
+    \begin{multicols}{2}
+      \begin{enumerate}[(i)]
+      \item
+        $f^\prime < 0$ on that interval,
+        \vspace{.05in}
+      \item
+        $f > 0$ on that interval,
+      \item
+        $f^\prime > 0$ on that interval,
+        \vspace{.05in}
+      \item
+        $f < 0$ on that interval.
+      \end{enumerate}
+    \end{multicols}
+    \item
+    $f$ is decreasing on an interval if
+    \begin{multicols}{2}
+      \begin{enumerate}[(i)]
+      \item
+        $f^\prime < 0$ on that interval,
+        \vspace{.05in}
+      \item
+        $f > 0$ on that interval,
+      \item
+        $f^\prime > 0$ on that interval,
+        \vspace{.05in}
+      \item
+        $f < 0$ on that interval.
+      \end{enumerate}
+    \end{multicols}
+  \item
+    $f$ is concave down on an interval if
+    \begin{multicols}{2}
+      \begin{enumerate}[(i)]
+      \item
+        $f^{\prime\prime} = 0$ on that interval,
+        \vspace{.05in}
+      \item
+        $f^{\prime\prime} < 0$ on that interval,
+      \item
+        $f^{\prime\prime} > 0$ on that interval,
+        \vspace{.05in}
+      \item
+        $f^\prime = 0$ on that interval.
+      \end{enumerate}
+    \end{multicols}
+  \item
+    $f$ is concave up on an interval if
+    \begin{multicols}{2}
+      \begin{enumerate}[(i)]
+      \item
+        $f^{\prime\prime} = 0$ on that interval,
+        \vspace{.05in}
+      \item
+        $f^{\prime\prime} < 0$ on that interval,
+      \item
+        \vspace{.05in}
+        $f^{\prime\prime} > 0$ on that interval,
+      \item
+        $f^\prime = 0$ on that interval.
+      \end{enumerate}
+    \end{multicols}
+  \end{enumerate}
+\end{thm}
+
+\newpage
+
+\begin{thm}[2 Points]
+  The first derivative test says that a critical point, $p$, of $f$ is a
+  \begin{enumerate}[(a)]
+  \item
+    local maximum if
+    \begin{multicols}{2}
+      \begin{enumerate}[(i)]
+      \item
+        $f^\prime$ changes from negative to positive at $p$,
+        \vspace{.05in}
+      \item
+        $f^\prime$ changes from positive to negative at $p$,
+      \item
+        $f$ changes from negative to positive at $p$,
+        \vspace{.05in}
+      \item
+        $f$ changes from positive to negative at $p$.
+      \end{enumerate}
+    \end{multicols}
+  \item
+    local minimum if
+    \begin{multicols}{2}
+      \begin{enumerate}[(i)]
+        \item
+        $f^\prime$ changes from negative to positive at $p$,
+        \vspace{.05in}
+      \item
+        $f^\prime$ changes from positive to negative at $p$,
+      \item
+        $f$ changes from negative to positive at $p$,
+        \vspace{.05in}
+      \item
+        $f$ changes from positive to negative at $p$.
+      \end{enumerate}
+    \end{multicols}
+  \end{enumerate}
+\end{thm}
+
+\begin{thm}[2 Points]
+  The second derivative test says that a critical point, $p$, of $f$ is a
+  \begin{enumerate}[(a)]
+  \item
+    local maximum if
+    \begin{multicols}{2}
+      \begin{enumerate}[(i)]
+      \item
+        $f^{\prime\prime}$ changes from negative to positive at $p$,
+        \vspace{.05in}
+      \item
+        $f^{\prime\prime}$ changes from positive to negative at $p$,
+      \item
+        $f^{\prime\prime}(p) < 0$,
+        \vspace{.05in}
+      \item
+        $f^{\prime\prime}(p) > 0$.
+      \end{enumerate}
+    \end{multicols}
+  \item
+    local minimum if
+    \begin{multicols}{2}
+      \begin{enumerate}[(i)]
+        \item
+        $f^{\prime\prime}$ changes from negative to positive at $p$,
+        \vspace{.05in}
+      \item
+        $f^{\prime\prime}$ changes from positive to negative at $p$,
+      \item
+        $f^{\prime\prime}(p) < 0$,
+        \vspace{.05in}
+      \item
+        $f^{\prime\prime}(p) > 0$.
+      \end{enumerate}
+    \end{multicols}
+  \end{enumerate}
+\end{thm}
+
+\begin{thm}[1 Point]
+  Suppose that $f^{\prime\prime}(p)\ = 0$.
+  We say that $p$ is an inflection point of $f$ if
+  \begin{multicols}{2}
+    \begin{enumerate}[(i)]
+    \item
+      $f^{\prime}(p) = 0$,
+      \vspace{.05in}
+    \item
+      $f(p) = 0$,
+    \item
+      $f^{\prime\prime}(p)$ changes sign at $p$,
+      \vspace{.05in}
+    \item
+      $f$ changes sign at $p$.
+    \end{enumerate}
+  \end{multicols}
+\end{thm}
+
+\newpage
+
+\section{Problems}
+\setcounter{thm}{0}
+\begin{thm}[5 Points]
+  Find the derivative of the following functions.
+  \begin{enumerate}[(a)]
+  \item
+    $\displaystyle{f(x) = 3x + 7}$
+    \vspace{1in}
+  \item
+    $\displaystyle{g(x) = 5x^2 + 2x + 1}$
+    \vspace{1in}
+  \item
+    $\displaystyle{h(x) = 12x^3 + 13x^2}$
+    \vspace{1in}
+  \item
+    $\displaystyle{r(x) = \frac{1}{3}x^3 + 2}$
+    \vspace{1in}
+  \item
+    $\displaystyle{s(x) = \sqrt{x} + 3}$
+    \vspace{1in}
+  \end{enumerate}
+\end{thm}
+
+\newpage
+\begin{thm}[10 Points]
+  Find the derivative of the following functions.
+  \begin{enumerate}[(a)]
+  \item
+    $\displaystyle{(x + 7)^{25}}$
+    \vspace{1in}
+  \item
+    $\displaystyle{e^{\frac{1}{2}x^2 + 2x + 1}}$
+    \vspace{1in}
+  \item
+    $\displaystyle{\ln(2x^2 + 7)}$
+    \vspace{1in}
+  \item
+    $\displaystyle{\sqrt{x^2 + 1}}$
+    \vspace{1in}
+  \item
+    $\displaystyle{6e^{5x} + e^{-x^2}}$
+  \end{enumerate}
+\end{thm}
+
+\newpage
+
+\begin{thm}[12 Points]
+  Differentiate the following functions
+  \begin{enumerate}[(a)]
+  \item
+    $\displaystyle{xe^{-2x}}$
+    \vspace{2in}
+  \item
+    $\displaystyle{x\ln(x)}$
+    \vspace{2in}
+  \item
+    $\displaystyle{(x^2 + 3)e^x}$
+  \end{enumerate}
+\end{thm}
+
+\newpage
+
+\begin{thm}[12 Points]
+Differentiate the following functions
+\begin{enumerate}[(a)]
+\item
+  $\displaystyle{\frac{x + 1}{x - 1}}$
+  \vspace{2in}
+\item
+  $\displaystyle{\frac{x}{e^x}}$
+  \vspace{2in}
+\item
+  $\displaystyle{\frac{x}{\ln(x)}}$
+\end{enumerate}
+\end{thm}
+\newpage
+
+\begin{thm}[10 Points]
+  Let $f(x) = 10x^4 - 4x^5$.
+  \begin{enumerate}[(a)]
+  \item
+    Find the derivative of $f$.
+    \vspace{1in}
+  \item
+    Find the critical points of $f$.\newline
+    [Hint: Factoring after taking the derivative will make this task much easier.]
+    \vspace{2in}
+  \item
+    Find any local maxima and local minima of $f$.
+    Clearly indicate whether a point is a maximum or a minimum.
+    \vspace{2in}
+  \item
+    Find any inflection points of $f$.\newline
+    [Hint: Same as for part (b).]
+  \end{enumerate}
+\end{thm}
+
+\newpage
+
+\begin{thm}[12 Points]
+  Find the global maximum and global minimum of $f(x) = 10x^4 - 4x^5$ on the interval $[1,3]$.
+\end{thm}
+\newpage
+\begin{thm}[20 Points]
+  A company sells a product for \$21 each and the manufacturing costs can be modeled by the function
+  $$C(q) = \frac{1}{3}q^{3} - 2q^{2} + 100$$
+  of $q$ units produced.
+  For each of the quantities below, determine whether the company should increase, decrease, or not change the production levels in order to maximize profit.
+  Justify your answers using calculus.
+  {\bf You will not receive credit for guess and check solutions.}
+  \begin{multicols}{3}
+  \begin{enumerate}[(a)]
+    \item
+      $q = 3$
+    \item
+      $q = 7$
+    \item
+      $q = 9$
+    \end{enumerate}
+  \end{multicols}
+\end{thm}
+\end{document}
