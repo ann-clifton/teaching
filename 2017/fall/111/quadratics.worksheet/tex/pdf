@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+NUM=03
+CLASS=111
+NAME="quadratics"
+NAME2="quadratics-solns"
+PDFDIR=../pdf/
+FILE="$NAME.tex"
+FILE2="$NAME2.tex"
+texi2pdf $FILE
+texi2pdf $FILE2
+
+if [ ! -d ../pdf ]; then
+    mkdir ../pdf
+fi
+
+mv $NAME.pdf ../pdf
+mv $NAME2.pdf ../pdf
+
+rm -fr *.log
+rm -fr *.aux
+rm -fr *.bbl
+rm -fr *.blg
+rm -fr *~
+rm -fr *.out
