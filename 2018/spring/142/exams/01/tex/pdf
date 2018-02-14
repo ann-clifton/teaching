@@ -1,17 +1,19 @@
 #!/usr/bin/env bash
+NUM=01
 CLASS=142
-SECTION=020
-NAME="syllabus-${CLASS}-${SECTION}"
+NAME="exam${NUM}-${CLASS}"
 PDFDIR=../pdf/
-FILE="$NAME.tex"
+FILE="${NAME}.tex"
 
 texi2pdf $FILE
+texi2pdf "${NAME}-solns.tex"
 
 if [ ! -d ../pdf ]; then
     mkdir ../pdf
 fi
 
 mv $NAME.pdf ../pdf
+mv "${NAME}-solns.pdf" ../pdf
 
 rm -fr *.log
 rm -fr *.aux
