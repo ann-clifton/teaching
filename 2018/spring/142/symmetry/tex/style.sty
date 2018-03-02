@@ -1,0 +1,56 @@
+\ProvidesPackage{style}
+
+%Formatting
+\oddsidemargin  0.0in
+\evensidemargin 0.0in
+\textwidth      6.5in
+\headheight     0.0in
+\topmargin      0.0in
+\textheight=9.0in
+
+%Packages
+\usepackage{amsmath}
+\usepackage{graphicx}
+\graphicspath{{imgs/}}
+\usepackage{commath}
+
+%\usepackage{tikz-cd}
+%\usepackage{array}
+%\usepackage{amsfonts}
+%\usepackage{amssymb}
+%\usepackage{enumerate}
+%\usepackage{amsthm}
+%\usepackage{amsmath, amscd}
+%\usepackage{bm}
+%\usepackage{xy}
+%\xyoption{all}
+%\usepackage{color}
+%\usepackage{marvosym}
+%\usepackage{amsbsy}
+%\usepackage{hyperref}
+
+%Theorems
+\newtheorem{introtheorem}{Theorem}
+\newtheorem{introcor}{Corollary}
+\newtheorem{introconjecture}{Conjecture}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{Theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{Corollary}[Theorem]{Corollary}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{question}[theorem]{Question}
+
+%Definitions, etc.
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+%\newtheorem{definition-lemma}[theorem]{Definition/Lemma}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{Example}[Theorem]{Example}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+
+%Command
+\newcommand{\op}{\operatorname}
