@@ -1,0 +1,362 @@
+\documentclass[12pt]{amsart}
+\usepackage{amsmath,enumerate,commath,tikz}
+\usetikzlibrary{angles,quotes}
+\openup 5pt
+\author[Blake Farman]{Blake Farman\\University of South Carolina}
+\title[Exam 02]{Math 142: Exam 02\\Solutions}
+\date{March 20, 2018}
+\pdfpagewidth 8.5in
+\pdfpageheight 11in
+\usepackage[margin=1in]{geometry}
+
+\renewcommand{\qedsymbol}{}
+
+\begin{document}
+\maketitle
+
+\begin{center}
+  \fbox{\fbox{\parbox{5.5in}{\centering
+        Answer the questions in the spaces provided on the
+        question sheets and turn them in at the end of the class period.
+
+        Unless otherwise stated, all supporting work is required.
+        Unsupported or otherwise mysterious answers will \textbf{not receive credit.}
+        
+        You may \textbf{not} use a calculator or any other electronic device, including cell phones, smart watches, etc.
+        
+        It is advised, although not required, that you check your answers.
+
+        By writing your name on the line below, you indicate that you have read and understand these directions.}}}
+\end{center}
+
+\vspace{0.2in}
+\makebox[\textwidth]{Name:\enspace\hrulefill}
+\vspace{0.2in}
+
+\theoremstyle{definition}
+\newtheorem{thm}{}
+\newtheorem*{caution}{\textbf{Caution}}
+\renewcommand{\qedsymbol}{}
+
+\[
+\begin{array}{|c|c|c||c|c|c|}
+  \hline
+  \text{Tests} & \text{Points Earned} & \text{Points Possible} & \text{Problems} & \text{Points Earned} & \text{Points Possible}\\
+  \hline
+  1 & & 3 & 1 & & 5\\
+  \hline
+  2 & & 3 & 2 & & 5\\
+  \hline
+  3 & & 2 & 3 & & 5\\
+  \hline
+  4 & & 4 & 4 & & 10\\
+  \hline
+  5 & & 4 & 5 & & 10\\
+  \hline
+  6 & & 7 & 6 & & 15\\
+  \hline
+  7 & & 2 & 7 & & 15\\
+  \hline
+  8 & & 4 & \text{Subtotal} & & 65\\
+  \hline
+  9 & & 3 &\text{Bonus} & & 5\\
+  \hline
+  10 & & 3 & & &\\
+  \hline
+  \text{Subtotal} & & 35 & \text{Total} & & 100\\
+  \hline
+\end{array}
+\]
+
+\newpage
+
+\section{Tests}
+
+Fill in the blanks.
+
+\begin{thm}[3 Points - \(n^\text{th}\) Term Test for Divergence]
+  The series \(\sum_{n = 1}^\infty a_n\) diverges if \(\lim_{n \to \infty} a_n \neq 0\) or if \(\lim_{n \to \infty} a_n\) does not exist.
+  The test is inconclusive if \(\lim_{n \to \infty} a_n = 0\).
+\end{thm}
+
+\begin{thm}[3 Points - Geometric Series]
+  The series \(\sum_{n = 0}^\infty a r^n\) converges if \(\abs{r} < 1\) and diverges if \(1 \leq \abs{r}\).
+  If the series converges, then its sum is
+  \[\sum_{n = 0}^\infty a r^n = \frac{a}{1 - r}.\]
+\end{thm}
+
+\begin{thm}[2 Points - \(p\)-series]
+  The series \(\sum_{n = 1}^\infty \frac{1}{n^p}\) converges if \(1 < p\) and
+  diverges if \(p \leq 1\).
+\end{thm}
+
+\begin{thm}[4 Points - Integral Test]
+  Let \(\{a_n\}\) be a sequence of positive terms.
+  Suppose that \(f\) is a continuous, positive, decreasing function of the variable \(x\) for all \(N \leq x\), for some positive integer \(N\).
+  Then the series \(\sum_{n = N}^\infty a_n\) and the integral \(\int_N^\infty f(x)\dif x\) either both converge or both diverge.
+\end{thm}
+
+\begin{thm}[4 Points - Comparison Test]
+  Let \(\sum a_n\), \(\sum c_n\), and \(\sum d_n\) be series with non-negative terms.
+  Suppose that for some integer \(N\)
+  \[d_n \leq a_n \leq c_n\ \text{for all}\ N < n.\]
+  \begin{enumerate}[(a)]
+  \item
+    If \(\sum c_n\) converges, then \(\sum a_n\) converges.
+  \item
+    If \(\sum d_n\) diverges, then \(\sum a_n\) diverges.
+  \end{enumerate}
+\end{thm}
+
+\begin{thm}[7 Points - Limit Comparison Test]
+  Suppose that \(0 < a_n\) and \(0 < b_n\) for all \(N \leq n\), for some positive integer \(N\).
+  \begin{enumerate}
+  \item
+    If
+    \[\lim_{n \to \infty} \frac{a_n}{b_n} = c > 0,\]
+    then \(\sum a_n\) and \(\sum b_n\) both converge or both diverge.
+  \item
+    If
+    \[\lim_{n \to \infty} \frac{a_n}{b_n} = 0\]
+    and \(\sum b_n\) converges, then \(\sum a_n\) converges.
+  \item
+    If
+    \[\lim_{n \to \infty} \frac{a_n}{b_n} = \infty\]
+    and \(\sum b_n\) diverges, then \(\sum a_n\) diverges.
+  \end{enumerate}
+\end{thm}
+
+\begin{thm}[2 Points - Absolute Convergence Test]
+  If the series \(\sum \abs{a_n}\) converges, then the series \(\sum a_n\) converges.
+\end{thm}
+
+\begin{thm}[4 Points - Ratio Test]
+  Let \(\sum a_n\) be any series and suppose that
+  \[\lim_{n \to \infty} \abs{\frac{a_{n+1}}{a_n}} = \rho.\]
+  \begin{enumerate}[(a)]
+  \item
+    The series converges absolutely if \(\rho < 1\).
+  \item
+    The series diverges if \(1 < \rho\) or \(\rho = \infty\).
+  \item
+    The test is inconclusive if \(\rho = 1\).
+  \end{enumerate}
+\end{thm}
+
+\begin{thm}[3 Points - Root Test]
+  The \(\sum a_n\) be any series and suppose that
+  \[\lim_{n \to \infty} \sqrt[n]{\abs{a_n}} = \rho.\]
+  \begin{enumerate}[(a)]
+  \item
+    The series converges absolutely if \(\rho < 1\).
+  \item
+    The series diverges if \(1 < \rho\) or \(\rho = \infty\).
+  \item
+    The test is inconclusive if \(\rho = 1\).
+  \end{enumerate}
+\end{thm}
+
+\begin{thm}[3 Points - Alternating Series Test]
+  The series
+  \[\sum_{n = 1}^\infty (-1)^{n+1} u_n = u_1 - u_2 + u_3 - u_4 + \ldots\]
+  converges if all three of the following conditions are satisfied:
+  \begin{enumerate}
+  \item
+    \(0 < u_n\) for all \(n\),
+  \item
+    \(u_{n + 1} \leq u_n\) for all \(N \leq n\), for some integer \(N\), and
+  \item
+    \(u_n \to 0\).
+  \end{enumerate}
+\end{thm}
+
+\section{Problems}
+\setcounter{thm}{0}
+For each of the following problems, decide which of the tests listed above is appropriate and use it to show that the given series converges or diverges.
+\textbf{
+  Clearly indicate the test you used and why the series fits the hypotheses of the test.
+  Failure to do so will result in a zero on the problem.
+}
+
+\begin{thm}[5 Points]
+  Determine whether the series
+  \[\sum_{n = 0}^\infty \frac{5(3^n) + 2^{n+1}}{6^n}\]
+  converges or diverges.
+  If the series converges, find the sum of the series.
+\end{thm}
+
+\begin{proof}[Solution 1]
+  We observe that
+  \[\frac{5(3^n) + 2^{n+1}}{6^n} = \frac{5}{2^n} + \frac{2}{3^n}\]
+  which is the sum of terms of two convergent geometric series, so
+  \begin{eqnarray*}
+    \sum_{n = 0}^\infty \frac{5(3^n) + 2^{n+1}}{6^n} &=& \sum_{n = 0}^\infty \left[\frac{5}{2^n} + \frac{2}{3^n}\right]\\
+    &=& \sum_{n = 0}^\infty \frac{5}{2^n} + \sum_{n = 0}^\infty \frac{2}{3^n}\\
+    &=& \frac{5}{1 - \frac{1}{2}} + \frac{2}{1 - \frac{1}{3}}\\
+    &=& 5(2) + 2\left(\frac{3}{2}\right) = 10 + 3 = 13.
+  \end{eqnarray*}
+\end{proof}
+
+\begin{caution}I highly discourage using the Ratio Test when addition of exponents is involved.
+However, since several people did attempt to use the Ratio Test, I have included this solution.
+As you will see, it is quite a mess.
+
+It is also important to note that, while this will tell us the series converges, it does \textbf{not} provide us with any method to compute the sum of the series.
+  In order to do so, we must do as in the first solution and break the series up as a sum of two convergent geometric series.
+\end{caution}
+
+\begin{proof}[Solution 2]
+
+  We use the Ratio Test.
+  We have
+  \begin{eqnarray*}
+  \lim_{n \to \infty} \frac{5(3^{n+1}) + 2^{n+2}}{6^{n+1}} \cdot \frac{6^n}{5(3^{n}) + 2^{n+1}}
+  &=& \lim_{n \to \infty} \frac{3^{n + 1}(5 + \frac{2^{n + 2}}{3^{n+1}})}{6(3^n)(5 + \frac{2^{n+1}}{3^n})}\\
+  &=& \lim_{n \to \infty} \frac{3^{n + 1}(5 + 2 \cdot \frac{2^{n + 1}}{3^{n+1}})}{2(3^{n+1})(5 + 2 \cdot \frac{2^{n}}{3^n})}\\
+  &=& \lim_{n \to \infty} \frac{(5 + 2 \cdot \left(\frac{2}{3}\right)^{n+1})}{2(5 + 2 \cdot \left(\frac{2}{3}\right)^n)}\\
+  &=& \frac{5 + 2(0)}{2(5 + 2(0))}\\
+  &=& \frac{5}{10}\\
+  &=& \frac{1}{2}\\
+  &<& 1.
+  \end{eqnarray*}
+  Therefore the series
+  \[\sum_{n = 0}^\infty \frac{5(3^n) + 2^{n+1}}{6^n}\]
+  converges by the Ratio Test.
+\end{proof}
+\begin{thm}[5 Points]
+  Determine whether the series
+  \[\sum_{n=0}^\infty \frac{e^n}{e^n + n}\]
+  converges or diverges.
+\end{thm}
+
+\begin{proof}[Solution]
+  We observe that
+  \[\lim_{n \to \infty} \frac{e^n}{e^n + n} = \lim_{n \to \infty} \frac{e^n}{e^n} \cdot \frac{1}{1 + \frac{n}{e^n}} = \lim_{n \to \infty} \frac{1}{1 + \frac{n}{e^n}}.\]
+  By L'H\^opital's rule we have
+  \[\lim_{n \to \infty} \frac{n}{e^n} = \lim_{n \to \infty} \frac{1}{e^n} = 0\]
+  and thus
+  \[\lim_{n \to \infty} \frac{e^n}{e^n + n} = \lim_{n \to \infty} \frac{1}{1 + \frac{n}{e^n}} = \frac{1}{1 + 0} = 1.\]
+  Therefore this series diverges by the \(n^\text{th}\) Term Test for Divergence.
+\end{proof}
+
+\begin{thm}[5 Points]
+  Determine whether the series
+  \[\sum_{n=2}^\infty \frac{\ln(n)}{n}\]
+  converges or diverges.
+\end{thm}
+
+\begin{proof}[Solution]
+  We use the Integral Test.
+  The function \(f(x) = \ln(x)/x\) is continuous, positive, and decreasing for all \(e \leq x\).
+  To prove the latter claim, observe that
+  \[f^\prime(x) = \frac{\frac{1}{x} \cdot x - \ln(x)}{x^2} = \frac{1 - \ln(x)}{x^2} < 0\]
+  holds whenever \(e < x\) because \(1 = \ln(e)\) and \(\ln(x)\) is an increasing function.
+  
+  We observe that by using the substitution \(u = \ln(x)\), \(\dif u = \dif x / x\) then
+  \[\int_3^\infty \frac{\ln(x)}{x}\dif x = \lim_{t \to \infty} \int_3^t \frac{\ln(x)}{x}\dif x = \lim_{t \to \infty} \int_{\ln(3)}^{\ln(t)} u\dif u = \lim_{t \to \infty} \frac{u^2}{2}\Big|_{\ln(3)}^{\ln(t)} = \lim_{t \to \infty} \frac{\ln(t)^2 - \ln(3)^2}{2} = \infty.\]
+  Therefore the series
+  \[\sum_{n=2}^\infty \frac{\ln(n)}{n} = \frac{\ln(2)}{2} + \sum_{n=3}^\infty \frac{\ln(n)}{n}\]
+  diverges by the Integral Test.
+\end{proof}
+
+\begin{thm}[10 Points]
+  Determine whether the series
+  \[\sum_{n=1}^\infty \frac{n+1}{n^2\sqrt{n}}\]
+  converges or diverges.
+\end{thm}
+
+\begin{proof}[Solution]
+  We use the Limit Comparison Test with the convergent \(p\)-series
+  \[\sum_{n = 1}^\infty \frac{1}{n^{3/2}}.\]
+  Because we are only concerned with \(1 \leq n\), we have
+  \[\lim_{n \to \infty} \frac{\frac{n + 1}{n^2\sqrt{n}}}{\frac{1}{n^{3/2}}}
+  = \lim_{n \to \infty} \frac{n^{3/2}(n + 1)}{n^2\sqrt{n}}
+  = \lim_{n \to \infty} \frac{n + 1}{\sqrt{n}\sqrt{n}}
+  = \lim_{n \to \infty} \frac{n + 1}{n} = 1.\]
+  Therefore this series converges by Part~(1) of the Limit Comparison Test.
+\end{proof}
+
+\begin{thm}[10 Points]
+  Determine whether the series
+  \[\sum_{n = 1}^\infty (-1)^{n} \frac{n^2(n+2)!}{n! 3^{2n}}\]
+  converges conditionally, converges absolutely, or diverges.
+\end{thm}
+
+\begin{proof}[Solution]
+  We use the Ratio Test.
+  We have
+  \begin{eqnarray*}
+    \lim_{n \to \infty} \frac{(n + 1)^2 (n + 3)!}{(n+1)!3^{2n+2}} \frac{n! 3^{2n}}{n^2(n + 2)!} &=& \lim_{n \to \infty} \frac{(n+1)^2}{n^2} \cdot \frac{(n+3)!}{(n + 2)!} \cdot \frac{3^{2n}}{3^{2n + 2}} \cdot \frac{n!}{(n+1)!}\\
+    &=& \lim_{n \to \infty} \frac{(n+1)^2}{n^2} \cdot (n + 3) \cdot \frac{1}{3^2} \cdot \frac{1}{(n + 1)}\\
+    &=& \lim_{n \to \infty} \frac{(n + 1)^2(n + 3)}{9(n + 1)n^2}\\
+    &=& \lim_{n \to \infty} \frac{(n + 1)(n + 3)}{9n^2}\\
+    &=& \lim_{n \to \infty} \frac{n^2 + 4n + 3}{9n^2}\\
+    &=& \frac{1}{9} < 1
+  \end{eqnarray*}
+  Therefore this series converges absolutely by the Ratio Test.
+\end{proof}
+
+\begin{thm}[15 Points]
+  Determine whether the series
+  \[\sum_{n = 1}^\infty \left(\frac{4n+3}{3n-5}\right)^n\]
+  converges or diverges.
+\end{thm}
+
+\begin{proof}[Solution]
+  We use the Ratio Test.
+  We have
+  \[\lim_{n \to \infty} \sqrt[n]{\left(\frac{4n+3}{3n-5}\right)^n} = \lim_{n \to \infty} \frac{4n + 3}{3n - 5} = \frac{4}{3} > 1.\]
+  Therefore this series diverges by the Root Test.
+\end{proof}
+
+\begin{thm}[15 Points]
+  Determine whether the series
+  \[\sum_{n = 1}^\infty (-1)^n\frac{2n}{4n^2 + 1}\]
+  converges conditionally, converges absolutely, or diverges.
+\end{thm}
+
+\begin{proof}[Solution]
+  First we observe that this series does not converge absolutely.
+  By computing the limit
+  \[\lim_{n \to \infty} \frac{\frac{2n}{4n^2 + 1}}{\frac{1}{n}} = \lim_{n \to \infty} {2n^2}{4n^2 + 1} = \frac{1}{2} > 1\]
+  we see that the series
+  \[\sum_{n = 1}^\infty \frac{2n}{4n^2 + 1}\]
+  diverges by Part~(1) of the Limit Comparison Test because the Harmonic Series diverges.
+
+  Next we try the Alternating Series Test.
+  The first and third conditions are easy to verify: when \(1 \leq n\) it's clear that
+  \[0 < u_n = \frac{2n}{4n^2 + 1}\]
+  holds and also
+  \[\lim_{n \to \infty} u_n = \lim_{n \to \infty} \frac{2n}{4n^2 + 1} = \lim_{n \to \infty} \frac{n^2}{n^2} \cdot \frac{2/n}{4 + 1/n^2} = \lim_{n \to \infty} \frac{2/n}{4 + 1/n^2} = \frac{0}{4 + 0} = 0.\]
+  To conclude that this series converges by the Alternating Series Test, we need only verify that for some integer \(N\), \(u_{n + 1} \leq u_n\) holds whenever \(N \leq n\).
+  Towards that end let \(f(x) = \frac{2x}{4x^2 + 1}\) and observe that
+  \[f^\prime(x) = \frac{2(4x^2 + 1) - (2x)(8x)}{(4x^2 + 1)^2} = \frac{8x^2 + 2 - 16x}{(4x^2 + 1)^2} = \frac{-8x^2 + 2}{(4x^2 + 1)^2} < 0\]
+  holds if and only if
+  \[-8x^2 +2 < 0\]
+  which holds if and only if
+  \[\sqrt{\frac{2}{8}} = \sqrt{\frac{1}{4}} = \frac{1}{\sqrt{4}} = \frac{1}{2} < x.\]
+  Since \(f\) is a decreasing function if and only if \(f^\prime(x) < 0\), we see that
+  \[u_{n + 1} = f(n + 1) \leq f(n) = u_n\]
+  holds whenever \(1 \leq n\).
+  Therefore the series
+  \[\sum_{n = 1}^\infty (-1)^n\frac{2n}{4n^2 + 1}\]
+  converges conditionally.
+\end{proof}
+
+\begin{thm}[Bonus - 5 Points]
+  Determine whether the series
+  \[\sum_{n = 1}^\infty \sin\left(\frac{1}{n}\right)\]
+  converges or diverges.
+\end{thm}
+
+\begin{proof}[Solution]
+  We use the Limit Comparison Test with the Harmonic Series.
+  To evaluate the limit
+  \[\lim_{n \to \infty} \frac{\sin\left(\frac{1}{n}\right)}{\frac{1}{n}}\]
+  we observe that if we let \(h = \frac{1}{n}\), then
+  \[\lim_{n \to \infty} \frac{\sin\left(\frac{1}{n}\right)}{\frac{1}{n}} = \lim_{h \to 0} \frac{\sin(h)}{h} = 1.\]
+  Therefore the series
+  \[\sum_{n = 1}^\infty \sin\left(\frac{1}{n}\right)\]
+  diverges by Part~(1) of the Limit Comparison Test.
+\end{proof}
+\end{document}
