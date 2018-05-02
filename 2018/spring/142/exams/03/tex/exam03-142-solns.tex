@@ -1,0 +1,342 @@
+\documentclass[12pt]{amsart}
+\usepackage{amsmath,enumerate,commath,tikz}
+\usetikzlibrary{angles,quotes}
+\openup 5pt
+\author[Blake Farman]{Blake Farman\\University of South Carolina}
+\title[Exam 03]{Math 142: Exam 03}
+\date{April 17, 2018}
+\pdfpagewidth 8.5in
+\pdfpageheight 11in
+\usepackage[margin=1in]{geometry}
+
+\renewcommand{\qedsymbol}{}
+
+\begin{document}
+\maketitle
+
+\begin{center}
+  \fbox{\fbox{\parbox{5.5in}{\centering
+        Answer the questions in the spaces provided on the
+        question sheets and turn them in at the end of the class period.
+
+        Unless otherwise stated, all supporting work is required.
+        Unsupported or otherwise mysterious answers will \textbf{not receive credit.}
+        
+        You may \textbf{not} use a calculator or any other electronic device, including cell phones, smart watches, etc.
+        By writing your name on the line below, you indicate that you have read and understand these directions.
+
+
+        It is advised, although not required, that you check your answers.}}}
+\end{center}
+
+\vspace{0.2in}
+\makebox[\textwidth]{Name:\enspace\hrulefill}
+\vspace{0.2in}
+
+\theoremstyle{definition}
+\newtheorem{thm}{}
+\renewcommand{\qedsymbol}{}
+
+\[
+\begin{array}{|c|c|c|}
+  \hline
+  \text{Problem} & \text{Points Earned} & \text{Points Possible}\\
+  \hline
+  1 & & 25\\
+  \hline
+  2 & & 25\\
+  \hline
+  3 & & 25\\
+  \hline
+  4 & & 25\\
+  \hline
+  \text{Exam 1 Bonus} & & -\\
+  \hline
+  \text{Exam 2 Bonus} & & -\\
+  \hline
+  \text{Total} & & 100\\
+  \hline
+\end{array}
+\]
+
+\newpage
+
+\section{Problems}
+
+\begin{thm}[25 Points]
+  Find the radius and interval of convergence for the power series
+  \[\sum_{n = 0}^\infty \frac{3^nx^n}{n!}.\]
+\end{thm}
+
+\begin{proof}[Solution]
+  We use the Ratio Test.
+  First we compute the limit
+  \[\rho 
+  = \lim_{n \to \infty} \abs{\frac{3^{n+1}x^{n+1}}{(n+1)!} \cdot \frac{n!}{3^nx^n}}
+  = \lim_{n \to \infty} \frac{3\abs{x}}{n + 1}
+  = \lim_{n \to \infty} 3\abs{x} \cdot \lim_{n \to \infty} \frac{1}{n+1} = 3\abs{x} \cdot 0 = 0.\]
+  Since \(\rho < 1\) holds for all \(x\), the radius of convergence is \(R = \infty\) and thus this series converges absolutely on \(\mathbb{R} = (-\infty,\infty)\).
+\end{proof}
+
+\begin{thm}[25 Points]
+  Find the Maclaurin series for the function
+  \[f(x) = \frac{1}{(1-x)^3}.\]
+\end{thm}
+
+\begin{proof}[Solution]
+  First we recognize that on \((-1,1)\) we have the power series
+  \[F(x) = \frac{1}{1-x} = \sum_{n = 0}^\infty x^n\]
+  so taking the derivative of the left-hand side twice yields
+  \[F^\prime(x) = \frac{\dif }{\dif x} (1 - x)^{-1}
+  = (-1)(1 - x)^{-2}(-1)
+  = (1 - x)^{-2}\]
+  and
+  \[
+  F^{\prime\prime}(x) = (-2)(1 - x)^{-3}(-1)
+  = 2\frac{1}{(1 - x)^3}.
+  \]
+  Dividing both sides by 2 yields
+  \[\frac{1}{2}F^{\prime\prime}(x) = \frac{1}{(1 - x)^3} = f(x).\]
+  Applying Term-by-Term Differentiation twice to the Maclaurin series for \(F(x)\) we have
+  \[F^\prime(x) = \sum_{n = 0}^\infty \frac{\dif}{\dif x}x^n = \sum_{n = 0}^\infty nx^{n-1} = \sum_{n = 1}^\infty nx^{n-1}\]
+  and
+  \[F^{\prime\prime}(x) = \sum_{n = 1}^\infty \frac{\dif}{\dif x} nx^{n-1}
+  = \sum_{n = 1}^\infty n(n-1)x^{n-2}
+  = \sum_{n = 2}^\infty n(n-1)x^{n-2}\]
+  Therefore
+  \[f(x) = \frac{1}{(1 - x)^3} =\frac{1}{2}F^{\prime\prime}(x)
+  = \frac{1}{2}\sum_{n = 2}^\infty n(n-1)x^{n-2}
+  = \sum_{n = 2}^\infty \frac{n(n-1)}{2}x^{n-2}\]
+  holds for \(-1 < x < 1\).
+\end{proof}
+
+\begin{proof}[Alternative Solution]
+  We could also compute this series directly.
+  We have
+  \[f(x) = \frac{1}{(1 - x)^{3}} = (1 - x)^{-3}\]
+  so using
+  \[\frac{\dif}{\dif x}(1 - x) = -1\]
+  the Chain Rule, the derivatives are
+  \begin{eqnarray*}
+    f^\prime(x) &=& (-3)(1 - x)^{-4}(-1)
+    = \frac{3}{(1 - x)^{4}}
+    = \frac{(1 + 2)!}{2}\frac{1}{(1-x)^{3 + 1}}\\
+    f^{\prime\prime}(x) &=& (-4)(3)(1 - x)^{-5}(-1)
+    = (4)(3)(1 - x)^{-5}
+    = \frac{4!}{2!(1 - x)^{5}}
+    = \frac{(2 + 2)!}{2(1 - x)^{3 + 2}} \\
+    f^{\prime\prime\prime}(x) &=& (-5)(4)(3)(1-x)^{-6}(-1)
+    = (5)(4)(3)(1 - x)^{-6}
+    = \frac{5!}{2(1 - x)^{3+3}}
+    = \frac{(3 + 2)!}{2(1 - x)^{3 + 3}}\\
+    &\cdots&\\
+    f^{k}(x) &=& \frac{(k + 2)!}{2(1 - x)^{3 + k}}\\
+    &\cdots&
+  \end{eqnarray*}
+  This gives us
+  \[f^k(0) = \frac{(k+2)!}{2(1 - 0)^{3 + k}} = \frac{(k+2)!}{2}\]
+  and so the Maclaurin series is
+  \[\sum_{k = 0}^\infty \frac{f^k(0)}{k!} x^k = \sum_{k = 0}^\infty \frac{(k+2)}{2(k!)} x^k = \sum_{k = 0}^\infty \frac{(k+2)(k+1)}{2} x^k.\]
+  Using the Ratio Test we see that
+  \[\lim_{k \to \infty} \abs{\frac{(k+3)(k+2)x^{k+1}}{2} \cdot \frac{2}{(k+2)(k+3)x^k}} = \lim_{k \to \infty} \frac{k^2 + 5k + 6}{k^2 + 3k + 1} \abs{x} = \abs{x}\]
+  implies this series converges on \((-1,1)\).
+  Note, however, that in contrast with the previous solution, this does not give us any information about whether this series converges to \(f(x)\)!
+\end{proof}
+
+\begin{thm}[25 Points]
+  Find the Maclaurin series for \(x\ln(1 + 2x)\).
+\end{thm}
+
+\begin{proof}[Solution]
+  Either recall that on \((-1,1]\)
+  \[\ln(1 + x) = \sum_{n = 1}^\infty \frac{(-1)^{n-1}}{n} x^n\]
+  or, if you haven't memorized this formula, use substitution to get
+  \[\frac{1}{1+x} = \frac{1}{1 - (-x)} = \sum_{n = 0}^\infty (-x)^n = \sum_{n = 0}^\infty (-1)^nx^n,\]
+  integrate the function using the change of variables \(u = 1 + x\), \(\dif u = \dif x\) to get
+  \[\int \frac{\dif x}{1 + x} = \ln(1 + x) + c,\]
+  then apply Term-by-Term Integration to get
+  \[\ln(1 + x) + c = \int \frac{\dif x}{1 + x} = \sum_{n = 0}^\infty \int (-1)^nx^n\dif x = \sum_{n = 0}^\infty \frac{(-1)^n}{n + 1} x^{n+1} = \sum_{n = 1}^\infty \frac{(-1)^{n-1}}{n} x^n\]
+  and, finally, observe that evaluating the left-hand side at \(x = 0\) yields
+  \[\ln(1 + 0) + c = 0 + c = c\]
+  and evaluating the right-hand side at \(x = 0\) yields
+  \[\sum_{n = 1}^\infty \frac{(-1)^{n-1}}{n} 0^n = \sum_{n = 0}^\infty 0 = 0\]
+  to see that \(c = 0\).
+
+  Using substitution and the formula for the product of two convergent power series, we have
+  \[x\ln(1 + 2x) = x \sum_{n = 1}^\infty \frac{(-1)^{n-1}}{n} (2x)^n
+  = x \sum_{n = 1}^\infty \frac{(-1)^{n-1}2^n}{n} x^n
+  = \sum_{n = 1}^\infty \frac{(-1)^{n-1}2^n}{n} x^{n+1}.\]
+  Having made the substitution, we note that this holds for \(-1 < 2x \leq 1\) or, equivalently, \(-1/2 < x \leq -1/2\).
+\end{proof}
+\begin{proof}[Bare-hand Solution]
+  First we recall that
+  \[\frac{1}{1-x} = \sum_{n=0}^\infty x^n,\, -1 \leq x \leq 1\]
+  so
+  \[\frac{1}{1 + 2x} = \frac{1}{1 - (-2x)} = \sum_{n = 0}^\infty (-2x)^n = \sum_{n = 0}^\infty (-1)^n2^nx^n\]
+  holds so long as \(\abs{-2x} = 2\abs{x} < 1\) or, equivalently, \(\abs{x} < 1/2\).
+  Now we observe that using the change of variables \(u = 1 + 2x\), \(\dif u/2 = \dif x\), the integral of the left-hand side is
+  \[\int \frac{\dif x}{1 + 2x} = \int \frac{\dif u}{2u} = \frac{1}{2} \int \frac{\dif u}{u} = \frac{1}{2}\ln(u) + c = \frac{1}{2}\ln(1 + 2x) + c\]
+  while applying Term-by-Term Integration to the series yields
+  \[\frac{1}{2}\ln(1 + 2x) + c = \int \frac{\dif x}{1 + 2x}
+  = \sum_{n = 0}^\infty \int\left[(-1)^n2^nx^n\right]\dif x
+  = \sum_{n = 0}^\infty \frac{(-1)^n2^n}{n+1}x^{n+1}\]
+  on \((-1/2,1/2)\).
+  Evaluating the left-hand side of this equation at \(x = 0\) we have
+  \[\frac{1}{2}\ln(1 + 2(0)) + c = \frac{1}{2}\ln(1) + c = 0 + c = c\]
+  while evaluating the right-hand side of this equation at \(x = 0\) we have
+  \[\sum_{n = 0}^\infty \frac{(-1)^n2^n}{n+1}0^{n+1} = \sum_{n=0}^\infty 0 = 0\]
+  implies that \(c = 0\).
+  Multiplying both sides by \(2x\) we obtain
+  \[x\ln(1 + 2x) = 2x\sum_{n = 0}^\infty \frac{(-1)^n2^n}{n+1}x^{n+1}
+  = \sum_{n = 0}^\infty \frac{(-1)^n2^{n+1}}{n+1}x^{n+2}
+  = \sum_{n = 1}^\infty \frac{(-1)^{n-1}2^{n}}{n}x^{n+1}\]
+  for \(-1/2 < x < 1/2\).
+  This equality also holds for \(x = 1/2\), but requires some care.
+\end{proof}
+
+\begin{thm}[25 Points]
+  Find the Maclaurin series for
+  \[\ln\left(\frac{1 + x}{1 - x}\right)\]
+\end{thm}
+
+\begin{proof}[Solution]
+  First, rewrite
+  \[\ln\left(\frac{1+x}{1-x}\right) = \ln(1 + x) - \ln(1 - x).\]
+  Next, we recall that
+  \[\ln(1 + x) = \sum_{n = 1}^\infty \frac{(-1)^{n-1}}{n} x^n\]
+  holds for \(-1 < x \leq 1\).
+  Using substitution we obtain
+  \[\ln(1 - x) = \ln(1 + (-x)) =
+  \sum_{n = 1}^\infty \frac{(-1)^{n-1}(-1)^n}{n} (-x)^n
+  = \sum_{n = 1}^\infty \frac{(-1)^{2n - 1}}{n} x^n
+  = -\sum_{n = 1}^\infty \frac{1}{n} x^n\]
+  because
+  \[(-1)^{2n - 1} = (-1)^{2n}(-1)^{-1} = \frac{((-1)^2)^n}{-1} = \frac{1^n}{-1} = \frac{1}{-1} = -1,\]
+  which holds for \(-1 \leq x < 1\).
+
+  Since both of these series converge on \((-1,1)\), we have
+  \begin{eqnarray*}
+    \ln\left(\frac{1 + x}{1-x}\right) &=& \sum_{n = 1}^\infty \frac{(-1)^{n-1}}{n} x^n - \left(-\sum_{n = 1}^\infty \frac{1}{n} x^n\right)\\
+    &=& \sum_{n = 1}^\infty \frac{(-1)^{n-1}}{n} x^n + \sum_{n = 1}^\infty \frac{1}{n} x^n\\
+    &=& \sum_{n = 1}^\infty \left[\frac{(-1)^{n-1}}{n} x^n + \frac{1}{n} x^n\right]\\
+    &=& \sum_{n = 1}^\infty \frac{(-1)^{n-1} +1}{n} x^n\\
+  \end{eqnarray*}
+  When \(n\) is an even number, \(n - 1\) is odd, so 
+  \[(-1)^{n-1} + 1 = -1 + 1 = 0\]
+  and when \(n\) is an odd number, \(n - 1\) is even, so
+  \[(-1)^{n - 1} + 1 = 1 + 1 = 2.\]
+  Therefore
+  \[\ln\left(\frac{1 + x}{1 - x}\right) = \sum_{k=0}^\infty \frac{2}{2k+1} x^{2k+1}\]
+  holds for \(-1 < x < 1\).
+  We note that because the function
+  \[\ln\left(\frac{1 + x}{1 - x}\right)\]
+  is not defined at \(x = 1\) and when \(x = -1\) the series
+  \[\sum_{k = 0}^\infty \frac{2}{2k + 1} (-1)^{2k + 1} = \sum_{k = 0}^\infty \frac{-2}{2k + 1} = -2 - \frac{2}{3} - \frac{2}{5} - \ldots\]
+  does not converge to zero, this equality does not hold at either of the endpoints.
+  
+\end{proof}
+
+\begin{proof}[Bare-hand Solution]
+  First, rewrite
+  \[\ln\left(\frac{1+x}{1-x}\right) = \ln(1 + x) - \ln(1 - x).\]
+  We see that by making the change of variables \(u = 1 + x\), \(\dif u = \dif x\) we have
+  \[\int \frac{\dif x}{1 + x} = \int \frac{\dif u}{u} = \ln(u) + c_1 = \ln(1 + x) + c_2\]
+  and making the change of variables \(u = 1-x\), \(-\dif u = -\dif x\) we have
+  \[\int \frac{\dif x}{1 - x} = - \int \frac{\dif u}{u} = -(\ln(u) + c_2) = -\ln(1 - x) - c_2.\]
+  Letting \(c = c_1 - c_2\) we have
+  \begin{eqnarray*}
+    \ln(1 + x) - \ln(1 - x) + c 
+    &=&\int \frac{\dif x}{1 + x} + \int \frac{\dif x}{1 - x}\\
+    &=&\int\left[\frac{1}{1 + x} + \frac{1}{1 - x}\right]\dif x
+  \end{eqnarray*}
+  For \(-1 < x < 1\) we have
+  \[
+  \frac{1}{1 + x} + \frac{1}{1 - x} = \sum_{n = 0}^\infty (-x)^n + \sum_{n = 0}^\infty x^n = \sum_{n = 0}^\infty \left[(-1)^n + 1\right]x^n
+  \]
+  We observe that when \(n\) is even \((-1)^n + 1 = 1 + 1 = 2\) and when \(n\) is odd \((-1)^n + 1 = -1 + 1 = 0\) so
+  \[\frac{1}{1 + x} + \frac{1}{1 - x} = \sum_{k = 0}^\infty 2x^{2k}\]
+  Now, putting this all together and applying Term-by-Term Integration we have
+  \begin{eqnarray*}
+    \ln(1 + x) - \ln(1 - x) + c 
+    &=&\int\left[\frac{1}{1 + x} + \frac{1}{1 - x}\right]\dif x\\
+    &=& \sum_{k=0}^\infty \int 2x^{2k}\dif x\\
+    &=& \sum_{k=0}^\infty \frac{2}{2k+1} x^{2k+1}\\
+  \end{eqnarray*}
+  Evaluating the left-hand side of this equation at \(x = 0\) we get
+  \(\ln(1 + 0) - \ln(1 - 0) + c = \ln(1) - \ln(1) + c = c\)
+  and evaluating the right-hand side of this equation at \(x = 0\) we get
+  \[\sum_{k = 0}^\infty \frac{2}{2k+1} 0^{2k+1} = \sum_{k = 0}^\infty 0 = 0.\]
+  Therefore
+  \[\ln\left(\frac{1 + x}{1 - x}\right) = \ln(1 + x) - \ln(1 - x) = \sum_{k=0}^\infty \frac{2}{2k+1} x^{2k+1}\]
+  for \(-1 < x < 1\).
+\end{proof}
+
+\begin{thm}[Bonus - Exam 1]
+  Decide whether 
+  \[\int_2^\infty \frac{\dif x}{x^2 - 1}\]
+  converges or diverges.
+  If it converges, find the value of the integral.
+\end{thm}
+
+\begin{proof}[Solution]
+  By definition we have
+  \[\int_2^\infty \frac{\dif x}{x^2 - 1} = \lim_{t \to \infty} \int_2^t \frac{\dif x}{x^2 - 1}.\]
+  Factoring the denominator as \(x^2 - 1 = (x + 1)(x - 1)\) we can do the definite integral by partial fraction decomposition as follows.
+  Set
+  \[\frac{1}{(x - 1)(x + 1)} = \frac{A}{x - 1} + \frac{B}{x + 1}\]
+  then clear denominators to get
+  \[1 = A(x + 1) + B(x - 1) = (A + B)x + (A - B)\]
+  and equate coefficients to obtain the system
+  \begin{eqnarray*}
+    0 &=& A + B\\
+    1 &=& A - B.
+  \end{eqnarray*}
+  Adding the two equations together gives \(1 = 2A\), while subtracting the second equation from the first gives \(-1 = 2B\).
+  Thus \(A = 1/2\), \(B = -1/2\), and
+  \begin{eqnarray*}
+    \lim_{t \to \infty} \int_2^t \frac{\dif x}{x^2 - 1} &=& \lim_{t \to \infty}\left(\frac{1}{2}\int_2^t \frac{\dif x}{x - 1} - \frac{1}{2} \int_2^t \frac{\dif x}{x + 1}\right)\\
+    &=& \lim_{t \to \infty} \left(\frac{1}{2}\left[\ln \abs{x - 1} - \ln\abs{x+1}\right]_2^t\right)\\
+    &=& \lim_{t \to \infty} \left(\frac{\ln \abs{t - 1} - \ln\abs{t + 1} - \ln(2 - 1) + \ln(2 + 1)}{2}\right)\\
+    &=& \lim_{t \to \infty} \frac{1}{2}\left(\ln\abs{\frac{t - 1}{t + 1}} + \ln(3)\right).
+  \end{eqnarray*}
+  Since both the natural logarithm and the absolute value functions are continuous we have 
+  \[\lim_{t \to \infty} \ln\abs{\frac{t - 1}{t + 1}} = \ln\left(\lim_{t \to \infty} \abs{\frac{t -  1}{t + 1}}\right) = \ln\abs{\lim_{t\to\infty} \frac{t -1}{t + 1}} = \ln(1) = 0.\]
+  Therefore
+  \[\int_2^\infty \frac{\dif x}{x^2 - 1} =  \lim_{t \to \infty} \frac{1}{2}\left(\ln\abs{\frac{t - 1}{t + 1}} + \ln(3)\right) = \frac{0 + \ln(3)}{2} = \frac{\ln(3)}{2}.\]
+\end{proof}
+
+\begin{thm}[Bonus - Exam 2]
+  Determine whether the series
+  \[\sum_{n = 1}^\infty (-1)^n\frac{2n}{4n^2 + 1}\]
+  converges conditionally, converges absolutely, or diverges.
+\end{thm}
+
+\begin{proof}[Solution]
+  First we observe that this series does not converge absolutely.
+  By computing the limit
+  \[\lim_{n \to \infty} \frac{\frac{2n}{4n^2 + 1}}{\frac{1}{n}} = \lim_{n \to \infty} \frac{2n^2}{4n^2 + 1} = \frac{1}{2} > 0\]
+  we see that the series
+  \[\sum_{n = 1}^\infty \frac{2n}{4n^2 + 1}\]
+  diverges by Part~(1) of the Limit Comparison Test because the Harmonic Series diverges.
+
+  Next we try the Alternating Series Test.
+  The first and third conditions are easy to verify: when \(1 \leq n\) it's clear that
+  \[0 < u_n = \frac{2n}{4n^2 + 1}\]
+  holds and also
+  \[\lim_{n \to \infty} u_n = \lim_{n \to \infty} \frac{2n}{4n^2 + 1} = \lim_{n \to \infty} \frac{n^2}{n^2} \cdot \frac{2/n}{4 + 1/n^2} = \lim_{n \to \infty} \frac{2/n}{4 + 1/n^2} = \frac{0}{4 + 0} = 0.\]
+  To conclude that this series converges by the Alternating Series Test, we need only verify that for some integer \(N\), \(u_{n + 1} \leq u_n\) holds whenever \(N \leq n\).
+  Towards that end let \(f(x) = \frac{2x}{4x^2 + 1}\) and observe that
+  \[f^\prime(x) = \frac{2(4x^2 + 1) - (2x)(8x)}{(4x^2 + 1)^2} = \frac{8x^2 + 2 - 16x}{(4x^2 + 1)^2} = \frac{-8x^2 + 2}{(4x^2 + 1)^2} < 0\]
+  holds if and only if
+  \[-8x^2 +2 < 0\]
+  which holds if and only if
+  \[\sqrt{\frac{2}{8}} = \sqrt{\frac{1}{4}} = \frac{1}{\sqrt{4}} = \frac{1}{2} < x.\]
+  Since \(f\) is a decreasing function if and only if \(f^\prime(x) < 0\), we see that
+  \[u_{n + 1} = f(n + 1) \leq f(n) = u_n\]
+  holds whenever \(1 \leq n\).
+  Therefore the series
+  \[\sum_{n = 1}^\infty (-1)^n\frac{2n}{4n^2 + 1}\]
+  converges conditionally.
+\end{proof}
+
+\end{document}
