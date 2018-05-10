@@ -1,0 +1,154 @@
+\documentclass[12pt]{amsart}
+\usepackage{amsmath,enumerate,commath,tikz}
+\usetikzlibrary{angles,quotes}
+\openup 5pt
+\author[Blake Farman]{Blake Farman\\University of South Carolina}
+\title[Final Exam]{Math 142: Final Exam}
+\date{May 8, 2018}
+\pdfpagewidth 8.5in
+\pdfpageheight 11in
+\usepackage[margin=1in]{geometry}
+
+\renewcommand{\qedsymbol}{}
+
+\begin{document}
+\maketitle
+
+\begin{center}
+  \fbox{\fbox{\parbox{5.5in}{\centering
+        Answer the questions in the spaces provided on the
+        question sheets and turn them in at the end of the class period.
+
+        Unless otherwise stated, all supporting work is required.
+        Unsupported or otherwise mysterious answers will \textbf{not receive credit.}
+        
+        You may \textbf{not} use a calculator or any other electronic device, including cell phones, smart watches, etc.
+        By writing your name on the line below, you indicate that you have read and understand these directions.
+
+
+        It is advised, although not required, that you check your answers.}}}
+\end{center}
+
+\vspace{0.2in}
+\makebox[\textwidth]{Name:\enspace\hrulefill}
+\vspace{0.2in}
+
+\theoremstyle{definition}
+\newtheorem{thm}{}
+\renewcommand{\qedsymbol}{}
+
+\[
+\begin{array}{|c|c|c|}
+  \hline
+  \text{Problem} & \text{Points Earned} & \text{Points Possible}\\
+  \hline
+  1 & & 10\\
+  \hline
+  2 & & 10\\
+  \hline
+  3 & & 10\\
+  \hline
+  4 & & 10\\
+  \hline
+  5 & & 10\\
+  \hline
+  6 & & 10\\
+  \hline
+  7 & & 10\\
+  \hline
+  8 & & 10\\
+  \hline
+  9 & & 10\\
+  \hline
+  10 & & 10\\
+  \hline
+  \text{Total} & & 100\\
+  \hline
+\end{array}
+\]
+
+\newpage
+
+\section{Integrals}
+
+In this section, determine the appropriate method and compute the given integral.
+\begin{thm}[10 Points]
+  Compute
+  \[\int x\ln(x)\dif x.\]
+\end{thm}
+
+\vspace{3in}
+
+\begin{thm}[10 Points]
+  Compute
+  \[\int \frac{\dif x}{\sqrt{9 + x^2}}\]
+\end{thm}
+
+\newpage
+\begin{thm}[10 Points]
+Compute
+\[\int \frac{\dif x}{x^2 + 2x}\]
+\end{thm}
+
+\newpage
+
+\section{Series}
+
+\begin{thm}[10 Points]
+  Determine whether the series
+  \[\sum_{n=0}^\infty \left(\frac{5}{2^n} - \frac{2}{3^{n+1}}\right)\]
+  converges or diverges.
+  If it converges, find the sum of the series.
+\end{thm}
+
+\newpage
+
+\begin{thm}[10 Points]
+  Use the \textbf{integral test} to determine whether the series
+  \[\sum_{n=1}^\infty \frac{n}{n^2 + 4}\]
+  converges or diverges.
+\end{thm}
+
+\vspace{3in}
+\begin{thm}[10 Points]
+  Determine whether the series
+  \[\sum_{n=1}^\infty (-1)^n\frac{n}{n^2 + 4}\]
+  converges conditionally, converges absolutely, or diverges.
+\end{thm}
+
+\newpage
+\section{Power Series}
+\begin{thm}[10 Points]
+  Find the radius and interval of convergence for the power series
+  \[\sum_{n=1}^\infty \frac{4^nx^{2n}}{n}.\]
+\end{thm}
+
+\newpage
+
+\begin{thm}[10 Points]
+  Given the Maclaurin series
+  \[\frac{1}{1+x} = \sum_{n = 0}^\infty (-1)^n x^n,\, -1 < x < 1\]
+  find the Taylor series centered at \(a = 1\) for 
+  \[f(x) = \frac{1}{x}.\]
+  Where is the Taylor series equal to the function?\\
+  {[Hint: \(x = 1 + (x - 1)\).]}
+\end{thm}
+
+\vspace{2in}
+
+\begin{thm}[10 Points]
+  Use your answer to Problem 8 to compute the Taylor series for
+  \[f(x) = \ln(x)\]
+  centered at \(a = 1\).
+  Where is the Taylor series equal to the function?
+\end{thm}
+
+\newpage
+
+\begin{thm}[10 Points]
+  Use your solution to Problem 8 to find the Taylor series centered at \(a = 1\) for the function
+  \[f(x) = \frac{1}{x^2}.\]
+  Where is the Taylor series equal to the function?
+\end{thm}
+
+\end{document}
