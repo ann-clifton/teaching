@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 CLASS=161
 NUMBER=01
-NAME="hw${NUMBER}-${CLASS}"
+NAME="algebra.review"
 PDFDIR=../pdf/
 FILE="$NAME.tex"
 

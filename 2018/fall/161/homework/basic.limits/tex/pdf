@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 CLASS=161
-NUMBER=05
-NAME="hw${NUMBER}-${CLASS}"
+NUMBER=02
+NAME="basic.limits"
 PDFDIR=../pdf/
 FILE="$NAME.tex"
 

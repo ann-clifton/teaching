@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 CLASS=161
-NUMBER=02
-NAME="hw${NUMBER}-${CLASS}"
+NUMBER=05
+NAME="chain.rule"
 PDFDIR=../pdf/
 FILE="$NAME.tex"
 
