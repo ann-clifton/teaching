@@ -96,35 +96,37 @@ We want to answer the following question:
 \begin{displayquote}
   ``How many real roots can a polynomial of degree \(n\) have?''
 \end{displayquote}
+For \(n = 1\) and \(n = 2\) we have very explicit answers to this question from a high school algebra class.
+Similar explicit results are known for \(n = 3\) (Cardano's formula) and \(n = 4\), though are quite nasty and likely unfamiliar.
+For \(5 \leq n\), no such formulas exist.
 
 For a polynomial of degree one, \(p(x) = m x + b\), the answer to this question is simple: \(p\) has \textit{exactly} one real root, \(-b/m\):
 \[p\left(-\frac{b}{m}\right) = m\left(-\frac{b}{m}\right) + b = -b + b = 0\]
-For a polynomial of degree two, \(p(x) = a x^2 + b x + c\), the answer to this question also has a relatively simple answer from high school algebra: \(p\) has \textit{at most} two real roots
+For a polynomial of degree two, \(p(x) = a x^2 + b x + c\), the answer to this question also has a relatively simple answer: \(p\) has \textit{at most} two real roots
 \[\frac{-b \pm \sqrt{b^2 - 4ac}}{2a}.\]
-In this case, the number of real roots are determined by the discriminant, \(D = b^2 - 4ac\), as follows.\\
+These two answers lead us to believe that a degree \(n\) polynomial should have \textit{at most} \(n\) real roots.
+%In this case, the number of real roots are determined by the discriminant, \(D = b^2 - 4ac\), as follows.\\
 
-\noindent
-\(\underline{\textbf{D = 0:}}\) \(p\) has exactly one real root
-\[r = \frac{-b \pm \sqrt{D}}{2a} = \frac{-b \pm \sqrt{0}}{2a} = -\frac{b}{2a}.\]
+%\noindent
+%\(\underline{\textbf{D = 0:}}\) \(p\) has exactly one real root
+%\[r = \frac{-b \pm \sqrt{D}}{2a} = \frac{-b \pm \sqrt{0}}{2a} = -\frac{b}{2a}.\]
 
-\noindent
-\(\underline{\textbf{0 \textless\ D:}}\) there are exactly two real roots
-\[r_1 = \frac{-b + \sqrt{D}}{2a}\ \text{and}\ r_2 = \frac{-b - \sqrt{D}}{2a}.\]\\
+%\noindent
+%\(\underline{\textbf{0 \textless\ D:}}\) there are exactly two real roots
+%\[r_1 = \frac{-b + \sqrt{D}}{2a}\ \text{and}\ r_2 = \frac{-b - \sqrt{D}}{2a}.\]\\
 
-\noindent
-\(\underline{\textbf{D \textless\ 0:}}\) there are no real roots because \(\sqrt{D}\) is not a real number (there are no real numbers that square to a negative).
+%\noindent
+%\(\underline{\textbf{D \textless\ 0:}}\) there are no real roots because \(\sqrt{D}\) is not a real number (there are no real numbers that square to a negative number).
 
 First we investigate for a differentiable function, \(f\), how the number of solutions to \(f(x) = 0\) relates to the number of solutions to \(f^\prime(x) = 0\).
 We observe that if there exist numbers \(r_1 < r_2\) such that \(f(r_1) = f(r_2) = 0\), then by the Mean Value Theorem applied on the interval \([r_1, r_2]\) there exists a number \(s\) in \((r_1, r_2)\) such that
 \[f^\prime(s) = \frac{f(r_2) - f(r_1)}{r_2 - r_1} = \frac{0}{r_2 - r_1} = 0.\]
 
-\newpage
-
 \begin{thm}\label{roots of deriv}
   Assume that exist numbers \(r_1 < r_2 < r_3\) such that \(f(r_1) = f(r_2) = f(r_3) = 0\).
   Show that there are two numbers \(s_1 < s_2\) such that \(f^\prime(s_1) = f^\prime(s_2) = 0\).
 \end{thm}
-\vspace{3in}
+\newpage
 
 \noindent We can now use this result to answer our original question in the case that \(n = 3\):
 \begin{thm}\label{FTA}
@@ -133,24 +135,24 @@ We observe that if there exist numbers \(r_1 < r_2\) such that \(f(r_1) = f(r_2)
   has \textit{at most} three real roots.
   That is to say, there are at most three numbers \(r_1 < r_2 < r_3\) such that
   \[p(r_1) = p(r_2) = p(r_3) = 0.\]
-     {[Hint: Apply the result of Problem~\ref{roots of deriv} to the differentiable function \(p\).]}
+     {[Hint: According to Problem~\ref{roots of deriv}, what would happen if \(p\) had four real roots?]}
 \end{thm}
 
-\newpage
+\vspace{2in}
 
 \begin{thm}
   Generalize your result from Problem~\ref{roots of deriv}:\\
 
   \noindent Assume that for some integer \(m\) there exist numbers
-    \[r_1 < r_2 < \ldots < r_m\]
+  \(r_1 < r_2 < \ldots < r_m\)
     such that
     \[f(r_1) = f(r_2) = \ldots = f(r_m) = 0.\]
     Show that there are \(m-1\) numbers
-    \[s_1 < s_2 < \ldots < s_{m-1}\]
+    \(s_1 < s_2 < \ldots < s_{m-1}\)
     such that
     \[f^\prime(s_1) = f^\prime(s_2) = \ldots = f^\prime(s_m).\]
 \end{thm}
-\vspace{4in}
+\newpage
 \begin{thm}
   Generalize your solution to Problem~\ref{FTA}:\\
   
