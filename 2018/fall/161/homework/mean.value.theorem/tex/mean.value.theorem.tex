@@ -1,0 +1,103 @@
+\documentclass[10pt]{amsart}
+\usepackage{style}
+
+\title[Mean Value Theorem]{Mean Value Theorem Practice}
+\date{October 12, 2018}
+\author{Blake Farman}
+\address{Lafayette College}
+
+\begin{document}
+\maketitle
+
+\makenameslot
+%\begin{thm*}[Rolle]
+%  Let \(f\) be a function that satisfies the following hypotheses:
+%  \begin{enumerate}
+%  \item
+%    \(f\) is continuous on the closed interval \([a,b]\).
+%  \item
+%    \(f\) is differentiable on the open interval \((a,b)\).
+%  \item
+%    \(f(a) = f(b)\).
+%  \end{enumerate}
+%  Then there is a number \(c\) in \((a,b)\) such that \(f^\prime(c) = 0\).
+%\end{thm*}
+
+\begin{thm*}[Mean Value]
+  Let \(f\) be a function that satisfies the following hypotheses:
+  \begin{enumerate}
+  \item
+    \(f\) is continuous on the closed interval \([a,b]\).
+  \item
+    \(f\) is differentiable on the open interval \((a,b)\).
+  \end{enumerate}
+  Then there is a number \(c\) in \((a,b)\) such that
+  \[f^\prime(c) = \frac{f(b) - f(a)}{b - a}\]
+  or, equivalently,
+  \[f(b) - f(a) = f^\prime(c)(b - a).\]
+\end{thm*}
+
+In Problems~\ref{first MVT} through \ref{last MVT}, verify that the function satisfies the hypotheses of the Mean Value Theorem on the given interval and find all numbers \(c\) that satisfy its conclusion.
+\begin{thm}\label{first MVT}
+  \(f(x) = x^3 - x^2 - 6x + 2,\, [0,3]\)
+\end{thm}
+
+\begin{thm}
+  \(f(x) = \cos(2x),\, [\pi/8, 7\pi/8]\)
+\end{thm}
+
+\begin{thm}
+    \(f(x) = 3x^2 + 2x + 5,\, [-1,1]\)
+\end{thm}
+
+\begin{thm}\label{last MVT}
+  \(f(x) = \dfrac{x}{x + 2},\, [1,4]\)
+\end{thm}
+
+\begin{thm}
+  Let \(f(x) = 1 - x^{2/3}\).
+  Show that \(f(-1) = f(1)\), but there is no number \(c\) in \((-1,1)\) such that
+  \[f^\prime(c) = \frac{f(1) - f(-1)}{1 - (-1)} = \frac{0}{2} = 0.\]
+  Why does this not contradict the Mean Value Theorem?
+\end{thm}
+
+\begin{thm}
+  Show that the equation \(1 + 2x + x^3 + 4x^5 = 0\) has \textit{exactly} one real solution.
+\end{thm}
+
+\section*{Challenge}
+
+Recall that a polynomial
+\[p(x) = a_n x^n + a_{n-1} x^{n-1} + \ldots + a_1 x + a_0,\, a_n \neq 0\]
+is said to have \textit{degree} \(n\), the highest power of \(x\) that appears.
+We say that a number \(r\) is a \textit{root} of \(p\) if
+\[p(r) = a_nr^n + a_{n-1}r^{n-1} + \ldots a_1 r + a_0 = 0\].
+
+A degree one polynomial, \(p(x) = m x + b\), always has \textit{exactly} one real root,
+\[p\left(-\frac{b}{m}\right) = m\left(-\frac{b}{m}\right) + b = -b + b = 0\]
+while a degree two polynomial, \(p(x) = a x^2 + b x + c\), has \textit{at most} two real roots
+\[\frac{-b \pm \sqrt{b^2 - 4ac}}{2a}.\]
+In the latter case, the number of roots are determined by the discriminant, \(D = b^2 - 4ac\).
+If \(D = 0\), then \(p\) has exactly one real root
+\[r = \frac{-b \pm \sqrt{D}}{2a} = \frac{-b \pm \sqrt{0}}{2a} = -\frac{b}{2a}.\]
+If \(0 < D\) then there are exactly two real roots
+\[r_1 = \frac{-b + \sqrt{D}}{2a}\ \text{and}\ r_2 = \frac{-b - \sqrt{D}}{2a}.\]
+If \(D < 0\), then \(\sqrt{D}\) is not a real number (there are no real numbers that square to a negative), so there are no real roots.
+
+
+\begin{thm}\label{FTA}
+  Show that a polynomial of degree three
+  \[p(x) = a_3x^3 + a_2x^2 + a_1x +a_0\]
+  has \textit{at most} three real roots.
+  That is to say, there are at most three numbers \(r_1 < r_2 < r_3\) such that
+  \[p(r_1) = p(r_2) = p(r_3) = 0.\]
+     {[Hint: How does the number of roots of \(p(x)\) affect the number of roots of \(p^\prime(x)\)?]}
+\end{thm}
+
+\begin{thm}
+  Generalize your solution to Problem~\ref{FTA}.  That is:\vspace{\baselineskip}\\
+  
+  \noindent Show that a polynomial of degree \(n\) has \textit{at most} \(n\) real roots.
+\end{thm}
+\end{document}
+
