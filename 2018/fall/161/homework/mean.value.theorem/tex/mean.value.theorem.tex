@@ -42,17 +42,23 @@ In Problems~\ref{first MVT} through \ref{last MVT}, verify that the function sat
   \(f(x) = x^3 - x^2 - 6x + 2,\, [0,3]\)
 \end{thm}
 
+\vspace{1.5in}
+
 \begin{thm}
   \(f(x) = \cos(2x),\, [\pi/8, 7\pi/8]\)
 \end{thm}
 
+\newpage
+
 \begin{thm}
     \(f(x) = 3x^2 + 2x + 5,\, [-1,1]\)
 \end{thm}
-
+\vspace{1.5in}
 \begin{thm}\label{last MVT}
   \(f(x) = \dfrac{x}{x + 2},\, [1,4]\)
 \end{thm}
+
+\vspace{1.5in}
 
 \begin{thm}
   Let \(f(x) = 1 - x^{2/3}\).
@@ -61,41 +67,92 @@ In Problems~\ref{first MVT} through \ref{last MVT}, verify that the function sat
   Why does this not contradict the Mean Value Theorem?
 \end{thm}
 
+\newpage
+
 \begin{thm}
   Show that the equation \(1 + 2x + x^3 + 4x^5 = 0\) has \textit{exactly} one real solution.
 \end{thm}
 
+\vspace{4in}
+
+\begin{thm}
+  Let \(c\) be a constant.
+  Show that the equation \(x^4 + 4x + c = 0\) has \textit{at most} two real roots.
+\end{thm}
+
+\newpage
+
 \section*{Challenge}
 
-Recall that a polynomial
+
+
+Recall that the polynomial
 \[p(x) = a_n x^n + a_{n-1} x^{n-1} + \ldots + a_1 x + a_0,\, a_n \neq 0\]
 is said to have \textit{degree} \(n\), the highest power of \(x\) that appears.
-We say that a number \(r\) is a \textit{root} of \(p\) if
-\[p(r) = a_nr^n + a_{n-1}r^{n-1} + \ldots a_1 r + a_0 = 0\].
+Recall also that we say that a number \(r\) is a \textit{root} of \(p\) if
+\[p(r) = a_nr^n + a_{n-1}r^{n-1} + \ldots a_1 r + a_0 = 0,\]
+and we say that \(r\) is a \textit{real root} if \(r\) is a real number.
+We want to answer the following question:
+\begin{displayquote}
+  ``How many real roots can a polynomial of degree \(n\) have?''
+\end{displayquote}
 
-A degree one polynomial, \(p(x) = m x + b\), always has \textit{exactly} one real root,
+For a polynomial of degree one, \(p(x) = m x + b\), the answer to this question is simple: \(p\) has \textit{exactly} one real root, \(-b/m\):
 \[p\left(-\frac{b}{m}\right) = m\left(-\frac{b}{m}\right) + b = -b + b = 0\]
-while a degree two polynomial, \(p(x) = a x^2 + b x + c\), has \textit{at most} two real roots
+For a polynomial of degree two, \(p(x) = a x^2 + b x + c\), the answer to this question also has a relatively simple answer from high school algebra: \(p\) has \textit{at most} two real roots
 \[\frac{-b \pm \sqrt{b^2 - 4ac}}{2a}.\]
-In the latter case, the number of roots are determined by the discriminant, \(D = b^2 - 4ac\).
-If \(D = 0\), then \(p\) has exactly one real root
+In this case, the number of real roots are determined by the discriminant, \(D = b^2 - 4ac\), as follows.\\
+
+\noindent
+\(\underline{\textbf{D = 0:}}\) \(p\) has exactly one real root
 \[r = \frac{-b \pm \sqrt{D}}{2a} = \frac{-b \pm \sqrt{0}}{2a} = -\frac{b}{2a}.\]
-If \(0 < D\) then there are exactly two real roots
-\[r_1 = \frac{-b + \sqrt{D}}{2a}\ \text{and}\ r_2 = \frac{-b - \sqrt{D}}{2a}.\]
-If \(D < 0\), then \(\sqrt{D}\) is not a real number (there are no real numbers that square to a negative), so there are no real roots.
 
+\noindent
+\(\underline{\textbf{0 \textless\ D:}}\) there are exactly two real roots
+\[r_1 = \frac{-b + \sqrt{D}}{2a}\ \text{and}\ r_2 = \frac{-b - \sqrt{D}}{2a}.\]\\
 
+\noindent
+\(\underline{\textbf{D \textless\ 0:}}\) there are no real roots because \(\sqrt{D}\) is not a real number (there are no real numbers that square to a negative).
+
+First we investigate for a differentiable function, \(f\), how the number of solutions to \(f(x) = 0\) relates to the number of solutions to \(f^\prime(x) = 0\).
+We observe that if there exist numbers \(r_1 < r_2\) such that \(f(r_1) = f(r_2) = 0\), then by the Mean Value Theorem applied on the interval \([r_1, r_2]\) there exists a number \(s\) in \((r_1, r_2)\) such that
+\[f^\prime(s) = \frac{f(r_2) - f(r_1)}{r_2 - r_1} = \frac{0}{r_2 - r_1} = 0.\]
+
+\newpage
+
+\begin{thm}\label{roots of deriv}
+  Assume that exist numbers \(r_1 < r_2 < r_3\) such that \(f(r_1) = f(r_2) = f(r_3) = 0\).
+  Show that there are two numbers \(s_1 < s_2\) such that \(f^\prime(s_1) = f^\prime(s_2) = 0\).
+\end{thm}
+\vspace{3in}
+
+\noindent We can now use this result to answer our original question in the case that \(n = 3\):
 \begin{thm}\label{FTA}
   Show that a polynomial of degree three
   \[p(x) = a_3x^3 + a_2x^2 + a_1x +a_0\]
   has \textit{at most} three real roots.
   That is to say, there are at most three numbers \(r_1 < r_2 < r_3\) such that
   \[p(r_1) = p(r_2) = p(r_3) = 0.\]
-     {[Hint: How does the number of roots of \(p(x)\) affect the number of roots of \(p^\prime(x)\)?]}
+     {[Hint: Apply the result of Problem~\ref{roots of deriv} to the differentiable function \(p\).]}
 \end{thm}
 
+\newpage
+
 \begin{thm}
-  Generalize your solution to Problem~\ref{FTA}.  That is:\vspace{\baselineskip}\\
+  Generalize your result from Problem~\ref{roots of deriv}:\\
+
+  \noindent Assume that for some integer \(m\) there exist numbers
+    \[r_1 < r_2 < \ldots < r_m\]
+    such that
+    \[f(r_1) = f(r_2) = \ldots = f(r_m) = 0.\]
+    Show that there are \(m-1\) numbers
+    \[s_1 < s_2 < \ldots < s_{m-1}\]
+    such that
+    \[f^\prime(s_1) = f^\prime(s_2) = \ldots = f^\prime(s_m).\]
+\end{thm}
+\vspace{4in}
+\begin{thm}
+  Generalize your solution to Problem~\ref{FTA}:\\
   
   \noindent Show that a polynomial of degree \(n\) has \textit{at most} \(n\) real roots.
 \end{thm}
