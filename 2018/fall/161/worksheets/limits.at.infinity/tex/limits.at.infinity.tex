@@ -1,0 +1,165 @@
+\documentclass[10pt]{amsart}
+\usepackage{style}
+
+\title[Limits at Infinity]{Limits at Infinity Worksheet}
+\date{October 15, 2018}
+\author{Blake Farman}
+\address{Lafayette College}
+
+\begin{document}
+\maketitle
+
+%\begin{abstract}
+%\end{abstract}
+\makenameslot
+
+The most common type of limit at infinity one encounters in calculus is that of a rational function.
+The computation of such a limit rests on the following
+\begin{thm*}
+  If \(0 < r\) is a rational number, then
+  \[\lim_{x \to \infty} \frac{1}{x^r} = 0.\]
+  If \(0 < r\) is a rational number such that \(x^r\) is defined for all \(x\), then
+  \[\lim_{x \to -\infty} \frac{1}{x^r} = 0.\]
+\end{thm*}
+
+%In the second statement, the caveat ``\(x^r\) is defined for all \(x\)'' is there to exclude even roots, such as \(r = 1/2\), which all have domain \((0,\infty)\).
+
+For example, suppose we want to evaluate the limit
+\[\lim_{x \to \infty} \frac{3x^2 - x - 2}{5x^2 + 4x + 1}.\]
+Both the numerator and the denominator tend to \(\infty\) as \(x\) tends to \(\infty\), so we cannot yet apply any of the Limit Laws.
+However, we observe that if we factor the largest power of \(x\) out of numerator and the denominator, then we obtain
+\[\lim_{x \to \infty} \frac{3x^2 - x - 2}{5x^2 + 4x + 1} = \lim_{x \to \infty} \frac{x^2(3 - \frac{1}{x} - \frac{2}{x^2})}{x^2(5 + \frac{4}{x} + \frac{1}{x^2})} = \lim_{x \to \infty} \frac{3 - \frac{1}{x} - \frac{2}{x^2}}{5 + \frac{4}{x} + \frac{1}{x^2}}.\]
+The Theorem above and the Limit Laws allow us to evaluate the limit of the numerator
+\[\lim_{x \to \infty} \left(3 - \frac{1}{x} - \frac{2}{x^2}\right) =
+\lim_{x \to \infty}3 - \lim_{x \to \infty}\frac{1}{x} - \lim_{x \to \infty}\frac{2}{x^2} = 3 - 0 - 0 = 3\]
+and of the denominator
+\[\lim_{x \to \infty} \left(5 + \frac{4}{x} + \frac{1}{x^2}\right) =
+\lim_{x \to \infty}5 + \lim_{x \to \infty}\frac{4}{x} + \lim_{x \to \infty}\frac{1}{x^2} = 5 + 0 + 0 = 5.\]
+Since both limits exists we have
+\[\lim_{x \to \infty} \frac{3x^2 - x - 2}{5x^2 + 4x + 1}
+= \lim_{x \to \infty} \frac{3 - \frac{1}{x} - \frac{2}{x^2}}{5 + \frac{4}{x} + \frac{1}{x^2}}
+= \frac{\lim_{x \to \infty} \left(3 - \frac{1}{x} - \frac{2}{x^2}\right)}{\lim_{x \to \infty} \left(5 + \frac{4}{x} + \frac{1}{x^2}\right)} = \frac{3}{5}.\]
+
+\newpage
+Evaluate the following limits at infinity.
+\begin{multicols}{3}
+  \begin{thm}
+    \(\displaystyle{\lim_{x \to \infty} \frac{3x - 2}{2x + 1}}\)
+  \end{thm}
+
+  \begin{thm}
+    \(\displaystyle{\lim_{x \to \infty} \frac{4x^3 + 6x^2 - 2}{2x^3 - 4x + 5}}\)
+  \end{thm}
+
+  \begin{thm}
+    \(\displaystyle{\lim_{x \to \infty} \frac{\sqrt{2x^2 + 1}}{3x - 5}}\)
+  \end{thm}
+\end{multicols}
+\newpage
+
+When the largest power of \(x\) in the numerator is larger than that of the denominator, the method is still the same, but requires the following useful fact
+
+\begin{thm*}
+  Let \(f\) and \(g\) be numbers and let  \(0 < L\) be a constant.
+  \begin{enumerate}[(a)]
+  \item
+    If \(\lim_{x \to \infty} f(x) = \infty\) and \(\lim_{x \to \infty} g(x) = L\), then \(\lim_{x \to \infty} f(x)g(x) = \infty\).
+  \item
+    If \(\lim_{x \to -\infty} f(x) = \infty\) and \(\lim_{x \to -\infty} g(x) = L\), then \(\lim_{x \to -\infty} f(x)g(x) = \infty\).
+  \item
+    If \(\lim_{x \to \infty} f(x) = \infty\) and \(\lim_{x \to \infty} g(x) = -L\), then \(\lim_{x \to \infty} f(x)g(x) = -\infty\).
+  \item
+    If \(\lim_{x \to -\infty} f(x) = \infty\) and \(\lim_{x \to -\infty} g(x) = -L\), then \(\lim_{x \to -\infty} f(x)g(x) = -\infty\).
+  \end{enumerate}
+\end{thm*}
+
+For example, say we want to compute the limit
+\[\lim_{x \to \infty} \frac{x^2 + x}{3 - x}.\]
+We factor an \(x^2\) out of the numerator and an \(x\) out of the denominator to obtain
+\[\lim_{x \to \infty} \frac{x^2 + x}{3 - x} = \lim_{x \to \infty} \frac{x^2(1 + \frac{1}{x})}{x(\frac{3}{x} - 1)} \lim_{x \to \infty} x\frac{(1 + \frac{1}{x})}{\frac{3}{x} - 1}.\]
+Since \(\lim_{x \to \infty} x = \infty\) and 
+\[\lim_{x \to \infty} \frac{\left(1 + \frac{1}{x}\right)}{\frac{3}{x} - 1} = \frac{\lim_{x \to \infty}\left(1 + \frac{1}{x}\right)}{\lim_{x \to \infty} \left(\frac{3}{x} - 1\right)} = \frac{\lim_{x \to \infty}1 + \lim_{x \to \infty}\frac{1}{x}}{\lim_{x \to \infty} \frac{3}{x} - \lim_{x \to \infty}1} = \frac{1 + 0}{0 - 1} = -1\]
+it follows from part (c) of the Theorem that
+\[\lim_{x \to \infty} \frac{x^2 + x}{3 - x} = -\infty.\]
+
+Evaluate the following limits
+\begin{multicols}{3}
+  \begin{thm}
+    \(\displaystyle{\lim_{x \to \infty} \frac{x + 3x^2}{4x - 1}}\)
+  \end{thm}
+
+  \begin{thm}
+    \(\displaystyle{\lim_{x \to \infty} \frac{x^3 - x}{x^2 - 6x + 5}}\)
+  \end{thm}
+
+
+  \begin{thm}
+    \(\displaystyle{\lim_{x \to \infty} \frac{x^4 - 3x^2 + x}{x^3 - x + 2}}\)
+  \end{thm}
+
+\end{multicols}
+\newpage
+
+When the highest power of \(x\) in the denominator is larger than that of the numerator, the computation is simpler.
+Say we want to compute
+\[\lim_{x \to \infty} \frac{3x + 2}{x^2 + 2x + 1}.\]
+We factor an \(x\) out of the numerator and an \(x^2\) out of the denominator to obtain
+\[\lim_{x \to \infty} \frac{3x + 2}{x^2 + 2x + 1}
+= \lim_{x \to \infty} \frac{x\left(3 + \frac{2}{x}\right)}{x^2\left(1 + \frac{2}{x} + \frac{1}{x^2}\right)}
+= \lim_{x \to \infty} \frac{1}{x} \frac{\left(3 + \frac{2}{x}\right)}{1 + \frac{2}{x} + \frac{1}{x^2}}
+= 0 \left(\frac{3 + 0}{1 + 0 + 0}\right)
+= 0 \cdot 3
+= 0.\]
+
+Evaluate the following limits.
+\begin{multicols}{3}
+  \begin{thm}
+    \(\displaystyle{\lim_{x \to \infty} \frac{1 - x^2}{x^3 - x + 1}}\)
+  \end{thm}
+
+  \begin{thm}
+    \(\displaystyle{\lim_{x \to \infty} \frac{1 + x^4}{x^6 + 1}}\)
+  \end{thm}
+
+  \begin{thm}
+    \(\displaystyle{\lim_{x \to \infty} \frac{x - 2}{x^2 + 1}}\)
+  \end{thm}
+
+\end{multicols}
+
+\newpage
+Sometimes, limits at infinity of rational functions can be disguised.  For example, the limit
+\[\lim_{x \to \infty} \left(\sqrt{x^2 + 1} - x\right)\]
+does not appear to be the limit of a rational function.
+We cannot use the Limit Laws to evaluate the limit directly because
+\[\lim_{x \to \infty} \sqrt{x^2 + 1} = \infty\ \text{and}\ \lim_{x \to \infty} x = \infty,\]
+which is to say \underline{\textbf{it is incorrect to write}}
+\[\lim_{x \to \infty} \left(\sqrt{x^2 + 1} - x\right) = \lim_{x \to \infty} \sqrt{x^2 + 1} - \lim_{x \to \infty} x = \infty - \infty = 0!\]
+To evaluate this limit, we think of this as a rational function with denominator 1 and rationalize the numerator:
+\begin{gather*}
+  \lim_{x \to \infty} \left(\sqrt{x^2 + 1} - x\right)
+  = \lim_{x \to \infty} \frac{\sqrt{x^2 + 1} - x}{1} \left(\frac{\sqrt{x^2 + 1} + x}{\sqrt{x^2 + 1} + x}\right)
+  = \lim_{x \to \infty} \frac{x^2 + 1 - x^2}{\sqrt{x^2\left(1 + \frac{1}{x^2}\right)} + x}\\
+  = \lim_{x \to \infty} \frac{1}{x\sqrt{1 + \frac{1}{x^2}} + x}
+  = \lim_{x \to \infty} \frac{1}{x\left(\sqrt{1 + \frac{1}{x^2}} + 1\right)}
+  =\lim_{x \to \infty} \frac{1}{x}\frac{1}{\sqrt{1 + \frac{1}{x^2}} + 1}\\
+  = 0 \left(\frac{1}{\sqrt{1 + 0} + 1}\right)
+  = 0.
+\end{gather*}
+
+Evaluate the following limits.
+\begin{multicols}{3}
+  \begin{thm}
+  \(\displaystyle{\lim_{x \to \infty} \left(\sqrt{9x^2 + x} - 3x\right)}\)
+\end{thm}
+
+  \begin{thm}
+  \(\displaystyle{\lim_{x \to \infty} \left(\sqrt{4x^2 + 3x} + 2x\right)}\)
+\end{thm}
+
+  \begin{thm}
+  \(\displaystyle{\lim_{x \to \infty} \left(x - \sqrt{x}\right)}\)
+\end{thm}
+
+\end{multicols}
+\end{document}
