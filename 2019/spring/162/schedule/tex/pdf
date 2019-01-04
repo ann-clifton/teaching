@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+NUM=final
+CLASS=162
+NAME="schedule-162"
+PDFDIR=../pdf/
+FILE="${NAME}.tex"
+
+latexmk -pdf ${FILE}
+#texi2pdf $FILE
+#texi2pdf "${NAME}-solns.tex"
+
+if [ ! -d ../pdf ]; then
+    mkdir ../pdf
+fi
+
+mv $NAME.pdf ../pdf
+#mv "${NAME}-solns.pdf" ../pdf
+
+
+#rm -fr *.log
+#rm -fr *.aux
+#rm -fr *.bbl
+#rm -fr *.blg
+#rm -fr *.out
+latexmk -C
+rm -fr *~
+
