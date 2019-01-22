@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-NAME="limits-practice"
+NAME="limits"
 PDFDIR=../pdf/
 FILE="$NAME.tex"
 
